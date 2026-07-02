@@ -1,9 +1,118 @@
----
-layout: base
-title: 把 AI 从判断推进到生产
-subtitle: NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。
-faq_schema: true
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>把 AI 从判断推进到生产 | NEXFDE</title>
+  <meta name="description" content="NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。">
+
+  <link rel="canonical" href="https://nexfde.com">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="把 AI 从判断推进到生产 | NEXFDE">
+  <meta property="og:description" content="NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。">
+  <meta property="og:url" content="https://nexfde.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXFDE">
+  <meta property="og:image" content="https://nexfde.com/assets/nexfde-og.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="把 AI 从判断推进到生产 | NEXFDE">
+  <meta name="twitter:description" content="NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #111111;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "provider": {
+      "@type": "Organization",
+      "name": "NEXFDE",
+      "url": "https://nexfde.com"
+    },
+    "name": "NEXFDE — Enterprise AI Deployment",
+    "description": "NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。",
+    "url": "https://nexfde.com",
+    "serviceType": "Enterprise AI Deployment",
+    "areaServed": { "@type": "Country", "name": "China" },
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://nexfde.com"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "你们和普通 AI 咨询有什么不同？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NEXFDE 不以交一份建议书作为结束，而是以跑通第一条真实流程为目标。我们更接近 deployment practice，而不是泛方案咨询。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "你们是做咨询，还是做实施？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "两者之间的断层正是 NEXFDE 解决的问题。我们不是只给建议，也不是一上来就做大实施，而是从判断、验证到接入，逐步推进。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如果我们现在还不确定值不值得做，怎么办？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "这正是 AI Deployment Diagnostic 的意义。它不是为了证明 AI 一定要做，而是帮助你判断：哪些值得做、哪些先别碰。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "你们适合什么规模的公司？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "最适合已经有一定业务复杂度、真实流程需求和明确行动意愿的团队。不一定要非常大，但需要是真正准备行动的组织。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "你们会不会只推荐某种固定工具？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不会。NEXFDE 的起点是业务流程，不是工具清单。工具是手段，不是页面主角。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
 
 <style>
 /* ═══ NEXFDE Design System ═══ */
@@ -756,6 +865,51 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 
 </div><!-- /.nf-page -->
 
+<!-- ═══ FOOTER ═══ -->
+<footer style="background:#102A43;color:rgba(255,255,255,0.7);padding:56px 0 40px;font-size:14px;line-height:1.8;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
+
+    <div style="display:flex;flex-wrap:wrap;gap:40px 60px;justify-content:space-between;margin-bottom:40px;">
+
+      <div style="min-width:200px;">
+        <div style="font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.02em;margin-bottom:6px;">NEXFDE</div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:#2F6FEB;text-transform:uppercase;margin-bottom:16px;">FDE-style AI Deployment</div>
+        <p style="max-width:280px;">
+          NEXFDE 是面向企业 AI 落地的专项服务品牌。<br>
+          By <a href="https://actionthinker.com" style="color:#2F6FEB;text-decoration:none;">ActionThinker</a>, validated through <a href="https://actionthinker.com/opclab/" style="color:#2F6FEB;text-decoration:none;">OPClab</a>.
+        </p>
+        <p style="margin-top:12px;font-size:13px;">
+          <a href="mailto:lu@NexFDE.com" style="color:rgba(255,255,255,0.6);text-decoration:none;">lu@NexFDE.com</a>
+        </p>
+      </div>
+
+      <div style="display:flex;gap:48px;flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">服务</div>
+          <a href="#method" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Method</a>
+          <a href="#services" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Services</a>
+          <a href="#deliverables" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Deliverables</a>
+        </div>
+        <div>
+          <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">了解更多</div>
+          <a href="#faq" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">FAQ</a>
+          <a href="#cases" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Cases</a>
+        </div>
+        <div>
+          <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">联系</div>
+          <a href="#" onclick="openWechat();return false;" style="display:block;color:#2F6FEB;text-decoration:none;margin-bottom:6px;font-weight:500;">预约部署诊断 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;font-size:12px;color:rgba(255,255,255,0.4);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;">
+      <span>&copy; 2026 NEXFDE. All rights reserved.</span>
+      <span>An AI deployment practice by <a href="https://actionthinker.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">ActionThinker</a></span>
+    </div>
+
+  </div>
+</footer>
+
 <script>
 /* FAQ Toggle */
 function toggleFaq(btn) {
@@ -794,3 +948,6 @@ document.querySelectorAll('#navLinks a').forEach(function(link) {
   });
 })();
 </script>
+
+</body>
+</html>
