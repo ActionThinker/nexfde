@@ -1,0 +1,46 @@
+# --- NexFDE Site Configuration ---
+# GitHub Pages + Jekyll
+
+url: "https://nexfde.com"
+baseurl: ""
+
+title: NEXFDE
+description: NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线
+
+# Google Fonts
+googlefonts:
+  - "Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700"
+
+# Navigation
+navbar-links:
+  Method: "#method"
+  Services: "#services"
+  Cases: "#cases"
+  FAQ: "#faq"
+  Diagnostic: "#cta"
+
+# Brand
+brand:
+  name: NEXFDE
+  tagline: FDE-style AI Deployment
+  parent: ActionThinker
+  lab: OPClab
+
+# Author (for SEO / schema)
+author:
+  name: ActionThinker
+
+# Exclude from build
+exclude:
+  - README.md
+  - .gitignore
+
+# Build settings
+timezone: "Asia/Shanghai"
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "base"

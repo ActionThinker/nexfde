@@ -1,0 +1,796 @@
+---
+layout: base
+title: 把 AI 从判断推进到生产
+subtitle: NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。
+faq_schema: true
+---
+
+<style>
+/* ═══ NEXFDE Design System ═══ */
+:root {
+  --blue-deep: #102A43;
+  --blue-tech: #2F6FEB;
+  --blue-light: #EBF2FF;
+  --ink: #111111;
+  --bg: #F4F7FB;
+  --surface: #FFFFFF;
+  --border: #D8E1EA;
+  --muted: #5B6B7A;
+  --radius: 12px;
+  --radius-lg: 16px;
+}
+
+/* ═══ Shared ═══ */
+.nf-page { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; line-height: 1.7; color: var(--ink); background: var(--surface); -webkit-font-smoothing: antialiased; }
+.nf-page *, .nf-page *::before, .nf-page *::after { box-sizing: border-box; }
+.nf-page h1, .nf-page h2, .nf-page h3, .nf-page h4 { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 600; line-height: 1.2; color: var(--ink); letter-spacing: -0.02em; }
+.nf-page p { margin: 0; }
+.nf-page ul { margin: 0; padding: 0; list-style: none; }
+.nf-page a { text-decoration: none; color: inherit; }
+
+.nf-container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.nf-section { padding: 100px 0; }
+
+.nf-section-label {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--blue-tech); margin-bottom: 14px;
+}
+.nf-section-title {
+  font-size: clamp(26px, 4.5vw, 38px); font-weight: 700;
+  color: var(--ink); margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.02em;
+}
+.nf-section-desc {
+  font-size: 17px; color: var(--muted);
+  max-width: 620px; line-height: 1.8; margin-bottom: 52px;
+}
+
+/* Buttons */
+.nf-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 30px; border-radius: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px; font-weight: 600; cursor: pointer; border: none;
+  transition: all 0.2s ease; white-space: nowrap;
+}
+a.nf-btn-primary { background: var(--blue-tech); color: #fff; }
+a.nf-btn-primary:hover { background: #1a5ad9; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(47,111,235,0.3); }
+a.nf-btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
+a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech); transform: translateY(-1px); }
+
+/* ═══ Nav ═══ */
+.nf-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nf-nav-logo { display: flex; align-items: center; gap: 10px; }
+.nf-nav-logo-main {
+  font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--ink); letter-spacing: -0.02em;
+}
+.nf-nav-logo-sub {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+  color: var(--blue-tech); text-transform: uppercase;
+  padding-left: 10px; border-left: 1.5px solid var(--border);
+}
+.nf-nav-links { display: flex; align-items: center; gap: 32px; }
+.nf-nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--muted);
+  transition: color 0.15s;
+}
+.nf-nav-links a:hover { color: var(--ink); }
+.nf-nav-cta {
+  font-size: 13px; font-weight: 600; color: #fff !important;
+  background: var(--blue-tech); padding: 8px 18px; border-radius: 6px;
+  transition: background 0.2s !important;
+}
+.nf-nav-cta:hover { background: #1a5ad9 !important; color: #fff !important; }
+.nf-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+
+@media (max-width: 860px) {
+  .nf-nav-links { display: none; }
+  .nf-nav-toggle { display: block; }
+  .nf-nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 60px; left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid var(--border);
+    padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+}
+
+/* ═══ Hero ═══ */
+.nf-hero { padding: 140px 0 100px; background: var(--bg); }
+.nf-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.nf-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--blue-tech); background: var(--blue-light);
+  padding: 6px 14px; border-radius: 99px; margin-bottom: 28px;
+}
+.nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue-tech); display: block; }
+.nf-hero h1 { font-size: clamp(34px, 6vw, 52px); font-weight: 700; line-height: 1.15; color: var(--blue-deep); margin-bottom: 22px; letter-spacing: -0.03em; }
+.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 14px; }
+.nf-hero-note { font-size: 14px; color: var(--muted); margin-bottom: 36px; line-height: 1.7; }
+.nf-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
+.nf-hero-credit { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; }
+.nf-hero-credit a { color: var(--blue-tech); font-weight: 500; }
+.nf-hero-credit a:hover { text-decoration: underline; }
+
+/* Hero Visual — Structured Flow */
+.nf-hero-flow {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  box-shadow: 0 2px 12px rgba(16,42,67,0.04);
+}
+.nf-hero-flow-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
+}
+.nf-flow-step {
+  display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;
+  padding: 14px 16px; border-radius: var(--radius);
+  border: 1px solid var(--border); transition: border-color 0.2s;
+}
+.nf-flow-step:last-child { margin-bottom: 0; }
+.nf-flow-step:hover { border-color: var(--blue-tech); }
+.nf-flow-num {
+  font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700;
+  color: var(--blue-tech); line-height: 1; min-width: 32px;
+}
+.nf-flow-step-title { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 3px; }
+.nf-flow-step-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.nf-flow-arrow {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--border); font-size: 18px; height: 8px; margin: 0 0 4px 30px;
+}
+
+/* ═══ Pain Cards ═══ */
+.nf-pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; }
+.nf-pain-card { background: var(--surface); padding: 36px 28px; transition: background 0.2s; }
+.nf-pain-card:hover { background: var(--bg); }
+.nf-pain-num {
+  font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700;
+  color: var(--border); margin-bottom: 16px; line-height: 1;
+}
+.nf-pain-title { font-weight: 600; font-size: 17px; color: var(--ink); margin-bottom: 10px; }
+.nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ Value Props ═══ */
+.nf-value-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.nf-value-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.nf-value-card:hover { border-color: rgba(47,111,235,0.25); transform: translateY(-2px); }
+.nf-value-icon {
+  width: 44px; height: 44px; border-radius: var(--radius);
+  background: var(--blue-light); display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 20px;
+}
+.nf-value-title { font-weight: 600; font-size: 17px; color: var(--ink); margin-bottom: 10px; }
+.nf-value-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ Three Steps ═══ */
+.nf-steps { position: relative; }
+.nf-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
+.nf-step-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  position: relative; transition: border-color 0.2s, transform 0.15s;
+}
+.nf-step-card:hover { border-color: rgba(47,111,235,0.3); transform: translateY(-2px); }
+.nf-step-tag {
+  display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--blue-tech); margin-bottom: 18px;
+}
+.nf-step-en {
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
+  color: var(--muted); margin-bottom: 8px; letter-spacing: -0.01em;
+}
+.nf-step-title { font-weight: 600; font-size: 19px; color: var(--ink); margin-bottom: 14px; }
+.nf-step-body { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+.nf-step-outputs { display: flex; flex-wrap: wrap; gap: 6px; }
+.nf-step-output {
+  font-size: 11px; font-weight: 500; color: var(--blue-deep);
+  background: var(--blue-light); padding: 4px 10px; border-radius: 99px;
+}
+
+/* ═══ Deliverables ═══ */
+.nf-deliver-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
+.nf-deliver-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px;
+  display: flex; align-items: flex-start; gap: 14px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.nf-deliver-card:hover { border-color: var(--blue-tech); transform: translateY(-1px); }
+.nf-deliver-num {
+  font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+  color: var(--blue-tech); min-width: 28px; line-height: 1.5;
+}
+.nf-deliver-text { font-size: 14px; color: var(--ink); font-weight: 500; line-height: 1.5; }
+
+/* ═══ Service Packages ═══ */
+.nf-pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
+.nf-pkg-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.nf-pkg-card:hover { border-color: rgba(47,111,235,0.3); transform: translateY(-2px); }
+.nf-pkg-card.featured { border-color: var(--blue-tech); border-width: 2px; }
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--blue-tech); color: #fff; }
+.nf-pkg-tag {
+  display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--blue-tech); background: var(--blue-light);
+  padding: 3px 10px; border-radius: 99px; margin-bottom: 16px;
+}
+.nf-pkg-title { font-weight: 600; font-size: 20px; color: var(--ink); margin-bottom: 6px; }
+.nf-pkg-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.nf-pkg-items { border-top: 1px solid var(--border); padding-top: 18px; }
+.nf-pkg-item { font-size: 13px; color: var(--muted); margin-bottom: 8px; padding-left: 16px; position: relative; line-height: 1.6; }
+.nf-pkg-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
+
+/* ═══ Why NEXFDE ═══ */
+.nf-why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.nf-why-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  transition: border-color 0.2s;
+}
+.nf-why-card:hover { border-color: rgba(47,111,235,0.25); }
+.nf-why-card-icon {
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700;
+  color: var(--blue-tech); letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.nf-why-card-title { font-weight: 600; font-size: 18px; color: var(--ink); margin-bottom: 12px; }
+.nf-why-card-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ Endorsement ═══ */
+.nf-endorse { background: var(--bg); }
+.nf-endorse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.nf-endorse-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 32px;
+}
+.nf-endorse-brand {
+  font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700;
+  letter-spacing: -0.02em; margin-bottom: 12px;
+}
+.nf-endorse-brand.at { color: #1a2a3a; }
+.nf-endorse-brand.opc { color: var(--blue-deep); }
+.nf-endorse-body { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.nf-endorse-footer {
+  margin-top: 32px; text-align: center;
+  font-size: 13px; color: var(--muted); font-weight: 500;
+}
+.nf-endorse-footer strong { color: var(--ink); }
+
+/* ═══ Fit / Not Fit ═══ */
+.nf-fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
+.nf-fit-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 32px;
+}
+.nf-fit-card h3 {
+  font-size: 18px; font-weight: 600; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.nf-fit-card.fit h3 { color: var(--blue-tech); }
+.nf-fit-card.not h3 { color: var(--muted); }
+.nf-fit-card li { font-size: 14px; color: var(--muted); margin-bottom: 10px; padding-left: 22px; position: relative; line-height: 1.6; }
+.nf-fit-card li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 50%; }
+.nf-fit-card.fit li::before { background: var(--blue-tech); }
+.nf-fit-card.not li::before { background: var(--border); }
+
+/* ═══ FAQ ═══ */
+.nf-faq-list { max-width: 780px; margin-top: 20px; }
+.nf-faq-item { border-bottom: 1px solid var(--border); }
+.nf-faq-q {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; background: none; border: none; padding: 22px 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px; font-weight: 600; color: var(--ink); text-align: left;
+  cursor: pointer; line-height: 1.5;
+}
+.nf-faq-q:hover { color: var(--blue-tech); }
+.nf-faq-icon {
+  font-size: 20px; font-weight: 300; color: var(--muted);
+  transition: transform 0.25s; flex-shrink: 0; margin-left: 16px;
+}
+.nf-faq-item.open .nf-faq-icon { transform: rotate(45deg); }
+.nf-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+.nf-faq-item.open .nf-faq-a { max-height: 400px; padding-bottom: 22px; }
+.nf-faq-a p { font-size: 15px; color: var(--muted); line-height: 1.8; }
+
+/* ═══ Final CTA ═══ */
+.nf-final-cta { text-align: center; padding: 120px 0; background: var(--blue-deep); }
+.nf-final-cta h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: #fff; margin-bottom: 18px; letter-spacing: -0.02em; }
+.nf-final-cta p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 40px; line-height: 1.8; }
+.nf-final-cta .nf-btn-primary { background: #fff; color: var(--blue-deep); font-size: 15px; padding: 16px 36px; }
+.nf-final-cta .nf-btn-primary:hover { background: #e8edf5; box-shadow: 0 4px 20px rgba(255,255,255,0.15); }
+.nf-final-cta .nf-btn-outline { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.25); }
+.nf-final-cta .nf-btn-outline:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+.nf-final-note { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 28px; }
+
+
+/* ═══ Animations ═══ */
+@keyframes nf-fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.nf-animate {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.nf-animate.visible { opacity: 1; transform: translateY(0); }
+
+/* ═══ Responsive ═══ */
+@media (max-width: 1024px) {
+  .nf-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .nf-hero-flow { max-width: 500px; }
+}
+@media (max-width: 768px) {
+  .nf-pain-grid,
+  .nf-value-grid,
+  .nf-steps-grid,
+  .nf-deliver-grid,
+  .nf-pkg-grid,
+  .nf-why-grid,
+  .nf-endorse-grid,
+  .nf-fit-grid { grid-template-columns: 1fr; }
+  .nf-section { padding: 60px 0; }
+  .nf-hero { padding: 100px 0 60px; }
+  .nf-container { padding: 0 18px; }
+  .nf-hero-ctas { flex-direction: column; }
+  .nf-hero-ctas .nf-btn { justify-content: center; }
+  .nf-deliver-grid { grid-template-columns: 1fr 1fr; }
+  .nf-final-cta { padding: 80px 0; }
+}
+@media (max-width: 480px) {
+  .nf-deliver-grid { grid-template-columns: 1fr; }
+  .nf-pain-card, .nf-value-card, .nf-step-card, .nf-pkg-card, .nf-why-card, .nf-endorse-card, .nf-fit-card { padding: 24px 20px; }
+}
+</style>
+
+<div class="nf-page">
+
+<!-- ═══ 1. NAV ═══ -->
+<nav class="nf-nav" id="navbar">
+  <div class="nf-nav-logo">
+    <span class="nf-nav-logo-main">NEXFDE</span>
+    <span class="nf-nav-logo-sub">FDE-style AI Deployment</span>
+  </div>
+  <button class="nf-nav-toggle" id="navToggle" aria-label="Menu">
+    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" rx="1" fill="#111"/><rect y="7" width="22" height="2" rx="1" fill="#111"/><rect y="14" width="22" height="2" rx="1" fill="#111"/></svg>
+  </button>
+  <div class="nf-nav-links" id="navLinks">
+    <a href="#method">Method</a>
+    <a href="#services">Services</a>
+    <a href="#cases">Cases</a>
+    <a href="#faq">FAQ</a>
+    <a href="#cta" class="nf-nav-cta">预约部署诊断</a>
+  </div>
+</nav>
+
+<!-- ═══ 2. HERO ═══ -->
+<section class="nf-hero">
+  <div class="nf-container">
+    <div class="nf-hero-grid">
+      <div>
+        <div class="nf-hero-badge">Enterprise AI Deployment</div>
+        <h1>把 AI 从判断推进到生产</h1>
+        <p class="nf-hero-sub">
+          <strong>NEXFDE</strong> 不是卖工具，也不是停在方案文档。我们帮助企业从场景判断、试点验证到真实流程上线，跑通第一条能持续运转的 AI 工作流。
+        </p>
+        <p class="nf-hero-note">面向真正准备行动的企业团队。先判断值不值得做，再把值得做的那一条路跑通。</p>
+        <div class="nf-hero-ctas">
+          <a href="#" onclick="openWechat();return false" class="nf-btn nf-btn-primary">预约部署诊断</a>
+          <a href="#method" class="nf-btn nf-btn-outline">查看服务结构</a>
+        </div>
+        <p class="nf-hero-credit">
+          An AI deployment practice by <a href="https://actionthinker.com" target="_blank" rel="noopener">ActionThinker</a>, validated through <a href="https://actionthinker.com/opclab/" target="_blank" rel="noopener">OPClab</a>.
+        </p>
+      </div>
+
+      <!-- Hero Visual: Structured Flow -->
+      <div class="nf-hero-flow">
+        <div class="nf-hero-flow-label">FDE Deployment Path</div>
+        <div class="nf-flow-step">
+          <div class="nf-flow-num">01</div>
+          <div>
+            <div class="nf-flow-step-title">Judgment</div>
+            <div class="nf-flow-step-desc">场景价值判断 · 优先级排序 · 可行性评估</div>
+          </div>
+        </div>
+        <div class="nf-flow-arrow">↓</div>
+        <div class="nf-flow-step">
+          <div class="nf-flow-num">02</div>
+          <div>
+            <div class="nf-flow-step-title">Pilot</div>
+            <div class="nf-flow-step-desc">快速验证闭环 · 真实数据反馈 · 决策依据</div>
+          </div>
+        </div>
+        <div class="nf-flow-arrow">↓</div>
+        <div class="nf-flow-step">
+          <div class="nf-flow-num">03</div>
+          <div>
+            <div class="nf-flow-step-title">Rollout</div>
+            <div class="nf-flow-step-desc">流程接入 · 使用规范 · 持续迭代机制</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3. PAIN POINTS ═══ -->
+<section class="nf-section">
+  <div class="nf-container">
+    <div class="nf-section-label">The Problem</div>
+    <h2 class="nf-section-title">企业不是缺 AI 工具，而是缺一条能真正跑通的路</h2>
+    <p class="nf-section-desc">多数企业今天的问题不是"要不要 AI"，而是信息太多判断不了、工具买了接不进去、Demo 做了推不到生产。</p>
+    <div class="nf-pain-grid">
+      <div class="nf-pain-card nf-animate">
+        <div class="nf-pain-num">01</div>
+        <div class="nf-pain-title">信息很多，判断很少</div>
+        <div class="nf-pain-body">每天都有新模型、新工具、新方案，但没有人真正回答：在你的行业、你的业务里，哪一条最值得先做。</div>
+      </div>
+      <div class="nf-pain-card nf-animate">
+        <div class="nf-pain-num">02</div>
+        <div class="nf-pain-title">买了工具，团队用不起来</div>
+        <div class="nf-pain-body">通用 AI 工具解决不了具体业务流程的问题。真正缺的，是把模型接进系统、角色、权限和工作方式的人。</div>
+      </div>
+      <div class="nf-pain-card nf-animate">
+        <div class="nf-pain-num">03</div>
+        <div class="nf-pain-title">Demo 能做，生产上不了</div>
+        <div class="nf-pain-body">很多项目不是死在不会做原型，而是死在接入、治理、协作、采用和迭代上。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. VALUE PROPOSITION ═══ -->
+<section class="nf-section" style="background:var(--bg);">
+  <div class="nf-container">
+    <div class="nf-section-label">What We Do</div>
+    <h2 class="nf-section-title">NEXFDE 解决的不是 AI 认知问题，而是 AI 落地问题</h2>
+    <p class="nf-section-desc">我们不从工具清单出发，也不从"热点方案"出发。用 FDE-style 的方法，从你的真实业务流程出发，帮助你判断哪些值得做、哪些先别碰，并把第一条高价值路径跑通。</p>
+    <div class="nf-value-grid">
+      <div class="nf-value-card nf-animate">
+        <div class="nf-value-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="nf-value-title">先判断，再投入</div>
+        <div class="nf-value-body">先看场景价值、可行性和组织条件，避免团队在错误方向上浪费资源。</div>
+      </div>
+      <div class="nf-value-card nf-animate">
+        <div class="nf-value-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="nf-value-title">先跑通一条，再扩展</div>
+        <div class="nf-value-body">不追求一次做大，而是优先完成一个真实、可运行、可复用的业务闭环。</div>
+      </div>
+      <div class="nf-value-card nf-animate">
+        <div class="nf-value-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <div class="nf-value-title">交付结果，不只交付建议</div>
+        <div class="nf-value-body">客户拿到的不是一本报告，而是一条被验证过、能进入团队日常的 AI 工作流。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. THREE STEPS ═══ -->
+<section class="nf-section" id="method">
+  <div class="nf-container">
+    <div class="nf-section-label">How It Works</div>
+    <h2 class="nf-section-title">从判断到跑通，分三步完成</h2>
+    <p class="nf-section-desc">每一步都可以独立产生价值。不是先卖一个大项目，而是每完成一步，你再决定是否进入下一步。</p>
+    <div class="nf-steps-grid">
+      <div class="nf-step-card nf-animate">
+        <div class="nf-step-tag">Step 1</div>
+        <div class="nf-step-en">AI Deployment Diagnostic</div>
+        <div class="nf-step-title">AI 部署诊断</div>
+        <div class="nf-step-body">一起拆解业务流程，识别机会点、约束点与优先级，判断这件事值不值得做、该从哪里开始。</div>
+        <div class="nf-step-outputs">
+          <span class="nf-step-output">AI 机会地图</span>
+          <span class="nf-step-output">场景优先级</span>
+          <span class="nf-step-output">可行性评估</span>
+          <span class="nf-step-output">第一阶段路径</span>
+        </div>
+      </div>
+      <div class="nf-step-card nf-animate">
+        <div class="nf-step-tag">Step 2</div>
+        <div class="nf-step-en">Pilot Sprint</div>
+        <div class="nf-step-title">试点冲刺</div>
+        <div class="nf-step-body">从最值得做的 1 到 2 个场景里，快速搭出一个真实可验证的试点闭环，让数据和用户反馈直接说话。</div>
+        <div class="nf-step-outputs">
+          <span class="nf-step-output">可运行原型</span>
+          <span class="nf-step-output">试点流程设计</span>
+          <span class="nf-step-output">验证结果</span>
+          <span class="nf-step-output">下一步决策依据</span>
+        </div>
+      </div>
+      <div class="nf-step-card nf-animate">
+        <div class="nf-step-tag">Step 3</div>
+        <div class="nf-step-en">Production Rollout</div>
+        <div class="nf-step-title">生产上线</div>
+        <div class="nf-step-body">把已经验证跑通的场景真正接入工作流，完善角色、使用规范、治理与持续迭代机制。</div>
+        <div class="nf-step-outputs">
+          <span class="nf-step-output">流程接入方案</span>
+          <span class="nf-step-output">使用规范</span>
+          <span class="nf-step-output">生产部署建议</span>
+          <span class="nf-step-output">Adoption 路径</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. DELIVERABLES ═══ -->
+<section class="nf-section" style="background:var(--bg);" id="deliverables">
+  <div class="nf-container">
+    <div class="nf-section-label">Deliverables</div>
+    <h2 class="nf-section-title">客户拿到的不是一份方案，而是一套能持续运行的能力</h2>
+    <p class="nf-section-desc">NEXFDE 的交付，不止是建议，而是让团队开始形成自己的 AI 落地能力。</p>
+    <div class="nf-deliver-grid">
+      <div class="nf-deliver-card nf-animate">
+        <div class="nf-deliver-num">01</div>
+        <div class="nf-deliver-text">一张看清方向的 AI 机会地图</div>
+      </div>
+      <div class="nf-deliver-card nf-animate">
+        <div class="nf-deliver-num">02</div>
+        <div class="nf-deliver-text">一套明确的场景优先级判断</div>
+      </div>
+      <div class="nf-deliver-card nf-animate">
+        <div class="nf-deliver-num">03</div>
+        <div class="nf-deliver-text">一个真实可运行的试点闭环</div>
+      </div>
+      <div class="nf-deliver-card nf-animate">
+        <div class="nf-deliver-num">04</div>
+        <div class="nf-deliver-text">一套进入生产的流程接入方案</div>
+      </div>
+      <div class="nf-deliver-card nf-animate">
+        <div class="nf-deliver-num">05</div>
+        <div class="nf-deliver-text">一套团队可执行的使用方式与规范</div>
+      </div>
+      <div class="nf-deliver-card nf-animate">
+        <div class="nf-deliver-num">06</div>
+        <div class="nf-deliver-text">一条后续可继续扩展的路线图</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. SERVICE PACKAGES ═══ -->
+<section class="nf-section" id="services">
+  <div class="nf-container">
+    <div class="nf-section-label">Services</div>
+    <h2 class="nf-section-title">先做对第一步，再决定下一步</h2>
+    <p class="nf-section-desc">NEXFDE 不要求客户一次做很大。我们更关注的是：先把最值得做、最可能跑通的一条路，真正做出来。</p>
+    <div class="nf-pkg-grid">
+      <div class="nf-pkg-card nf-animate">
+        <div class="nf-pkg-tag">Diagnostic</div>
+        <div class="nf-pkg-title">AI Deployment Diagnostic</div>
+        <div class="nf-pkg-sub">适合第一次进入 AI 落地阶段的团队</div>
+        <div class="nf-pkg-items">
+          <div class="nf-pkg-item">方向不清、内部意见分散、想降低试错成本</div>
+          <div class="nf-pkg-item">判断值不值得做，优先做哪条路径</div>
+          <div class="nf-pkg-item">形成可执行的第一阶段部署建议</div>
+        </div>
+      </div>
+      <div class="nf-pkg-card nf-animate featured">
+        <div class="nf-pkg-tag">Pilot</div>
+        <div class="nf-pkg-title">Pilot Sprint</div>
+        <div class="nf-pkg-sub">适合已有方向，想尽快验证的团队</div>
+        <div class="nf-pkg-items">
+          <div class="nf-pkg-item">已有明确场景，但缺验证闭环</div>
+          <div class="nf-pkg-item">用最小代价验证最大可能性</div>
+          <div class="nf-pkg-item">形成一个真实可运行的试点成果</div>
+        </div>
+      </div>
+      <div class="nf-pkg-card nf-animate">
+        <div class="nf-pkg-tag">Rollout</div>
+        <div class="nf-pkg-title">Production Rollout</div>
+        <div class="nf-pkg-sub">适合试点跑通后准备进入生产的团队</div>
+        <div class="nf-pkg-items">
+          <div class="nf-pkg-item">已经看到潜力，准备接入日常流程</div>
+          <div class="nf-pkg-item">完成组织、流程和系统层面的真正落地</div>
+          <div class="nf-pkg-item">形成可持续使用的 AI 工作机制</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8. WHY NEXFDE ═══ -->
+<section class="nf-section" style="background:var(--bg);" id="cases">
+  <div class="nf-container">
+    <div class="nf-section-label">Why NEXFDE</div>
+    <h2 class="nf-section-title">判断、技术、落地，必须同时在一个体系里</h2>
+    <p class="nf-section-desc">市场上不缺懂 AI 工具的人，也不缺做 PPT 方案的人。真正稀缺的是：能够同时理解业务、技术边界与落地过程的人。</p>
+    <div class="nf-why-grid">
+      <div class="nf-why-card nf-animate">
+        <div class="nf-why-card-icon">Business</div>
+        <div class="nf-why-card-title">懂业务</div>
+        <div class="nf-why-card-body">不是拿着 AI 锤子找钉子，而是先理解你的组织、流程、角色和判断机制。</div>
+      </div>
+      <div class="nf-why-card nf-animate">
+        <div class="nf-why-card-icon">Technology</div>
+        <div class="nf-why-card-title">懂技术边界</div>
+        <div class="nf-why-card-body">知道模型能做什么、不能做什么、适合什么、不适合什么，不被技术话术牵着走。</div>
+      </div>
+      <div class="nf-why-card nf-animate">
+        <div class="nf-why-card-icon">Deployment</div>
+        <div class="nf-why-card-title">懂落地路径</div>
+        <div class="nf-why-card-body">从原型到真实流程，中间差的不是一句"上线就好"，而是大量具体的接入、治理与 adoption 工作。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 9. ENDORSEMENT ═══ -->
+<section class="nf-section nf-endorse">
+  <div class="nf-container">
+    <div class="nf-section-label">Trust</div>
+    <h2 class="nf-section-title">这套方法不是讲出来的，是持续验证出来的</h2>
+    <p class="nf-section-desc" style="margin-bottom:32px;">NEXFDE 的背后，是两个持续运转的体系在提供支撑。</p>
+    <div class="nf-endorse-grid">
+      <div class="nf-endorse-card nf-animate">
+        <div class="nf-endorse-brand at">ActionThinker</div>
+        <div class="nf-endorse-body">创始人的内容与判断入口，承载长期的产业观察、知识管理实践与方法论表达。它提供的是这套服务背后的<strong style="color:#111;">判断力与信任来源</strong>。</div>
+      </div>
+      <div class="nf-endorse-card nf-animate">
+        <div class="nf-endorse-brand opc">OPClab</div>
+        <div class="nf-endorse-body">方法论实验室，持续验证 AI 协作、知识资产化与工作流落地方式。它确保 NEXFDE 不是一套停留在 PPT 里的服务话术，而是<strong style="color:#111;">被持续实验、迭代和校正过的方法</strong>。</div>
+      </div>
+    </div>
+    <div class="nf-endorse-footer">
+      <strong>NEXFDE</strong> by ActionThinker, validated through OPClab.
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10. WHO IT'S FOR ═══ -->
+<section class="nf-section">
+  <div class="nf-container">
+    <div class="nf-section-label">Fit</div>
+    <h2 class="nf-section-title">NEXFDE 最适合这样的团队</h2>
+    <div class="nf-fit-grid">
+      <div class="nf-fit-card fit">
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 适合谁</h3>
+        <ul>
+          <li>已经感受到 AI 紧迫感，但不知道先做哪条业务路径</li>
+          <li>已经做过一些尝试，但还没有真正跑进业务流程</li>
+          <li>愿意投入真实团队资源，不只停留在观望和学习</li>
+          <li>希望先降低试错成本，再逐步扩展</li>
+        </ul>
+      </div>
+      <div class="nf-fit-card not">
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6B7A" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> 不适合谁</h3>
+        <ul>
+          <li>只想听趋势分享，不准备开始动作</li>
+          <li>只想找一堆工具清单，不准备做流程调整</li>
+          <li>希望一次性"全公司 AI 化"，但还没有明确切入点</li>
+          <li>只想做表面演示，不关心生产落地</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11. FAQ ═══ -->
+<section class="nf-section" style="background:var(--bg);" id="faq">
+  <div class="nf-container">
+    <div class="nf-section-label">FAQ</div>
+    <h2 class="nf-section-title">常见问题</h2>
+    <div class="nf-faq-list">
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">
+          你们和普通 AI 咨询有什么不同？
+          <span class="nf-faq-icon">+</span>
+        </button>
+        <div class="nf-faq-a"><p>NEXFDE 不以"交一份建议书"作为结束，而是以"跑通第一条真实流程"为目标。我们更接近 <strong>deployment practice</strong>，而不是泛方案咨询。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">
+          你们是做咨询，还是做实施？
+          <span class="nf-faq-icon">+</span>
+        </button>
+        <div class="nf-faq-a"><p>两者之间的断层，正是 NEXFDE 解决的问题。我们不是只给建议，也不是一上来就做大实施，而是从判断、验证到接入，逐步推进。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">
+          如果我们现在还不确定值不值得做，怎么办？
+          <span class="nf-faq-icon">+</span>
+        </button>
+        <div class="nf-faq-a"><p>这正是 <strong>AI Deployment Diagnostic</strong> 的意义。它不是为了证明 AI 一定要做，而是帮助你判断：哪些值得做、哪些先别碰。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">
+          你们适合什么规模的公司？
+          <span class="nf-faq-icon">+</span>
+        </button>
+        <div class="nf-faq-a"><p>最适合已经有一定业务复杂度、真实流程需求和明确行动意愿的团队。不一定要非常大，但需要是真正准备行动的组织。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">
+          你们会不会只推荐某种固定工具？
+          <span class="nf-faq-icon">+</span>
+        </button>
+        <div class="nf-faq-a"><p>不会。NEXFDE 的起点是业务流程，不是工具清单。工具是手段，不是页面主角。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 12. FINAL CTA ═══ -->
+<section class="nf-final-cta" id="cta">
+  <div class="nf-container">
+    <h2>先做一次部署诊断，判断这件事值不值得做</h2>
+    <p>告诉我们你的行业、团队规模、当前最犹豫的 AI 方向。我们会先帮助你判断：哪条路径值得开始，哪条路径现在不该碰。</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="#" onclick="openWechat();return false" class="nf-btn nf-btn-primary">预约部署诊断</a>
+      <a href="#method" class="nf-btn nf-btn-outline">查看服务结构</a>
+    </div>
+    <p class="nf-final-note">适合真正准备进入行动阶段的企业团队。不合适，也会直接说。</p>
+  </div>
+</section>
+
+<!-- ═══ WECHAT MODAL ═══ -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(16,42,67,0.6);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <p style="font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:#111;margin-bottom:8px">添加微信咨询</p>
+    <img src="/assets/wechat-qr.png" alt="微信：ActionThinker" style="width:200px;margin:12px auto;display:block;border-radius:12px">
+    <p style="font-size:16px;font-weight:700;color:#111;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:13px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
+  </div>
+</div>
+
+</div><!-- /.nf-page -->
+
+<script>
+/* FAQ Toggle */
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  item.classList.toggle('open');
+}
+
+/* WeChat Modal */
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+
+/* Mobile Nav Toggle */
+document.getElementById('navToggle').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* Close mobile nav on link click */
+document.querySelectorAll('#navLinks a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+/* Scroll Animation — Intersection Observer */
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.nf-animate').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+</script>
