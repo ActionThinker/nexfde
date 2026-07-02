@@ -1,0 +1,29 @@
+{
+  "name": "NEXFDE",
+  "description": "Enterprise AI Deployment Practice — FDE-style AI deployment for businesses.",
+  "url": "https://nexfde.com",
+  "serviceType": "Enterprise AI Deployment",
+  "capabilities": [
+    "AI Deployment Diagnostic",
+    "Pilot Sprint",
+    "Production Rollout"
+  ],
+  "endpoints": [
+    { "path": "/llms.txt", "format": "text/markdown", "description": "AI agent site summary" },
+    { "path": "/llms-full.txt", "format": "text/markdown", "description": "Full content Markdown for RAG pipelines" },
+    { "path": "/sitemap.xml", "format": "application/xml", "description": "Site sitemap" },
+    { "path": "/BUILDLOG.md", "format": "text/markdown", "description": "Site build log with iteration decisions" }
+  ],
+  "aiDisclosure": {
+    "level": "ai-assisted",
+    "system": "Claude (Anthropic)",
+    "operator": "ActionThinker",
+    "humanDecisions": ["brand positioning", "business strategy", "copy approval", "design direction"],
+    "aiScope": ["code generation", "content structuring", "GEO optimization", "JSON-LD schema design"]
+  },
+  "brand": {
+    "parent": "ActionThinker",
+    "lab": "OPClab",
+    "contact": "lu@NexFDE.com"
+  }
+}

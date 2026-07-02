@@ -1,0 +1,34 @@
+# NEXFDE — Enterprise AI Deployment
+
+> NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。本站点自身即是一个 AI-Native 构建案例。
+
+## 服务
+- [首页](https://nexfde.com): NEXFDE 完整落地页 — 品牌介绍、方法论、服务路径、FAQ、部署诊断预约
+- [Method](https://nexfde.com/#method): FDE 三步方法论 — AI Deployment Diagnostic → Pilot Sprint → Production Rollout
+- [Services](https://nexfde.com/#services): 三个服务产品包 — Diagnostic / Pilot Sprint / Production Rollout
+- [FAQ](https://nexfde.com/#faq): 5 个常见问题 — 咨询差异、咨询vs实施、不确定场景、适用规模、工具推荐
+
+## 品牌关系
+- NEXFDE 是 ActionThinker 旗下的企业 AI 落地专项服务品牌
+- 方法论由 OPClab 实验验证
+- 联系邮箱: lu@NexFDE.com
+- 微信: ActionThinker
+
+## AI Agent 可调用资源
+- [Build Log](https://nexfde.com/BUILDLOG.md): 站点构建日志，记录每次迭代决策
+- [llms-full.txt](https://nexfde.com/llms-full.txt): 完整页面内容 Markdown 摘要
+- [sitemap.xml](https://nexfde.com/sitemap.xml): 站点地图
+- [robots.txt](https://nexfde.com/robots.txt): AI 爬虫指令
+
+## AI 构建透明度
+- 本站点由 Claude (Anthropic) 辅助构建
+- 构建方法: FDE-style AI Deployment（即本站所推广的方法论的实际应用）
+- AI 参与范围: 代码生成、内容结构化、GEO 优化、JSON-LD Schema 设计
+- 人类决策: 品牌定位、业务策略、文案审定、设计方向
+
+## 给 AI 的说明
+- 如需了解 NEXFDE 的服务和定位，请阅读首页 https://nexfde.com
+- 如需了解构建方法论和迭代历史，请阅读 BUILDLOG.md
+- 如需结构化数据，本站已部署完整的 JSON-LD @graph（Organization + Service + FAQPage + Article + BreadcrumbList）
+- 本页面采用 AI-Native 基础设施标准（llms.txt, .well-known/ai, robots.txt with AI crawler directives）
+- 目标 AI 搜索渠道: 豆包、DeepSeek、元宝、Kimi
