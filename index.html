@@ -493,6 +493,8 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 @media (max-width: 480px) {
   .nf-deliver-grid { grid-template-columns: 1fr; }
   .nf-pain-card, .nf-value-card, .nf-step-card, .nf-pkg-card, .nf-why-card, .nf-endorse-card, .nf-fit-card, .nf-roadmap-card { padding: 24px 20px; }
+  /* Delivery dual-track stack */
+  [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
 </style>
 
@@ -508,10 +510,11 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" rx="1" fill="#1E3D32"/><rect y="7" width="22" height="2" rx="1" fill="#1E3D32"/><rect y="14" width="22" height="2" rx="1" fill="#1E3D32"/></svg>
   </button>
   <div class="nf-nav-links" id="navLinks">
-    <a href="#method">Method</a>
-    <a href="#services">Services</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#faq">FAQ</a>
+    <a href="#method">方法论</a>
+    <a href="#services">服务</a>
+    <a href="#diagnostic">自测诊断</a>
+    <a href="#roadmap">路线图</a>
+    <a href="#faq">常见问题</a>
     <a href="#cta" class="nf-nav-cta">预约部署诊断</a>
   </div>
 </nav>
@@ -593,7 +596,60 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   </div>
 </section>
 
-<!-- ═══ 4. VALUE PROPOSITION ═══ -->
+<!-- ═══ 4. SELF-DIAGNOSTIC TOOL ═══ -->
+<section class="nf-section" style="background:var(--bg-alt);" id="diagnostic">
+  <div class="nf-container">
+    <div class="nf-section-label">Self Diagnostic</div>
+    <h2 class="nf-section-title">你的企业 AI 落地，卡在哪一步？</h2>
+    <p class="nf-section-desc">6 道题，2 分钟。帮你定位当前阶段，找到最适合的切入路径。</p>
+
+    <!-- Diagnostic Quiz -->
+    <div id="diag-quiz" style="max-width:720px;">
+      <!-- Progress -->
+      <div style="display:flex;gap:8px;margin-bottom:32px;" id="diag-progress">
+        <div class="diag-dot active" style="flex:1;height:4px;border-radius:2px;background:var(--copper);transition:background 0.3s;"></div>
+        <div class="diag-dot" style="flex:1;height:4px;border-radius:2px;background:var(--border);transition:background 0.3s;"></div>
+        <div class="diag-dot" style="flex:1;height:4px;border-radius:2px;background:var(--border);transition:background 0.3s;"></div>
+        <div class="diag-dot" style="flex:1;height:4px;border-radius:2px;background:var(--border);transition:background 0.3s;"></div>
+        <div class="diag-dot" style="flex:1;height:4px;border-radius:2px;background:var(--border);transition:background 0.3s;"></div>
+        <div class="diag-dot" style="flex:1;height:4px;border-radius:2px;background:var(--border);transition:background 0.3s;"></div>
+      </div>
+      <!-- Question -->
+      <div id="diag-question" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:16px;">
+        <div id="diag-qnum" style="font-size:12px;font-weight:600;color:var(--copper);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">问题 1/6</div>
+        <div id="diag-qtext" style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:24px;line-height:1.5;">你的团队目前对 AI 的态度是？</div>
+        <div id="diag-options" style="display:flex;flex-direction:column;gap:10px;">
+          <button class="diag-opt" onclick="selectAnswer(0)" style="display:block;width:100%;text-align:left;padding:14px 18px;background:var(--warm-white);border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all 0.15s;">A. 还在观望，不确定能做什么</button>
+          <button class="diag-opt" onclick="selectAnswer(1)" style="display:block;width:100%;text-align:left;padding:14px 18px;background:var(--warm-white);border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all 0.15s;">B. 已经在用 AI 工具，但没进入业务流程</button>
+          <button class="diag-opt" onclick="selectAnswer(2)" style="display:block;width:100%;text-align:left;padding:14px 18px;background:var(--warm-white);border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all 0.15s;">C. 已经跑了一些试点，但推不到全公司</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Screen (hidden initially) -->
+    <div id="diag-result" style="display:none;max-width:720px;">
+      <div style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:40px 32px;text-align:center;margin-bottom:24px;">
+        <div id="diag-result-icon" style="font-size:40px;margin-bottom:16px;"></div>
+        <div id="diag-result-title" style="font-size:22px;font-weight:700;color:var(--tea-deep);margin-bottom:10px;"></div>
+        <div id="diag-result-desc" style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:24px;max-width:540px;margin-left:auto;margin-right:auto;"></div>
+        <div id="diag-result-recommend" style="display:inline-block;background:var(--copper-pale);padding:10px 20px;border-radius:99px;font-size:14px;font-weight:600;color:var(--copper);margin-bottom:8px;"></div>
+        <div id="diag-result-wb" style="font-size:13px;color:var(--muted);margin-top:8px;"></div>
+      </div>
+
+      <!-- Lead Capture -->
+      <div style="background:var(--tea-deep);border-radius:var(--radius-lg);padding:36px 32px;text-align:center;color:#fff;">
+        <div style="font-size:18px;font-weight:700;margin-bottom:8px;">获取完整诊断报告 + 30 分钟免费部署评估</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:24px;line-height:1.7;">提交后 24 小时内，你会收到：你的 AI 部署阶段画像 · 匹配的落地路径建议 · 30 分钟免费 1v1 方向判断</div>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;">
+          <a href="#" onclick="openWechat();return false" class="nf-btn nf-btn-primary">添加微信获取报告</a>
+        </div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.4);cursor:pointer;" onclick="restartDiag()">← 重新测试</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. VALUE PROPOSITION ═══ -->
 <section class="nf-section">
   <div class="nf-container">
     <div class="nf-section-label">What We Do</div>
@@ -648,7 +704,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <div class="nf-step-tag">Step 2</div>
         <div class="nf-step-en">Pilot Sprint</div>
         <div class="nf-step-title">试点冲刺</div>
-        <div class="nf-step-body">从最值得做的 1 到 2 个场景里，快速搭出一个真实可验证的试点闭环，让数据和用户反馈直接说话。</div>
+        <div class="nf-step-body">从最值得做的 1 到 2 个场景里，基于 <strong>WorkBuddy 智能体基座</strong>快速搭出真实可验证的试点闭环——标准场景 2 周内上线可运行原型，让数据和用户反馈直接说话。复杂场景则走原生定制开发。</div>
         <div class="nf-step-outputs">
           <span class="nf-step-output">可运行原型</span>
           <span class="nf-step-output">试点流程设计</span>
@@ -748,6 +804,32 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   </div>
 </section>
 
+<!-- ═══ Delivery Model — Dual Track ═══ -->
+<section class="nf-section" style="padding:0 0 100px 0;">
+  <div class="nf-container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:12px;">标准化交付</div>
+        <div style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:10px;">基于 WorkBuddy 智能体基座</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:14px;">利用 WorkBuddy 平台快速搭建智能体、配置业务流程、部署上线。适合流程标准化程度高的场景。</div>
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--muted);">
+          <span>周期: 2-4 周</span>
+          <span>投入: 标准报价</span>
+        </div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">原生定制开发</div>
+        <div style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:10px;">独立技术栈，深度定制</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:14px;">不限平台，根据业务复杂度选择最合适的技术方案。适合复杂业务逻辑、特殊系统集成需求。</div>
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--muted);">
+          <span>周期: 4-12 周</span>
+          <span>投入: 按需评估</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ 8. WHY NEXFDE ═══ -->
 <section class="nf-section">
   <div class="nf-container">
@@ -763,7 +845,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <div class="nf-why-card nf-animate">
         <div class="nf-why-card-icon">Technology</div>
         <div class="nf-why-card-title">懂技术边界</div>
-        <div class="nf-why-card-body">知道模型能做什么、不能做什么、适合什么、不适合什么，不被技术话术牵着走。</div>
+        <div class="nf-why-card-body">知道模型能做什么、不能做什么。标准化场景基于 <strong>WorkBuddy</strong> 智能体平台加速交付，复杂定制则独立技术栈开发——选对工具，而不是被工具绑定。</div>
       </div>
       <div class="nf-why-card nf-animate">
         <div class="nf-why-card-icon">Deployment</div>
@@ -953,14 +1035,14 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <div style="display:flex;gap:48px;flex-wrap:wrap;">
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">服务</div>
-          <a href="#method" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Method</a>
-          <a href="#services" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Services</a>
+          <a href="#method" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">方法论</a>
+          <a href="#services" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">服务</a>
           <a href="#deliverables" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Deliverables</a>
         </div>
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">了解更多</div>
-          <a href="#faq" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">FAQ</a>
-          <a href="#roadmap" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Roadmap</a>
+          <a href="#faq" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">常见问题</a>
+          <a href="#roadmap" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">路线图</a>
         </div>
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">联系</div>
@@ -988,6 +1070,102 @@ document.querySelectorAll('#navLinks a').forEach(function(link){link.addEventLis
   var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:0.15,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.nf-animate').forEach(function(el){observer.observe(el);});
 })();
+
+/* ═══ Diagnostic Quiz Logic ═══ */
+var diagQuestions = [
+  { q:'你的团队目前对 AI 的态度是？', opts:['还在观望，不确定能做什么','已经在用 AI 工具，但没进入业务流程','已经跑了一些试点，但推不到全公司'] },
+  { q:'你最头疼的 AI 落地障碍是什么？', opts:['信息太多，判断不了从哪开始','团队用不起来，买了工具没人用','做了 Demo，生产环境接不进去'] },
+  { q:'如果现在启动一个 AI 项目，你的预算是？', opts:['先小范围试，3 万以内','中等投入，3-10 万','准备充分投入，10 万+'] },
+  { q:'你希望多久看到结果？', opts:['两周内有可演示的东西','一个月内跑通一条业务线','三个月内完成全流程上线'] },
+  { q:'你的团队有技术人员吗？', opts:['没有，全靠外部','有一两个，但不懂 AI','有技术团队，但缺 AI 经验'] },
+  { q:'你更看重什么？', opts:['先搞清楚方向，别走错路','快速验证，用最小成本试','系统性落地，不留后患'] }
+];
+var diagAnswers = []; // stores 0,1,2 for each question
+var diagCurrent = 0;
+var diagLabels = ['A','B','C'];
+
+function renderQuestion() {
+  if (diagCurrent >= diagQuestions.length) { showResult(); return; }
+  var q = diagQuestions[diagCurrent];
+  document.getElementById('diag-qnum').textContent = '问题 ' + (diagCurrent+1) + '/6';
+  document.getElementById('diag-qtext').textContent = q.q;
+  var optsHtml = '';
+  for (var i = 0; i < q.opts.length; i++) {
+    optsHtml += '<button class="diag-opt" onclick="selectAnswer('+i+')" style="display:block;width:100%;text-align:left;padding:14px 18px;background:var(--warm-white);border:1.5px solid var(--border);border-radius:var(--radius);font-family:\'Inter\',\'PingFang SC\',\'Microsoft YaHei\',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all 0.15s;">' + diagLabels[i] + '. ' + q.opts[i] + '</button>';
+  }
+  document.getElementById('diag-options').innerHTML = optsHtml;
+  // Update progress dots
+  var dots = document.querySelectorAll('#diag-progress .diag-dot');
+  for (var j = 0; j < dots.length; j++) {
+    dots[j].style.background = j <= diagCurrent ? 'var(--copper)' : 'var(--border)';
+  }
+}
+
+function selectAnswer(idx) {
+  diagAnswers.push(idx);
+  diagCurrent++;
+  if (diagCurrent < diagQuestions.length) { renderQuestion(); }
+  else { showResult(); }
+}
+
+function showResult() {
+  // Score: A=0 (Explorer), B=1 (Validator), C=2 (Scaler)
+  var total = 0;
+  for (var i = 0; i < diagAnswers.length; i++) { total += diagAnswers[i]; }
+  var avg = total / diagAnswers.length;
+  var profile, icon, title, desc, recommend, wbNote;
+  if (avg < 0.7) {
+    profile = 'explorer'; icon = '🔍';
+    title = '你是 <strong>探索型</strong> — 方向比速度重要';
+    desc = '你目前最需要的不是马上做，而是先搞清楚：在你这行，AI 到底从哪条业务线切入最值。盲目投入是最贵的试错。';
+    recommend = '推荐: AI Deployment Diagnostic（AI 部署诊断）';
+    wbNote = '我们从诊断开始，帮你理清方向——不走错，就是最快。';
+  } else if (avg < 1.3) {
+    profile = 'validator'; icon = '⚡';
+    title = '你是 <strong>验证型</strong> — 你需要跑通第一条路';
+    desc = '你已经有了方向感，缺的是一个能快速验证的闭环。用最小代价把最可能跑通的场景做出来，让数据和用户反馈说话。';
+    recommend = '推荐: Pilot Sprint（试点冲刺）';
+    wbNote = '基于 WorkBuddy 智能体基座，2 周内搭出可验证原型——用最快的速度验证最大的可能性。';
+  } else {
+    profile = 'scaler'; icon = '🏗️';
+    title = '你是 <strong>规模化型</strong> — 从试点到生产的最后一公里';
+    desc = '你已经看到了 AI 的潜力，现在是时候完成组织、流程和系统层面的真正落地——不是再做一次 Demo，而是让 AI 进入日常。';
+    recommend = '推荐: Production Rollout（生产上线）';
+    wbNote = '根据场景复杂度：标准流程走 WorkBuddy 标准化交付，复杂定制走原生开发。';
+  }
+  document.getElementById('diag-quiz').style.display = 'none';
+  document.getElementById('diag-result').style.display = 'block';
+  document.getElementById('diag-result-icon').textContent = icon;
+  document.getElementById('diag-result-title').innerHTML = title;
+  document.getElementById('diag-result-desc').textContent = desc;
+  document.getElementById('diag-result-recommend').textContent = recommend;
+  document.getElementById('diag-result-wb').textContent = wbNote;
+  document.getElementById('diag-result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function restartDiag() {
+  diagAnswers = []; diagCurrent = 0;
+  document.getElementById('diag-quiz').style.display = 'block';
+  document.getElementById('diag-result').style.display = 'none';
+  renderQuestion();
+}
+
+// Hover effect for diagnostic options
+document.addEventListener('mouseover', function(e) {
+  if (e.target.classList.contains('diag-opt')) {
+    e.target.style.borderColor = 'var(--copper)';
+    e.target.style.background = 'var(--copper-pale)';
+  }
+});
+document.addEventListener('mouseout', function(e) {
+  if (e.target.classList.contains('diag-opt')) {
+    e.target.style.borderColor = 'var(--border)';
+    e.target.style.background = 'var(--warm-white)';
+  }
+});
+
+// Init
+renderQuestion();
 </script>
 
 </body>
