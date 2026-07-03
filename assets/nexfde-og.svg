@@ -1,24 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#102A43"/>
-      <stop offset="100%" stop-color="#1a3d5c"/>
+      <stop offset="0%" stop-color="#152D25"/>
+      <stop offset="100%" stop-color="#1E3D32"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="60" y="60" width="1080" height="510" rx="12" fill="none" stroke="#2F6FEB" stroke-width="1" opacity="0.3"/>
+  <rect x="60" y="60" width="1080" height="510" rx="12" fill="none" stroke="#C8853E" stroke-width="1" opacity="0.25"/>
 
-  <!-- Brand -->
-  <text x="120" y="200" font-family="Inter,-apple-system,sans-serif" font-size="64" font-weight="700" fill="#FFFFFF" letter-spacing="-0.03em">NEXFDE</text>
-  <text x="128" y="248" font-family="Inter,-apple-system,sans-serif" font-size="16" font-weight="500" fill="#2F6FEB" letter-spacing="0.12em">FDE-STYLE AI DEPLOYMENT</text>
+  <!-- Logo -->
+  <text x="120" y="200" font-family="Inter,-apple-system,sans-serif" font-size="64" font-weight="600" fill="#FFFFFF" letter-spacing="-0.03em">NEX</text>
+  <text x="282" y="200" font-family="Inter,-apple-system,sans-serif" font-size="64" font-weight="700" fill="#C8853E" letter-spacing="-0.03em">FDE</text>
+  <text x="138" y="248" font-family="Inter,-apple-system,sans-serif" font-size="16" font-weight="500" fill="#C8853E" letter-spacing="0.12em">FDE-STYLE AI DEPLOYMENT</text>
 
   <!-- Tagline -->
   <text x="120" y="340" font-family="Inter,-apple-system,sans-serif" font-size="36" font-weight="600" fill="rgba(255,255,255,0.9)" letter-spacing="-0.02em">把 AI 从判断推进到生产</text>
 
   <!-- Description -->
-  <text x="120" y="400" font-family="Inter,-apple-system,sans-serif" font-size="20" fill="rgba(255,255,255,0.6)">不是卖工具，也不是停在方案文档——跑通第一条能持续运转的 AI 工作流</text>
+  <text x="120" y="400" font-family="Inter,-apple-system,sans-serif" font-size="20" fill="rgba(255,255,255,0.55)">不是卖工具，也不是停在方案文档——跑通第一条能持续运转的 AI 工作流</text>
 
   <!-- Bottom bar -->
-  <text x="120" y="520" font-family="Inter,-apple-system,sans-serif" font-size="16" fill="rgba(255,255,255,0.4)">AI Deployment Diagnostic → Pilot Sprint → Production Rollout</text>
-  <text x="960" y="520" font-family="Inter,-apple-system,sans-serif" font-size="16" fill="rgba(255,255,255,0.4)" text-anchor="end">nexfde.com</text>
+  <text x="120" y="520" font-family="Inter,-apple-system,sans-serif" font-size="16" fill="rgba(255,255,255,0.35)">AI Deployment Diagnostic → Pilot Sprint → Production Rollout</text>
+  <text x="960" y="520" font-family="Inter,-apple-system,sans-serif" font-size="16" fill="rgba(255,255,255,0.35)" text-anchor="end">nexfde.com</text>
 </svg>

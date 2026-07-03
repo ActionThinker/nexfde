@@ -7,12 +7,12 @@
   <title>把 AI 从判断推进到生产 | NEXFDE</title>
   <meta name="description" content="NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。">
 
-  <link rel="canonical" href="https://nexfde.com">
+  <link rel="canonical" href="https://nexfde.com/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="把 AI 从判断推进到生产 | NEXFDE">
   <meta property="og:description" content="NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。">
-  <meta property="og:url" content="https://nexfde.com">
+  <meta property="og:url" content="https://nexfde.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NEXFDE">
   <meta property="og:image" content="https://nexfde.com/assets/nexfde-og.svg">
@@ -21,6 +21,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="把 AI 从判断推进到生产 | NEXFDE">
   <meta name="twitter:description" content="NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。不是卖工具，也不是停在方案文档。">
+  <meta name="twitter:image" content="https://nexfde.com/assets/nexfde-og.svg">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="NEXFDE (ActionThinker)">
+  <link rel="alternate" hreflang="zh-CN" href="https://nexfde.com/">
+
+  <!-- AI Disclosure — EU AI Act Article 50 -->
+  <meta name="ai-disclosure" content="ai-assisted">
+  <meta name="ai-system" content="Claude (Anthropic)">
+  <meta name="ai-operator" content="ActionThinker">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,168 +41,63 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #111111;
-      background: #ffffff;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      font-size: 16px; line-height: 1.7; color: #1A1A1A;
+      background: #F5F2ED; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     }
   </style>
 
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="author" content="NEXFDE (ActionThinker)">
-  <link rel="alternate" hreflang="zh-CN" href="https://nexfde.com/">
-  <meta name="twitter:image" content="https://nexfde.com/assets/nexfde-og.png">
-
-  <!-- AI Disclosure — EU AI Act Article 50 (effective 2026-08-02) -->
-  <meta name="ai-disclosure" content="ai-assisted">
-  <meta name="ai-system" content="Claude (Anthropic)">
-  <meta name="ai-operator" content="ActionThinker">
-
-  <!-- JSON-LD @graph: Unified structured data -->
+  <!-- JSON-LD @graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": "https://nexfde.com/#organization",
-        "name": "NEXFDE",
-        "alternateName": "NEXFDE — Enterprise AI Deployment",
+        "@type": "Organization", "@id": "https://nexfde.com/#organization",
+        "name": "NEXFDE", "alternateName": "NEXFDE — Enterprise AI Deployment",
         "description": "NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。",
-        "url": "https://nexfde.com",
-        "logo": "https://nexfde.com/assets/nexfde-og.png",
+        "url": "https://nexfde.com", "logo": "https://nexfde.com/assets/nexfde-og.svg",
         "email": "lu@NexFDE.com",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "sales",
-          "email": "lu@NexFDE.com",
-          "availableLanguage": ["zh-CN", "en"]
-        },
-        "sameAs": [
-          "https://actionthinker.com",
-          "https://github.com/ActionThinker"
-        ],
-        "parentOrganization": {
-          "@type": "Organization",
-          "name": "ActionThinker",
-          "url": "https://actionthinker.com"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "China"
-        }
+        "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "lu@NexFDE.com", "availableLanguage": ["zh-CN", "en"] },
+        "sameAs": ["https://actionthinker.com", "https://github.com/ActionThinker"],
+        "parentOrganization": { "@type": "Organization", "name": "ActionThinker", "url": "https://actionthinker.com" },
+        "areaServed": { "@type": "Country", "name": "China" }
       },
       {
-        "@type": "Service",
-        "@id": "https://nexfde.com/#service",
+        "@type": "Service", "@id": "https://nexfde.com/#service",
         "name": "NEXFDE — Enterprise AI Deployment",
-        "description": "NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。提供 AI 部署诊断、试点冲刺、生产上线三步闭环服务。",
-        "url": "https://nexfde.com",
-        "provider": { "@id": "https://nexfde.com/#organization" },
+        "description": "NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。",
+        "url": "https://nexfde.com", "provider": { "@id": "https://nexfde.com/#organization" },
         "serviceType": "Enterprise AI Deployment",
         "areaServed": { "@type": "Country", "name": "China" },
-        "availableChannel": {
-          "@type": "ServiceChannel",
-          "serviceUrl": "https://nexfde.com"
-        },
+        "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://nexfde.com" },
         "offers": [
-          {
-            "@type": "Offer",
-            "name": "AI Deployment Diagnostic",
-            "description": "适合第一次进入 AI 落地阶段的团队——判断值不值得做，优先做哪条路径",
-            "category": "AI部署诊断"
-          },
-          {
-            "@type": "Offer",
-            "name": "Pilot Sprint",
-            "description": "适合已有方向、想尽快验证的团队——用最小代价验证最大可能性",
-            "category": "试点冲刺"
-          },
-          {
-            "@type": "Offer",
-            "name": "Production Rollout",
-            "description": "适合试点跑通后准备进入生产的团队——完成组织、流程和系统层面的真正落地",
-            "category": "生产上线"
-          }
+          { "@type": "Offer", "name": "AI Deployment Diagnostic", "description": "第一次进入 AI 落地阶段的团队——判断值不值得做", "category": "AI部署诊断" },
+          { "@type": "Offer", "name": "Pilot Sprint", "description": "已有方向、想尽快验证的团队——最小代价验证最大可能", "category": "试点冲刺" },
+          { "@type": "Offer", "name": "Production Rollout", "description": "试点跑通后准备进入生产的团队——完成组织流程系统层面落地", "category": "生产上线" }
         ]
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://nexfde.com/#faq",
+        "@type": "FAQPage", "@id": "https://nexfde.com/#faq",
         "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "你们和普通 AI 咨询有什么不同？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NEXFDE 不以交一份建议书作为结束，而是以跑通第一条真实流程为目标。我们更接近 deployment practice，而不是泛方案咨询。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "你们是做咨询，还是做实施？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "两者之间的断层正是 NEXFDE 解决的问题。我们不是只给建议，也不是一上来就做大实施，而是从判断、验证到接入，逐步推进。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "如果我们现在还不确定值不值得做，怎么办？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "这正是 AI Deployment Diagnostic 的意义。它不是为了证明 AI 一定要做，而是帮助你判断：哪些值得做、哪些先别碰。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "你们适合什么规模的公司？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "最适合已经有一定业务复杂度、真实流程需求和明确行动意愿的团队。不一定要非常大，但需要是真正准备行动的组织。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "你们会不会只推荐某种固定工具？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "不会。NEXFDE 的起点是业务流程，不是工具清单。工具是手段，不是页面主角。"
-            }
-          }
+          { "@type": "Question", "name": "你们和普通 AI 咨询有什么不同？", "acceptedAnswer": { "@type": "Answer", "text": "NEXFDE 不以交一份建议书作为结束，而是以跑通第一条真实流程为目标。我们更接近 deployment practice，而不是泛方案咨询。" } },
+          { "@type": "Question", "name": "你们是做咨询，还是做实施？", "acceptedAnswer": { "@type": "Answer", "text": "两者之间的断层正是 NEXFDE 解决的问题。我们不是只给建议，也不是一上来就做大实施，而是从判断、验证到接入，逐步推进。" } },
+          { "@type": "Question", "name": "如果我们现在还不确定值不值得做，怎么办？", "acceptedAnswer": { "@type": "Answer", "text": "这正是 AI Deployment Diagnostic 的意义。它不是为了证明 AI 一定要做，而是帮助你判断：哪些值得做、哪些先别碰。" } },
+          { "@type": "Question", "name": "你们适合什么规模的公司？", "acceptedAnswer": { "@type": "Answer", "text": "最适合已经有一定业务复杂度、真实流程需求和明确行动意愿的团队。不一定要非常大，但需要是真正准备行动的组织。" } },
+          { "@type": "Question", "name": "你们会不会只推荐某种固定工具？", "acceptedAnswer": { "@type": "Answer", "text": "不会。NEXFDE 的起点是业务流程，不是工具清单。工具是手段，不是页面主角。" } }
         ]
       },
       {
-        "@type": "Article",
-        "@id": "https://nexfde.com/#article",
+        "@type": "Article", "@id": "https://nexfde.com/#article",
         "headline": "NEXFDE — 把 AI 从判断推进到生产",
         "description": "NEXFDE 以 FDE-style 方法帮助企业把 AI 从方向判断推进到真实业务流程上线。本站点自身即是一个 AI-Native 构建案例。",
-        "author": { "@id": "https://nexfde.com/#organization" },
-        "publisher": { "@id": "https://nexfde.com/#organization" },
-        "url": "https://nexfde.com",
-        "datePublished": "2026-07-02",
-        "dateModified": "2026-07-02",
-        "version": "1.1.0",
-        "inLanguage": "zh-CN",
-        "about": {
-          "@type": "Thing",
-          "name": "Enterprise AI Deployment",
-          "description": "FDE-style AI deployment methodology for businesses"
-        }
+        "author": { "@id": "https://nexfde.com/#organization" }, "publisher": { "@id": "https://nexfde.com/#organization" },
+        "url": "https://nexfde.com", "datePublished": "2026-07-02", "dateModified": "2026-07-03",
+        "version": "2.0.0", "inLanguage": "zh-CN",
+        "about": { "@type": "Thing", "name": "Enterprise AI Deployment", "description": "FDE-style AI deployment methodology" }
       },
       {
-        "@type": "BreadcrumbList",
-        "@id": "https://nexfde.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "首页",
-            "item": "https://nexfde.com"
-          }
-        ]
+        "@type": "BreadcrumbList", "@id": "https://nexfde.com/#breadcrumb",
+        "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首页", "item": "https://nexfde.com" }]
       }
     ]
   }
@@ -200,40 +105,47 @@
 </head>
 <body>
 
-<!-- NEXFDE Build: v1.1.0 | 2026-07-02 | Claude-assisted | AI-Native -->
+<!-- NEXFDE Build: v2.0.0 | 2026-07-03 | VIS: 深茶绿+铜色 | AI-Native -->
 <style>
-/* ═══ NEXFDE Design System ═══ */
+/* ═══ NEXFDE Design System v2.0 — 深茶绿 + 铜色 ═══ */
 :root {
-  --blue-deep: #102A43;
-  --blue-tech: #2F6FEB;
-  --blue-light: #EBF2FF;
-  --ink: #111111;
-  --bg: #F4F7FB;
+  --tea-deep: #1E3D32;
+  --tea-dark: #152D25;
+  --tea-mid: #2A5A4A;
+  --copper: #C8853E;
+  --copper-light: #D9A35E;
+  --copper-pale: #FBF6ED;
+  --warm-white: #F5F2ED;
   --surface: #FFFFFF;
-  --border: #D8E1EA;
-  --muted: #5B6B7A;
+  --bg-alt: #EDEAE4;
+  --border: #D4CFC6;
+  --ink: #1A1A1A;
+  --muted: #6B7A73;
   --radius: 12px;
   --radius-lg: 16px;
 }
 
 /* ═══ Shared ═══ */
-.nf-page { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; line-height: 1.7; color: var(--ink); background: var(--surface); -webkit-font-smoothing: antialiased; }
+.nf-page { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; line-height: 1.7; color: var(--ink); background: var(--warm-white); -webkit-font-smoothing: antialiased; }
 .nf-page *, .nf-page *::before, .nf-page *::after { box-sizing: border-box; }
-.nf-page h1, .nf-page h2, .nf-page h3, .nf-page h4 { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 600; line-height: 1.2; color: var(--ink); letter-spacing: -0.02em; }
+.nf-page h1, .nf-page h2, .nf-page h3, .nf-page h4 { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 600; line-height: 1.2; color: var(--tea-deep); letter-spacing: -0.02em; }
 .nf-page p { margin: 0; }
 .nf-page ul { margin: 0; padding: 0; list-style: none; }
 .nf-page a { text-decoration: none; color: inherit; }
 
 .nf-container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-.nf-section { padding: 100px 0; }
+.nf-section { padding: 110px 0; }
 
 .nf-section-label {
-  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--blue-tech); margin-bottom: 14px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--copper); margin-bottom: 14px;
 }
 .nf-section-title {
-  font-size: clamp(26px, 4.5vw, 38px); font-weight: 700;
-  color: var(--ink); margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.02em;
+  font-size: clamp(26px, 4vw, 36px); font-weight: 700;
+  color: var(--tea-deep); margin-bottom: 16px; line-height: 1.25; letter-spacing: -0.02em;
+}
+.nf-section-title em {
+  font-style: normal; color: var(--copper);
 }
 .nf-section-desc {
   font-size: 17px; color: var(--muted);
@@ -248,41 +160,39 @@
   font-size: 14px; font-weight: 600; cursor: pointer; border: none;
   transition: all 0.2s ease; white-space: nowrap;
 }
-a.nf-btn-primary { background: var(--blue-tech); color: #fff; }
-a.nf-btn-primary:hover { background: #1a5ad9; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(47,111,235,0.3); }
-a.nf-btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
-a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech); transform: translateY(-1px); }
+a.nf-btn-primary { background: var(--copper); color: #fff; }
+a.nf-btn-primary:hover { background: var(--copper-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,133,62,0.3); }
+a.nf-btn-outline { background: transparent; color: var(--tea-deep); border: 1.5px solid var(--border); }
+a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); transform: translateY(-1px); }
 
 /* ═══ Nav ═══ */
 .nf-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(255,255,255,0.92); backdrop-filter: blur(12px);
+  background: rgba(245,242,237,0.94); backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: 0 24px; height: 60px;
   display: flex; align-items: center; justify-content: space-between;
 }
 .nf-nav-logo { display: flex; align-items: center; gap: 10px; }
 .nf-nav-logo-main {
-  font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700;
-  color: var(--ink); letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600;
+  color: var(--tea-deep); letter-spacing: -0.02em;
 }
+.nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
 .nf-nav-logo-sub {
   font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
-  color: var(--blue-tech); text-transform: uppercase;
+  color: var(--copper); text-transform: uppercase;
   padding-left: 10px; border-left: 1.5px solid var(--border);
 }
 .nf-nav-links { display: flex; align-items: center; gap: 32px; }
-.nf-nav-links a {
-  font-size: 14px; font-weight: 500; color: var(--muted);
-  transition: color 0.15s;
-}
-.nf-nav-links a:hover { color: var(--ink); }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-cta {
   font-size: 13px; font-weight: 600; color: #fff !important;
-  background: var(--blue-tech); padding: 8px 18px; border-radius: 6px;
+  background: var(--copper); padding: 8px 18px; border-radius: 6px;
   transition: background 0.2s !important;
 }
-.nf-nav-cta:hover { background: #1a5ad9 !important; color: #fff !important; }
+.nf-nav-cta:hover { background: var(--copper-light) !important; color: #fff !important; }
 .nf-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
 
 @media (max-width: 860px) {
@@ -291,34 +201,35 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   .nf-nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: 60px; left: 0; right: 0;
-    background: #fff; border-bottom: 1px solid var(--border);
-    padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    background: var(--warm-white); border-bottom: 1px solid var(--border);
+    padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   }
 }
 
 /* ═══ Hero ═══ */
-.nf-hero { padding: 140px 0 100px; background: var(--bg); }
+.nf-hero { padding: 150px 0 110px; background: var(--warm-white); }
 .nf-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .nf-hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
-  color: var(--blue-tech); background: var(--blue-light);
+  color: var(--copper); background: var(--copper-pale);
   padding: 6px 14px; border-radius: 99px; margin-bottom: 28px;
 }
-.nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue-tech); display: block; }
-.nf-hero h1 { font-size: clamp(34px, 6vw, 52px); font-weight: 700; line-height: 1.15; color: var(--blue-deep); margin-bottom: 22px; letter-spacing: -0.03em; }
+.nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
+.nf-hero h1 { font-size: clamp(36px, 6vw, 54px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 24px; letter-spacing: -0.03em; }
+.nf-hero h1 em { font-style: normal; color: var(--copper); }
 .nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 14px; }
 .nf-hero-note { font-size: 14px; color: var(--muted); margin-bottom: 36px; line-height: 1.7; }
 .nf-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
 .nf-hero-credit { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; }
-.nf-hero-credit a { color: var(--blue-tech); font-weight: 500; }
+.nf-hero-credit a { color: var(--copper); font-weight: 500; }
 .nf-hero-credit a:hover { text-decoration: underline; }
 
-/* Hero Visual — Structured Flow */
+/* Hero Flow Card */
 .nf-hero-flow {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius-lg); padding: 32px 28px;
-  box-shadow: 0 2px 12px rgba(16,42,67,0.04);
+  box-shadow: 0 2px 12px rgba(30,61,50,0.04);
 }
 .nf-hero-flow-label {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
@@ -330,12 +241,11 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   border: 1px solid var(--border); transition: border-color 0.2s;
 }
 .nf-flow-step:last-child { margin-bottom: 0; }
-.nf-flow-step:hover { border-color: var(--blue-tech); }
+.nf-flow-step:hover { border-color: var(--copper); }
 .nf-flow-num {
-  font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700;
-  color: var(--blue-tech); line-height: 1; min-width: 32px;
+  font-size: 22px; font-weight: 700; color: var(--copper); line-height: 1; min-width: 32px;
 }
-.nf-flow-step-title { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 3px; }
+.nf-flow-step-title { font-weight: 600; font-size: 15px; color: var(--tea-deep); margin-bottom: 3px; }
 .nf-flow-step-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
 .nf-flow-arrow {
   display: flex; align-items: center; justify-content: center;
@@ -345,12 +255,12 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 /* ═══ Pain Cards ═══ */
 .nf-pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; }
 .nf-pain-card { background: var(--surface); padding: 36px 28px; transition: background 0.2s; }
-.nf-pain-card:hover { background: var(--bg); }
+.nf-pain-card:hover { background: var(--warm-white); }
 .nf-pain-num {
   font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700;
   color: var(--border); margin-bottom: 16px; line-height: 1;
 }
-.nf-pain-title { font-weight: 600; font-size: 17px; color: var(--ink); margin-bottom: 10px; }
+.nf-pain-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
 .nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
 
 /* ═══ Value Props ═══ */
@@ -360,38 +270,37 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   border-radius: var(--radius-lg); padding: 36px 28px;
   transition: border-color 0.2s, transform 0.15s;
 }
-.nf-value-card:hover { border-color: rgba(47,111,235,0.25); transform: translateY(-2px); }
+.nf-value-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
 .nf-value-icon {
   width: 44px; height: 44px; border-radius: var(--radius);
-  background: var(--blue-light); display: flex; align-items: center; justify-content: center;
+  background: var(--copper-pale); display: flex; align-items: center; justify-content: center;
   font-size: 20px; margin-bottom: 20px;
 }
-.nf-value-title { font-weight: 600; font-size: 17px; color: var(--ink); margin-bottom: 10px; }
+.nf-value-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
 .nf-value-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
 
 /* ═══ Three Steps ═══ */
-.nf-steps { position: relative; }
 .nf-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
 .nf-step-card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius-lg); padding: 36px 28px;
   position: relative; transition: border-color 0.2s, transform 0.15s;
 }
-.nf-step-card:hover { border-color: rgba(47,111,235,0.3); transform: translateY(-2px); }
+.nf-step-card:hover { border-color: rgba(200,133,62,0.35); transform: translateY(-2px); }
 .nf-step-tag {
   display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--blue-tech); margin-bottom: 18px;
+  text-transform: uppercase; color: var(--copper); margin-bottom: 18px;
 }
 .nf-step-en {
   font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
   color: var(--muted); margin-bottom: 8px; letter-spacing: -0.01em;
 }
-.nf-step-title { font-weight: 600; font-size: 19px; color: var(--ink); margin-bottom: 14px; }
+.nf-step-title { font-weight: 600; font-size: 19px; color: var(--tea-deep); margin-bottom: 14px; }
 .nf-step-body { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
 .nf-step-outputs { display: flex; flex-wrap: wrap; gap: 6px; }
 .nf-step-output {
-  font-size: 11px; font-weight: 500; color: var(--blue-deep);
-  background: var(--blue-light); padding: 4px 10px; border-radius: 99px;
+  font-size: 11px; font-weight: 500; color: var(--tea-deep);
+  background: var(--bg-alt); padding: 4px 10px; border-radius: 99px;
 }
 
 /* ═══ Deliverables ═══ */
@@ -402,12 +311,12 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   display: flex; align-items: flex-start; gap: 14px;
   transition: border-color 0.2s, transform 0.15s;
 }
-.nf-deliver-card:hover { border-color: var(--blue-tech); transform: translateY(-1px); }
+.nf-deliver-card:hover { border-color: var(--copper); transform: translateY(-1px); }
 .nf-deliver-num {
   font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
-  color: var(--blue-tech); min-width: 28px; line-height: 1.5;
+  color: var(--copper); min-width: 28px; line-height: 1.5;
 }
-.nf-deliver-text { font-size: 14px; color: var(--ink); font-weight: 500; line-height: 1.5; }
+.nf-deliver-text { font-size: 14px; color: var(--tea-deep); font-weight: 500; line-height: 1.5; }
 
 /* ═══ Service Packages ═══ */
 .nf-pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -416,15 +325,15 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   border-radius: var(--radius-lg); padding: 36px 28px;
   transition: border-color 0.2s, transform 0.15s;
 }
-.nf-pkg-card:hover { border-color: rgba(47,111,235,0.3); transform: translateY(-2px); }
-.nf-pkg-card.featured { border-color: var(--blue-tech); border-width: 2px; }
-.nf-pkg-card.featured .nf-pkg-tag { background: var(--blue-tech); color: #fff; }
+.nf-pkg-card:hover { border-color: rgba(200,133,62,0.35); transform: translateY(-2px); }
+.nf-pkg-card.featured { border-color: var(--copper); border-width: 2px; }
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper); color: #fff; }
 .nf-pkg-tag {
   display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--blue-tech); background: var(--blue-light);
+  text-transform: uppercase; color: var(--copper); background: var(--copper-pale);
   padding: 3px 10px; border-radius: 99px; margin-bottom: 16px;
 }
-.nf-pkg-title { font-weight: 600; font-size: 20px; color: var(--ink); margin-bottom: 6px; }
+.nf-pkg-title { font-weight: 600; font-size: 20px; color: var(--tea-deep); margin-bottom: 6px; }
 .nf-pkg-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
 .nf-pkg-items { border-top: 1px solid var(--border); padding-top: 18px; }
 .nf-pkg-item { font-size: 13px; color: var(--muted); margin-bottom: 8px; padding-left: 16px; position: relative; line-height: 1.6; }
@@ -437,17 +346,17 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   border-radius: var(--radius-lg); padding: 36px 28px;
   transition: border-color 0.2s;
 }
-.nf-why-card:hover { border-color: rgba(47,111,235,0.25); }
+.nf-why-card:hover { border-color: rgba(200,133,62,0.3); }
 .nf-why-card-icon {
   font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700;
-  color: var(--blue-tech); letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--copper); letter-spacing: 0.06em; text-transform: uppercase;
   margin-bottom: 16px;
 }
-.nf-why-card-title { font-weight: 600; font-size: 18px; color: var(--ink); margin-bottom: 12px; }
+.nf-why-card-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 12px; }
 .nf-why-card-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
 
 /* ═══ Endorsement ═══ */
-.nf-endorse { background: var(--bg); }
+.nf-endorse { background: var(--bg-alt); }
 .nf-endorse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .nf-endorse-card {
   background: var(--surface); border: 1px solid var(--border);
@@ -458,13 +367,13 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   letter-spacing: -0.02em; margin-bottom: 12px;
 }
 .nf-endorse-brand.at { color: #1a2a3a; }
-.nf-endorse-brand.opc { color: var(--blue-deep); }
+.nf-endorse-brand.opc { color: var(--tea-deep); }
 .nf-endorse-body { font-size: 14px; color: var(--muted); line-height: 1.8; }
 .nf-endorse-footer {
   margin-top: 32px; text-align: center;
   font-size: 13px; color: var(--muted); font-weight: 500;
 }
-.nf-endorse-footer strong { color: var(--ink); }
+.nf-endorse-footer strong { color: var(--tea-deep); }
 
 /* ═══ Fit / Not Fit ═══ */
 .nf-fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
@@ -474,14 +383,54 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 }
 .nf-fit-card h3 {
   font-size: 18px; font-weight: 600; margin-bottom: 20px;
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 10px; color: var(--tea-deep);
 }
-.nf-fit-card.fit h3 { color: var(--blue-tech); }
-.nf-fit-card.not h3 { color: var(--muted); }
+.nf-fit-card.fit h3 svg { stroke: var(--copper); }
+.nf-fit-card.not h3 svg { stroke: var(--muted); }
 .nf-fit-card li { font-size: 14px; color: var(--muted); margin-bottom: 10px; padding-left: 22px; position: relative; line-height: 1.6; }
 .nf-fit-card li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 50%; }
-.nf-fit-card.fit li::before { background: var(--blue-tech); }
+.nf-fit-card.fit li::before { background: var(--copper); }
 .nf-fit-card.not li::before { background: var(--border); }
+
+/* ═══ Business Roadmap ═══ */
+.nf-roadmap { background: var(--warm-white); }
+.nf-roadmap-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 24px; }
+.nf-roadmap-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  position: relative; transition: border-color 0.2s;
+}
+.nf-roadmap-card.active { border-color: var(--copper); border-width: 2px; background: var(--copper-pale); }
+.nf-roadmap-phase {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.nf-roadmap-card.active .nf-roadmap-phase { color: var(--copper); }
+.nf-roadmap-card:not(.active) .nf-roadmap-phase { color: var(--muted); }
+.nf-roadmap-dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px;
+}
+.nf-roadmap-card.active .nf-roadmap-dot { background: var(--copper); }
+.nf-roadmap-card:not(.active) .nf-roadmap-dot { background: var(--border); }
+.nf-roadmap-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 8px; }
+.nf-roadmap-body { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+.nf-roadmap-status {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.nf-roadmap-card.active .nf-roadmap-status { color: var(--copper); }
+.nf-roadmap-card:not(.active) .nf-roadmap-status { color: var(--muted); }
+.nf-roadmap-footer {
+  margin-top: 36px; text-align: center; padding: 24px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+}
+.nf-roadmap-footer p { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+.nf-roadmap-footer a { font-weight: 600; color: var(--copper); font-size: 14px; }
+.nf-roadmap-footer a:hover { text-decoration: underline; }
+
+/* Roadmap arrows between cards (desktop) */
+@media (min-width: 769px) {
+  .nf-roadmap-grid { position: relative; }
+}
 
 /* ═══ FAQ ═══ */
 .nf-faq-list { max-width: 780px; margin-top: 20px; }
@@ -490,10 +439,10 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   display: flex; justify-content: space-between; align-items: center;
   width: 100%; background: none; border: none; padding: 22px 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 16px; font-weight: 600; color: var(--ink); text-align: left;
+  font-size: 16px; font-weight: 600; color: var(--tea-deep); text-align: left;
   cursor: pointer; line-height: 1.5;
 }
-.nf-faq-q:hover { color: var(--blue-tech); }
+.nf-faq-q:hover { color: var(--copper); }
 .nf-faq-icon {
   font-size: 20px; font-weight: 300; color: var(--muted);
   transition: transform 0.25s; flex-shrink: 0; margin-left: 16px;
@@ -504,15 +453,14 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 .nf-faq-a p { font-size: 15px; color: var(--muted); line-height: 1.8; }
 
 /* ═══ Final CTA ═══ */
-.nf-final-cta { text-align: center; padding: 120px 0; background: var(--blue-deep); }
+.nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
 .nf-final-cta h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: #fff; margin-bottom: 18px; letter-spacing: -0.02em; }
 .nf-final-cta p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 40px; line-height: 1.8; }
-.nf-final-cta .nf-btn-primary { background: #fff; color: var(--blue-deep); font-size: 15px; padding: 16px 36px; }
-.nf-final-cta .nf-btn-primary:hover { background: #e8edf5; box-shadow: 0 4px 20px rgba(255,255,255,0.15); }
+.nf-final-cta .nf-btn-primary { background: var(--copper); color: #fff; font-size: 15px; padding: 16px 36px; }
+.nf-final-cta .nf-btn-primary:hover { background: var(--copper-light); box-shadow: 0 4px 20px rgba(200,133,62,0.3); }
 .nf-final-cta .nf-btn-outline { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.25); }
 .nf-final-cta .nf-btn-outline:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
 .nf-final-note { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 28px; }
-
 
 /* ═══ Animations ═══ */
 @keyframes nf-fadeUp {
@@ -531,16 +479,11 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   .nf-hero-flow { max-width: 500px; }
 }
 @media (max-width: 768px) {
-  .nf-pain-grid,
-  .nf-value-grid,
-  .nf-steps-grid,
-  .nf-deliver-grid,
-  .nf-pkg-grid,
-  .nf-why-grid,
-  .nf-endorse-grid,
-  .nf-fit-grid { grid-template-columns: 1fr; }
-  .nf-section { padding: 60px 0; }
-  .nf-hero { padding: 100px 0 60px; }
+  .nf-pain-grid, .nf-value-grid, .nf-steps-grid,
+  .nf-deliver-grid, .nf-pkg-grid, .nf-why-grid,
+  .nf-endorse-grid, .nf-fit-grid, .nf-roadmap-grid { grid-template-columns: 1fr; }
+  .nf-section { padding: 64px 0; }
+  .nf-hero { padding: 110px 0 64px; }
   .nf-container { padding: 0 18px; }
   .nf-hero-ctas { flex-direction: column; }
   .nf-hero-ctas .nf-btn { justify-content: center; }
@@ -549,7 +492,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 }
 @media (max-width: 480px) {
   .nf-deliver-grid { grid-template-columns: 1fr; }
-  .nf-pain-card, .nf-value-card, .nf-step-card, .nf-pkg-card, .nf-why-card, .nf-endorse-card, .nf-fit-card { padding: 24px 20px; }
+  .nf-pain-card, .nf-value-card, .nf-step-card, .nf-pkg-card, .nf-why-card, .nf-endorse-card, .nf-fit-card, .nf-roadmap-card { padding: 24px 20px; }
 }
 </style>
 
@@ -558,16 +501,16 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 <!-- ═══ 1. NAV ═══ -->
 <nav class="nf-nav" id="navbar">
   <div class="nf-nav-logo">
-    <span class="nf-nav-logo-main">NEXFDE</span>
+    <span class="nf-nav-logo-main">NEX<span class="fde">FDE</span></span>
     <span class="nf-nav-logo-sub">FDE-style AI Deployment</span>
   </div>
   <button class="nf-nav-toggle" id="navToggle" aria-label="Menu">
-    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" rx="1" fill="#111"/><rect y="7" width="22" height="2" rx="1" fill="#111"/><rect y="14" width="22" height="2" rx="1" fill="#111"/></svg>
+    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" rx="1" fill="#1E3D32"/><rect y="7" width="22" height="2" rx="1" fill="#1E3D32"/><rect y="14" width="22" height="2" rx="1" fill="#1E3D32"/></svg>
   </button>
   <div class="nf-nav-links" id="navLinks">
     <a href="#method">Method</a>
     <a href="#services">Services</a>
-    <a href="#cases">Cases</a>
+    <a href="#roadmap">Roadmap</a>
     <a href="#faq">FAQ</a>
     <a href="#cta" class="nf-nav-cta">预约部署诊断</a>
   </div>
@@ -579,9 +522,9 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
     <div class="nf-hero-grid">
       <div>
         <div class="nf-hero-badge">Enterprise AI Deployment</div>
-        <h1>把 AI 从判断推进到生产</h1>
+        <h1>把 AI 从判断<em>推进到</em>生产</h1>
         <p class="nf-hero-sub">
-          <strong>NEXFDE</strong> 不是卖工具，也不是停在方案文档。我们帮助企业从场景判断、试点验证到真实流程上线，跑通第一条能持续运转的 AI 工作流。
+          NEX<strong style="color:var(--copper);">FDE</strong> 不是卖工具，也不是停在方案文档。我们帮助企业从场景判断、试点验证到真实流程上线，跑通第一条能持续运转的 AI 工作流。
         </p>
         <p class="nf-hero-note">面向真正准备行动的企业团队。先判断值不值得做，再把值得做的那一条路跑通。</p>
         <div class="nf-hero-ctas">
@@ -593,7 +536,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
         </p>
       </div>
 
-      <!-- Hero Visual: Structured Flow -->
+      <!-- Hero Flow Card -->
       <div class="nf-hero-flow">
         <div class="nf-hero-flow-label">FDE Deployment Path</div>
         <div class="nf-flow-step">
@@ -625,7 +568,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ 3. PAIN POINTS ═══ -->
-<section class="nf-section">
+<section class="nf-section" style="background:var(--bg-alt);">
   <div class="nf-container">
     <div class="nf-section-label">The Problem</div>
     <h2 class="nf-section-title">企业不是缺 AI 工具，而是缺一条能真正跑通的路</h2>
@@ -651,29 +594,29 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ 4. VALUE PROPOSITION ═══ -->
-<section class="nf-section" style="background:var(--bg);">
+<section class="nf-section">
   <div class="nf-container">
     <div class="nf-section-label">What We Do</div>
-    <h2 class="nf-section-title">NEXFDE 解决的不是 AI 认知问题，而是 AI 落地问题</h2>
+    <h2 class="nf-section-title">NEX<em>FDE</em> 解决的不是 AI 认知问题，而是 AI 落地问题</h2>
     <p class="nf-section-desc">我们不从工具清单出发，也不从"热点方案"出发。用 FDE-style 的方法，从你的真实业务流程出发，帮助你判断哪些值得做、哪些先别碰，并把第一条高价值路径跑通。</p>
     <div class="nf-value-grid">
       <div class="nf-value-card nf-animate">
         <div class="nf-value-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8853E" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div class="nf-value-title">先判断，再投入</div>
         <div class="nf-value-body">先看场景价值、可行性和组织条件，避免团队在错误方向上浪费资源。</div>
       </div>
       <div class="nf-value-card nf-animate">
         <div class="nf-value-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8853E" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
         <div class="nf-value-title">先跑通一条，再扩展</div>
         <div class="nf-value-body">不追求一次做大，而是优先完成一个真实、可运行、可复用的业务闭环。</div>
       </div>
       <div class="nf-value-card nf-animate">
         <div class="nf-value-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8853E" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
         </div>
         <div class="nf-value-title">交付结果，不只交付建议</div>
         <div class="nf-value-body">客户拿到的不是一本报告，而是一条被验证过、能进入团队日常的 AI 工作流。</div>
@@ -683,7 +626,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ 5. THREE STEPS ═══ -->
-<section class="nf-section" id="method">
+<section class="nf-section" style="background:var(--bg-alt);" id="method">
   <div class="nf-container">
     <div class="nf-section-label">How It Works</div>
     <h2 class="nf-section-title">从判断到跑通，分三步完成</h2>
@@ -730,7 +673,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ 6. DELIVERABLES ═══ -->
-<section class="nf-section" style="background:var(--bg);" id="deliverables">
+<section class="nf-section" id="deliverables">
   <div class="nf-container">
     <div class="nf-section-label">Deliverables</div>
     <h2 class="nf-section-title">客户拿到的不是一份方案，而是一套能持续运行的能力</h2>
@@ -765,7 +708,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ 7. SERVICE PACKAGES ═══ -->
-<section class="nf-section" id="services">
+<section class="nf-section" style="background:var(--bg-alt);" id="services">
   <div class="nf-container">
     <div class="nf-section-label">Services</div>
     <h2 class="nf-section-title">先做对第一步，再决定下一步</h2>
@@ -806,7 +749,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ 8. WHY NEXFDE ═══ -->
-<section class="nf-section" style="background:var(--bg);" id="cases">
+<section class="nf-section">
   <div class="nf-container">
     <div class="nf-section-label">Why NEXFDE</div>
     <h2 class="nf-section-title">判断、技术、落地，必须同时在一个体系里</h2>
@@ -840,11 +783,11 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
     <div class="nf-endorse-grid">
       <div class="nf-endorse-card nf-animate">
         <div class="nf-endorse-brand at">ActionThinker</div>
-        <div class="nf-endorse-body">创始人的内容与判断入口，承载长期的产业观察、知识管理实践与方法论表达。它提供的是这套服务背后的<strong style="color:#111;">判断力与信任来源</strong>。</div>
+        <div class="nf-endorse-body">创始人的内容与判断入口，承载长期的产业观察、知识管理实践与方法论表达。它提供的是这套服务背后的<strong style="color:var(--tea-deep);">判断力与信任来源</strong>。</div>
       </div>
       <div class="nf-endorse-card nf-animate">
         <div class="nf-endorse-brand opc">OPClab</div>
-        <div class="nf-endorse-body">方法论实验室，持续验证 AI 协作、知识资产化与工作流落地方式。它确保 NEXFDE 不是一套停留在 PPT 里的服务话术，而是<strong style="color:#111;">被持续实验、迭代和校正过的方法</strong>。</div>
+        <div class="nf-endorse-body">方法论实验室，持续验证 AI 协作、知识资产化与工作流落地方式。它确保 NEXFDE 不是一套停留在 PPT 里的服务话术，而是<strong style="color:var(--tea-deep);">被持续实验、迭代和校正过的方法</strong>。</div>
       </div>
     </div>
     <div class="nf-endorse-footer">
@@ -860,7 +803,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
     <h2 class="nf-section-title">NEXFDE 最适合这样的团队</h2>
     <div class="nf-fit-grid">
       <div class="nf-fit-card fit">
-        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6FEB" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 适合谁</h3>
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 适合谁</h3>
         <ul>
           <li>已经感受到 AI 紧迫感，但不知道先做哪条业务路径</li>
           <li>已经做过一些尝试，但还没有真正跑进业务流程</li>
@@ -869,7 +812,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
         </ul>
       </div>
       <div class="nf-fit-card not">
-        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6B7A" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> 不适合谁</h3>
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> 不适合谁</h3>
         <ul>
           <li>只想听趋势分享，不准备开始动作</li>
           <li>只想找一堆工具清单，不准备做流程调整</li>
@@ -882,7 +825,7 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ 11. FAQ ═══ -->
-<section class="nf-section" style="background:var(--bg);" id="faq">
+<section class="nf-section" style="background:var(--bg-alt);" id="faq">
   <div class="nf-container">
     <div class="nf-section-label">FAQ</div>
     <h2 class="nf-section-title">常见问题</h2>
@@ -926,7 +869,40 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
   </div>
 </section>
 
-<!-- ═══ 12. FINAL CTA ═══ -->
+<!-- ═══ 12. BUSINESS ROADMAP (NEW) ═══ -->
+<section class="nf-section nf-roadmap" id="roadmap">
+  <div class="nf-container">
+    <div class="nf-section-label">Roadmap</div>
+    <h2 class="nf-section-title">NEXFDE 的业务演进</h2>
+    <p class="nf-section-desc">从个人 FDE 交付，到标准化 SOP，再到协同交付网络——每一步都建立在验证过的方法之上。</p>
+    <div class="nf-roadmap-grid">
+      <div class="nf-roadmap-card active nf-animate">
+        <div class="nf-roadmap-phase"><span class="nf-roadmap-dot"></span>Phase 1 · 现在</div>
+        <div class="nf-roadmap-title">个人 FDE 交付</div>
+        <div class="nf-roadmap-body">由具备判断力和落地经验的 FDE 直接为企业提供服务。从诊断到上线，全程陪伴，建立方法论与信任。</div>
+        <div class="nf-roadmap-status">进行中</div>
+      </div>
+      <div class="nf-roadmap-card nf-animate">
+        <div class="nf-roadmap-phase"><span class="nf-roadmap-dot"></span>Phase 2 · 即将</div>
+        <div class="nf-roadmap-title">标准化 SOP + 专家招募</div>
+        <div class="nf-roadmap-body">将实践经验梳理为标准交付流程，招募各行业具备 AI 能力的专家，建立可复用的交付标准。</div>
+        <div class="nf-roadmap-status">筹备中</div>
+      </div>
+      <div class="nf-roadmap-card nf-animate">
+        <div class="nf-roadmap-phase"><span class="nf-roadmap-dot"></span>Phase 3 · 规模</div>
+        <div class="nf-roadmap-title">FDE 协同交付网络</div>
+        <div class="nf-roadmap-body">NEXFDE 提供品牌、客资与品控，行业专家负责交付。OPC 协同网络模式——让对的人在对的项目上发挥价值。</div>
+        <div class="nf-roadmap-status">规划中</div>
+      </div>
+    </div>
+    <div class="nf-roadmap-footer">
+      <p>你是有 AI 能力的行业专家？我们正在建立 FDE 交付网络。</p>
+      <a href="#" onclick="openWechat();return false">了解加入 NEXFDE 交付网络 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 13. FINAL CTA ═══ -->
 <section class="nf-final-cta" id="cta">
   <div class="nf-container">
     <h2>先做一次部署诊断，判断这件事值不值得做</h2>
@@ -940,12 +916,12 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </section>
 
 <!-- ═══ WECHAT MODAL ═══ -->
-<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(16,42,67,0.6);z-index:9999;align-items:center;justify-content:center">
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(30,61,50,0.6);z-index:9999;align-items:center;justify-content:center">
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;text-align:center;max-width:380px;width:90%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)">
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
-    <p style="font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:#111;margin-bottom:8px">添加微信咨询</p>
+    <p style="font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:#1E3D32;margin-bottom:8px">添加微信咨询</p>
     <img src="/assets/wechat-qr.png" alt="微信：ActionThinker" style="width:200px;margin:12px auto;display:block;border-radius:12px">
-    <p style="font-size:16px;font-weight:700;color:#111;margin-bottom:4px">ActionThinker</p>
+    <p style="font-size:16px;font-weight:700;color:#1E3D32;margin-bottom:4px">ActionThinker</p>
     <p style="font-size:13px;color:#999">扫码或搜索添加 · 24小时内本人回复</p>
   </div>
 </div>
@@ -953,87 +929,64 @@ a.nf-btn-outline:hover { border-color: var(--blue-tech); color: var(--blue-tech)
 </div><!-- /.nf-page -->
 
 <!-- ═══ FOOTER ═══ -->
-<footer style="background:#102A43;color:rgba(255,255,255,0.7);padding:56px 0 40px;font-size:14px;line-height:1.8;">
+<footer style="background:var(--tea-dark);color:rgba(255,255,255,0.6);padding:56px 0 40px;font-size:14px;line-height:1.8;">
   <div style="max-width:1100px;margin:0 auto;padding:0 24px;">
 
     <div style="display:flex;flex-wrap:wrap;gap:40px 60px;justify-content:space-between;margin-bottom:40px;">
 
       <div style="min-width:200px;">
-        <div style="font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.02em;margin-bottom:6px;">NEXFDE</div>
-        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:#2F6FEB;text-transform:uppercase;margin-bottom:16px;">FDE-style AI Deployment</div>
+        <div style="font-family:'Inter',sans-serif;font-size:20px;font-weight:600;color:#ffffff;letter-spacing:-0.02em;margin-bottom:6px;">
+          NEX<span style="font-weight:700;color:var(--copper);">FDE</span>
+        </div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--copper);text-transform:uppercase;margin-bottom:16px;">
+          FDE-style AI Deployment
+        </div>
         <p style="max-width:280px;">
           NEXFDE 是面向企业 AI 落地的专项服务品牌。<br>
-          By <a href="https://actionthinker.com" style="color:#2F6FEB;text-decoration:none;">ActionThinker</a>, validated through <a href="https://actionthinker.com/opclab/" style="color:#2F6FEB;text-decoration:none;">OPClab</a>.
+          By <a href="https://actionthinker.com" style="color:var(--copper);text-decoration:none;">ActionThinker</a>, validated through <a href="https://actionthinker.com/opclab/" style="color:var(--copper);text-decoration:none;">OPClab</a>.
         </p>
         <p style="margin-top:12px;font-size:13px;">
-          <a href="mailto:lu@NexFDE.com" style="color:rgba(255,255,255,0.6);text-decoration:none;">lu@NexFDE.com</a>
+          <a href="mailto:lu@NexFDE.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">lu@NexFDE.com</a>
         </p>
       </div>
 
       <div style="display:flex;gap:48px;flex-wrap:wrap;">
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">服务</div>
-          <a href="#method" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Method</a>
-          <a href="#services" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Services</a>
-          <a href="#deliverables" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Deliverables</a>
+          <a href="#method" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Method</a>
+          <a href="#services" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Services</a>
+          <a href="#deliverables" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Deliverables</a>
         </div>
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">了解更多</div>
-          <a href="#faq" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">FAQ</a>
-          <a href="#cases" style="display:block;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:6px;">Cases</a>
+          <a href="#faq" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">FAQ</a>
+          <a href="#roadmap" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">Roadmap</a>
         </div>
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">联系</div>
-          <a href="#" onclick="openWechat();return false;" style="display:block;color:#2F6FEB;text-decoration:none;margin-bottom:6px;font-weight:500;">预约部署诊断 →</a>
+          <a href="#" onclick="openWechat();return false;" style="display:block;color:var(--copper);text-decoration:none;margin-bottom:6px;font-weight:500;">预约部署诊断 →</a>
+          <a href="#roadmap" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;font-size:13px;">加入交付网络 →</a>
         </div>
       </div>
     </div>
 
-    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;font-size:12px;color:rgba(255,255,255,0.4);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;">
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;font-size:12px;color:rgba(255,255,255,0.35);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;">
       <span>&copy; 2026 NEXFDE. All rights reserved.</span>
-      <span>An AI deployment practice by <a href="https://actionthinker.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">ActionThinker</a></span>
-      <span>AI-Native Built · <a href="https://nexfde.com/BUILDLOG.md" style="color:rgba(255,255,255,0.5);text-decoration:underline;">持续进化中 · 查看构建日志</a></span>
+      <span>An AI deployment practice by <a href="https://actionthinker.com" style="color:rgba(255,255,255,0.4);text-decoration:none;">ActionThinker</a></span>
+      <span>AI-Native Built · <a href="https://nexfde.com/BUILDLOG.md" style="color:rgba(255,255,255,0.4);text-decoration:underline;">持续进化中 · 查看构建日志</a></span>
     </div>
 
   </div>
 </footer>
 
 <script>
-/* FAQ Toggle */
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  item.classList.toggle('open');
-}
-
-/* WeChat Modal */
+function toggleFaq(btn){var item=btn.parentElement;item.classList.toggle('open');}
 function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
-
-/* Mobile Nav Toggle */
-document.getElementById('navToggle').addEventListener('click', function() {
-  document.getElementById('navLinks').classList.toggle('open');
-});
-
-/* Close mobile nav on link click */
-document.querySelectorAll('#navLinks a').forEach(function(link) {
-  link.addEventListener('click', function() {
-    document.getElementById('navLinks').classList.remove('open');
-  });
-});
-
-/* Scroll Animation — Intersection Observer */
-(function() {
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
-
-  document.querySelectorAll('.nf-animate').forEach(function(el) {
-    observer.observe(el);
-  });
+document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+document.querySelectorAll('#navLinks a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});});
+(function(){
+  var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:0.15,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.nf-animate').forEach(function(el){observer.observe(el);});
 })();
 </script>
 

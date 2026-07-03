@@ -9,7 +9,7 @@
 - **站点**: nexfde.com v1.0
 - **类型**: 单页落地页（纯静态 HTML + CSS + JS）
 - **部署**: GitHub Pages（`ActionThinker/nexfde`），无构建步骤
-- **设计系统**: Deep Blue (#102A43) + Tech Blue (#2F6FEB)，Inter 字体
+- **设计系统**: Deep Tea Green (#1E3D32) + Copper (#C8853E)，Inter 字体，暖白背景 (#F5F2ED)
 - **AI 构建**: Claude (Anthropic) 辅助，FDE-style AI Deployment 方法
 
 ## 关键路径
@@ -106,7 +106,7 @@
 ## 禁止操作
 
 - ❌ 不要将 ActionThinker 或 OPClab 放到 Hero 主叙事中
-- ❌ 不要使用紫色系、霓虹渐变、大面积纯黑背景
+- ❌ 不要使用紫色系、蓝色系、霓虹渐变、大面积纯黑背景
 - ❌ 不要添加粒子、3D、复杂滚动动效
 - ❌ 不要使用"颠覆""革命""重新定义"等夸张文案
 - ❌ 不要在页面上使用 Jekyll 或任何构建框架（保持纯静态 HTML）
