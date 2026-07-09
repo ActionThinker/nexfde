@@ -377,7 +377,8 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <a href="#background">需求背景</a>
     <a href="#challenge">痛点挑战</a>
     <a href="#solution">解决方案</a>
-    <a href="#path">实施路径</a>
+    <a href="#process">FDE服务流程</a>
+    <a href="#path">交付时间线</a>
     <a href="#results">交付结果</a>
     <a href="#pricing">服务定价</a>
     <a href="#engage" class="nf-nav-cta">合作咨询</a>
@@ -573,7 +574,161 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   </div>
 </section>
 
-<!-- ═══ 5. 实施路径 ═══ -->
+<!-- ═══ 5. FDE服务流程 ═══ -->
+<section class="nf-section" id="process">
+  <div class="nf-container">
+    <div class="nf-section-label">FDE 服务流程</div>
+    <h2 class="nf-section-title">从需求到交付，<em>每一环的价值输出</em></h2>
+    <p class="nf-section-desc">我们不只是「做分析」——我们构建了一套可以自动运转的系统。以下是 FDE 三阶段中每个环节的具体工作清单和对应的客户价值。</p>
+
+    <div style="margin-top:20px;">
+
+      <!-- Phase 1 -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">1</div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 1</div>
+            <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">POC 验证与基础设施搭建</div>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border);text-align:left;">
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">工作项</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">具体内容</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">输出的客户价值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">数据抓取管线</td>
+                <td style="padding:14px 16px;color:var(--muted);">搭建抖音+小红书全量作品采集管线（TikOmni API），含ASR语音转文字。单次可采集数百条历史作品的结构化数据。</td>
+                <td style="padding:14px 16px;color:var(--muted);">打破平台后台的数据限制，把「拍过的视频」变成「可计算的数据资产」。</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">API 接口验证</td>
+                <td style="padding:14px 16px;color:var(--muted);">逐端点测试平台API的可用性、字段返回率、限制条件。梳理哪些字段可以直接拿、哪些需要补数、哪些不可得。</td>
+                <td style="padding:14px 16px;color:var(--muted);">客户不会收到一堆报错——所有「拿不到的数据」我们已经在前面踩过坑，交付的是干净的数据集。</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">补数端点发现</td>
+                <td style="padding:14px 16px;color:var(--muted);">在API Catalog中定位隐藏的补数端点（如播放量批量查询、评论数端点），验证调用链路和数据可靠性。</td>
+                <td style="padding:14px 16px;color:var(--muted);">平台不直接给的指标（播放量/评论数/下载量），通过补数端点或后台数据合并方案拿回来，填补数据缺口。</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">成本核算</td>
+                <td style="padding:14px 16px;color:var(--muted);">计算全流程API调用成本、补数消耗、ASR消耗。建立单客户/单次服务的成本基线。</td>
+                <td style="padding:14px 16px;color:var(--muted);">客户看到的价格是经过真实成本核算的——不是拍脑袋定价，也不是亏本接单。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">2</div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 2</div>
+            <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">自动化流程与智能体构建</div>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border);text-align:left;">
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">工作项</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">具体内容</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">输出的客户价值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">社媒分析专家智能体</td>
+                <td style="padding:14px 16px;color:var(--muted);">创建专用AI Agent，内置社媒数据分析的完整方法论：统计脚本模板、报告结构规范、双平台差异规则、数据质量校验逻辑。</td>
+                <td style="padding:14px 16px;color:var(--muted);">不是每次都要从零开始写分析。专家智能体封装了已验证的方法论，确保不同客户拿到同等质量的交付。</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">管线 Skill 设计与调试</td>
+                <td style="padding:14px 16px;color:var(--muted);">把固化管线（采集/补数/统计/报告）封装为可复用的Skill模块。调试环境变量超限、编码兼容、API Key加载等坑。</td>
+                <td style="padding:14px 16px;color:var(--muted);">工具链可复用：下个月客户自己就能跑。Skill已固化在工作环境中，换一个新账号只需改一个ID参数。</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">数据报告模版设计</td>
+                <td style="padding:14px 16px;color:var(--muted);">设计报告章节结构（诊断→洞察→策略→路线图）、数据可视化模版、双平台对比框架。通过多轮审计验证数据一致性。</td>
+                <td style="padding:14px 16px;color:var(--muted);">报告质量可预期：每次交付的结构、深度、质量标准一致。不是靠个人发挥——是系统化输出。</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">自动化全流程联调</td>
+                <td style="padding:14px 16px;color:var(--muted);">打通采集→补数→统计→诊断→报告的全链路自动化。处理中断恢复、批量调度、API超时重试等工程问题。</td>
+                <td style="padding:14px 16px;color:var(--muted);">客户无需任何技术操作。发送链接后，全流程自动运转到最终报告输出。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:36px 32px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">3</div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 3</div>
+            <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">交付与能力移交</div>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border);text-align:left;">
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">交付物</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">说明</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">客户获得的能力</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">增长诊断报告</td>
+                <td style="padding:14px 16px;color:var(--muted);">互动漏斗、时间效率、内容矩阵、问题诊断——基于全量数据而非抽样。</td>
+                <td style="padding:14px 16px;color:var(--muted);">知道哪条内容有效、为什么有效、下次怎么复制。</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">深度分析报告</td>
+                <td style="padding:14px 16px;color:var(--muted);">跨平台对比、趋势检测、高价值内容特征提取、商业转化机会识别。</td>
+                <td style="padding:14px 16px;color:var(--muted);">知道每个平台的不同价值定位、资源应该怎么分配。</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">增长策略与行动建议</td>
+                <td style="padding:14px 16px;color:var(--muted);">具体到每周做什么、先做什么、预期效果。含内容矩阵重构、发布策略优化、商业转化漏斗设计。</td>
+                <td style="padding:14px 16px;color:var(--muted);">团队可以直接照着路线图执行，不需要再花时间「消化理解」。</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">工具链与能力移交</td>
+                <td style="padding:14px 16px;color:var(--muted);">固化管线脚本 + AI Agent + Skill模块 + 能力清单文档。客户或第三方可自行复跑、迭代。</td>
+                <td style="padding:14px 16px;color:var(--muted);">不是持续依赖我们的服务——客户获得了自己跑下去的能力。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:28px;background:var(--copper-pale);border-radius:var(--radius);padding:24px 28px;text-align:center;">
+          <p style="font-size:16px;font-weight:600;color:var(--tea-deep);margin-bottom:6px;">
+            最终效果：客户发送抖音、小红书主页链接 →
+            <span style="color:var(--copper);">自动化完成全流程</span> →
+            获得增长诊断报告、深度分析报告、增长策略与行动建议
+          </p>
+          <p style="font-size:13px;color:var(--muted);">从链接到完整交付物，两周闭环。客户零技术操作。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. 客户交付时间线 ═══ -->
 <section class="nf-section" id="path">
   <div class="nf-container">
     <div class="nf-section-label">实施路径</div>
