@@ -4,6 +4,12 @@
     <loc>https://nexfde.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-09</lastmod>
+  </url>
+  <url>
+    <loc>https://nexfde.com/cases/social-media-analytics/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-09</lastmod>
   </url>
 </urlset>

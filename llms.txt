@@ -7,6 +7,7 @@
 - [Method](https://nexfde.com/#method): FDE 三步方法论 — AI Deployment Diagnostic → Pilot Sprint → Production Rollout
 - [Services](https://nexfde.com/#services): 三个服务产品包 — Diagnostic / Pilot Sprint / Production Rollout
 - [FAQ](https://nexfde.com/#faq): 5 个常见问题 — 咨询差异、咨询vs实施、不确定场景、适用规模、工具推荐
+- [场景案例](https://nexfde.com/cases/social-media-analytics/): FDE 落地场景案例 #1 — 双平台社媒数据深度诊断，含客户画像、解决方案、交付成果、定价体系
 
 ## 品牌关系
 - NEXFDE 是 ActionThinker 旗下的企业 AI 落地专项服务品牌

@@ -6,8 +6,8 @@
 
 ## 项目信息
 
-- **站点**: nexfde.com v1.0
-- **类型**: 单页落地页（纯静态 HTML + CSS + JS）
+- **站点**: nexfde.com v2.1.0
+- **类型**: 多页静态站点（首页 + 场景案例页），纯静态 HTML + CSS + JS
 - **部署**: GitHub Pages（`ActionThinker/nexfde`），无构建步骤
 - **设计系统**: Deep Tea Green (#1E3D32) + Copper (#C8853E)，Inter 字体，暖白背景 (#F5F2ED)
 - **AI 构建**: Claude (Anthropic) 辅助，FDE-style AI Deployment 方法
@@ -17,6 +17,7 @@
 | 路径 | 用途 |
 |:---|:---|
 | `index.html` | 主落地页（自包含 CSS/JS） |
+| `cases/{scenario}/index.html` | 场景案例页（每场景独立子目录） |
 | `assets/` | 静态资源（微信二维码、OG 图片） |
 | `BUILDLOG.md` | 构建日志（每次迭代记录） |
 | `.push-history.jsonl` | 推送历史（自动记录） |
@@ -112,3 +113,12 @@
 - ❌ 不要在页面上使用 Jekyll 或任何构建框架（保持纯静态 HTML）
 - ❌ 不要跳过 GEO 检查清单
 - ❌ 不要跳过 BUILDLOG.md 记录
+- ❌ 案例页客户信息必须脱敏（行业/规模/数据可真实，名称/品牌不露）
+
+## 案例页规范（`cases/{scenario}/index.html`）
+
+每完成一个 FDE 场景闭环验证，复制已有案例模板新建页。标准九区块结构：
+1. Hero（含成果速览卡片） 2. 客户画像+痛点 3. FDE三步解决方案
+4. 成果仪表盘 5. 核心发现 6. 交付物清单 7. 服务定价 8. 交付流程 9. 伙伴价值+CTA
+
+约束：客户信息脱敏、真实数据指标、定价保持与已验证体系一致、每页自包含CSS/JS。
