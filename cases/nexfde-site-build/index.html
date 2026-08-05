@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NEXFDE 网站构建 — FDE 落地案例 | NEXFDE</title>
+  <meta name="description" content="本站点本身就是 FDE 方法论的活案例——从设计系统选择、案例页模板标准化到部署上线，每一步都遵循 FDE 三步法：判断→试点→上线。">
+
+  <link rel="canonical" href="https://nexfde.com/cases/nexfde-site-build/">
+
+  <meta property="og:title" content="NEXFDE 网站构建 — FDE 落地案例 | NEXFDE">
+  <meta property="og:description" content="本站点本身就是 FDE 方法论的活案例——从设计系统到部署上线，每一步都遵循 FDE 三步法。">
+  <meta property="og:url" content="https://nexfde.com/cases/nexfde-site-build/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="NEXFDE">
+  <meta property="og:image" content="https://nexfde.com/assets/nexfde-og.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEXFDE 网站构建 — FDE 落地案例 | NEXFDE">
+  <meta name="twitter:description" content="本站点本身就是 FDE 方法论的活案例——从设计系统到部署上线，每一步都遵循 FDE 三步法。">
+  <meta name="twitter:image" content="https://nexfde.com/assets/nexfde-og.svg">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="NEXFDE (ActionThinker)">
+  <link rel="alternate" hreflang="zh-CN" href="https://nexfde.com/cases/nexfde-site-build/">
+
+  <meta name="ai-disclosure" content="ai-assisted">
+  <meta name="ai-system" content="Claude (Anthropic)">
+  <meta name="ai-operator" content="ActionThinker">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization", "@id": "https://nexfde.com/#organization",
+        "name": "NEXFDE", "url": "https://nexfde.com",
+        "logo": "https://nexfde.com/assets/nexfde-og.svg",
+        "email": "lu@NexFDE.com",
+        "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "lu@NexFDE.com", "availableLanguage": ["zh-CN", "en"] }
+      },
+      {
+        "@type": "Service", "@id": "https://nexfde.com/cases/nexfde-site-build/#service",
+        "name": "FDE 网站构建服务",
+        "description": "运用 FDE 三步法为企业构建 AI-Native 品牌站点——从设计系统判断、内容模板标准化到部署上线，让网站本身成为方法论活案例。",
+        "provider": { "@id": "https://nexfde.com/#organization" },
+        "serviceType": "FDE-style Website Build",
+        "areaServed": { "@type": "Country", "name": "China" },
+        "offers": [
+          { "@type": "Offer", "name": "判断诊断", "description": "分析品牌定位、设计系统、内容结构，判断哪些值得做、哪些先不做", "category": "诊断" },
+          { "@type": "Offer", "name": "试点冲刺", "description": "搭建核心页面与模板，快速上线可验证的版本", "category": "试点" },
+          { "@type": "Offer", "name": "生产上线", "description": "完善内容体系、部署 GEO 基础设施，移交持续运营能力", "category": "上线" }
+        ]
+      },
+      {
+        "@type": "Article", "@id": "https://nexfde.com/cases/nexfde-site-build/#article",
+        "headline": "NEXFDE 网站构建 — FDE 落地案例",
+        "description": "从零构建 NEXFDE 品牌站——设计系统判断、案例页模板标准化、GEO 基础设施部署，站点本身即 FDE 方法论活案例。",
+        "author": { "@id": "https://nexfde.com/#organization" },
+        "publisher": { "@id": "https://nexfde.com/#organization" },
+        "url": "https://nexfde.com/cases/nexfde-site-build/",
+        "datePublished": "2026-08-05", "version": "1.0.0", "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://nexfde.com" },
+          { "@type": "ListItem", "position": 2, "name": "场景案例", "item": "https://nexfde.com/cases/nexfde-site-build/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="nf-page">
+
+<style>
+/* ═══ NEXFDE Design System — 深茶绿 + 铜色 ═══ */
+:root {
+  --tea-deep: #1E3D32;
+  --tea-dark: #152D25;
+  --tea-mid: #2A5A4A;
+  --copper: #C8853E;
+  --copper-light: #D9A35E;
+  --copper-pale: #FBF6ED;
+  --warm-white: #F5F2ED;
+  --surface: #FFFFFF;
+  --bg-alt: #EDEAE4;
+  --border: #D4CFC6;
+  --ink: #1A1A1A;
+  --muted: #6B7A73;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --green-bg: #E8F0EC;
+}
+
+.nf-page { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; line-height: 1.7; color: var(--ink); background: var(--warm-white); -webkit-font-smoothing: antialiased; }
+.nf-page *, .nf-page *::before, .nf-page *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.nf-page h1, .nf-page h2, .nf-page h3, .nf-page h4 { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 600; line-height: 1.2; color: var(--tea-deep); letter-spacing: -0.02em; }
+.nf-page p { margin: 0; }
+.nf-page ul { margin: 0; padding: 0; list-style: none; }
+.nf-page a { text-decoration: none; color: inherit; }
+
+.nf-container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.nf-section { padding: 110px 0; }
+
+.nf-section-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--copper); margin-bottom: 14px;
+}
+.nf-section-title {
+  font-size: clamp(26px, 4vw, 36px); font-weight: 700;
+  color: var(--tea-deep); margin-bottom: 16px; line-height: 1.25; letter-spacing: -0.02em;
+}
+.nf-section-title em { font-style: normal; color: var(--copper); }
+.nf-section-desc {
+  font-size: 17px; color: var(--muted);
+  max-width: 620px; line-height: 1.8; margin-bottom: 52px;
+}
+
+/* Buttons */
+.nf-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 30px; border-radius: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px; font-weight: 600; cursor: pointer; border: none;
+  transition: all 0.2s ease; white-space: nowrap;
+}
+a.nf-btn-primary { background: var(--copper); color: #fff; }
+a.nf-btn-primary:hover { background: var(--copper-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,133,62,0.3); }
+a.nf-btn-outline { background: transparent; color: var(--tea-deep); border: 1.5px solid var(--border); }
+a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); transform: translateY(-1px); }
+
+/* ═══ Nav ═══ */
+.nf-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(245,242,237,0.94); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nf-nav-left { display: flex; align-items: center; gap: 20px; }
+.nf-nav-logo { display: flex; align-items: center; gap: 10px; }
+.nf-nav-logo-main {
+  font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600;
+  color: var(--tea-deep); letter-spacing: -0.02em;
+}
+.nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
+.nf-nav-back {
+  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
+}
+.nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
+.nf-nav-links { display: flex; align-items: center; gap: 24px; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a:hover { color: var(--tea-deep); }
+.nf-nav-cta {
+  font-size: 13px; font-weight: 600; color: #fff !important;
+  background: var(--copper); padding: 8px 18px; border-radius: 6px;
+  transition: background 0.2s !important;
+}
+.nf-nav-cta:hover { background: var(--copper-light) !important; color: #fff !important; }
+.nf-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+
+@media (max-width: 860px) {
+  .nf-nav-links { display: none; }
+  .nf-nav-toggle { display: block; }
+  .nf-nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 60px; left: 0; right: 0;
+    background: var(--warm-white); border-bottom: 1px solid var(--border);
+    padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+}
+
+/* ═══ Hero ═══ */
+.nf-hero { padding: 150px 0 90px; background: var(--warm-white); }
+.nf-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.nf-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--copper); background: var(--copper-pale);
+  padding: 6px 14px; border-radius: 99px; margin-bottom: 20px;
+}
+.nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
+.nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
+.nf-hero h1 em { font-style: normal; color: var(--copper); }
+.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
+.nf-hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+.nf-hero-tag {
+  font-size: 12px; font-weight: 500; color: var(--tea-mid);
+  background: var(--green-bg); padding: 5px 12px; border-radius: 6px;
+}
+.nf-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.nf-hero-stat {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(30,61,50,0.04);
+}
+.nf-hero-stat-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+}
+.nf-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.nf-stat-item { text-align: center; padding: 12px 8px; background: var(--copper-pale); border-radius: var(--radius); }
+.nf-stat-num { font-size: 24px; font-weight: 700; color: var(--tea-deep); line-height: 1.2; }
+.nf-stat-num em { font-style: normal; color: var(--copper); font-size: 14px; }
+.nf-stat-text { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+/* ═══ Pain/Challenge Cards ═══ */
+.nf-pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; }
+.nf-pain-card { background: var(--surface); padding: 36px 28px; transition: background 0.2s; }
+.nf-pain-card:hover { background: var(--warm-white); }
+.nf-pain-num {
+  font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700;
+  color: var(--border); margin-bottom: 16px; line-height: 1;
+}
+.nf-pain-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
+.nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ Solution Steps ═══ */
+.nf-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
+.nf-step-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  position: relative; transition: border-color 0.2s, transform 0.15s;
+}
+.nf-step-card:hover { border-color: rgba(200,133,62,0.35); transform: translateY(-2px); }
+.nf-step-num {
+  font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 700;
+  color: var(--copper-pale); position: absolute; top: 20px; right: 24px;
+  line-height: 1;
+}
+.nf-step-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 6px; }
+.nf-step-sub { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+.nf-step-items { border-top: 1px solid var(--border); padding-top: 14px; }
+.nf-step-item {
+  font-size: 13px; color: var(--muted); margin-bottom: 6px;
+  padding-left: 14px; position: relative; line-height: 1.6;
+}
+.nf-step-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
+.nf-step-item:last-child { margin-bottom: 0; }
+
+/* ═══ Results ═══ */
+.nf-results-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-top: 20px; }
+.nf-result-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px 20px; text-align: center;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.nf-result-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
+.nf-result-num {
+  font-size: clamp(24px, 3.5vw, 34px); font-weight: 700;
+  color: var(--tea-deep); line-height: 1.2; margin-bottom: 6px;
+}
+.nf-result-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.nf-result-note { font-size: 11px; color: var(--border); margin-top: 4px; }
+
+/* ═══ Insight Cards ═══ */
+.nf-insight-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
+.nf-insight-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.nf-insight-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
+.nf-insight-icon {
+  width: 44px; height: 44px; border-radius: var(--radius);
+  background: var(--copper-pale); display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 20px;
+}
+.nf-insight-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
+.nf-insight-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ Timeline ═══ */
+.nf-timeline { max-width: 760px; margin: 20px auto 0; }
+.nf-tl-item { display: flex; gap: 20px; padding-bottom: 28px; position: relative; }
+.nf-tl-item:last-child { padding-bottom: 0; }
+.nf-tl-marker {
+  flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+  background: var(--copper-pale); border: 2px solid var(--copper);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: var(--copper);
+}
+.nf-tl-item:not(:last-child) .nf-tl-marker::after {
+  content: ''; position: absolute; left: 23px; top: 48px;
+  width: 2px; height: calc(100% - 20px);
+  background: var(--border);
+}
+.nf-tl-content { padding-top: 8px; }
+.nf-tl-day { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper); margin-bottom: 4px; }
+.nf-tl-title { font-weight: 600; font-size: 16px; color: var(--tea-deep); margin-bottom: 4px; }
+.nf-tl-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ═══ Scenario Fit ═══ */
+.nf-fit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
+.nf-fit-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.nf-fit-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
+.nf-fit-icon { font-size: 28px; margin-bottom: 16px; }
+.nf-fit-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
+.nf-fit-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+/* ═══ Final CTA ═══ */
+.nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
+.nf-final-cta h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: #fff; margin-bottom: 18px; letter-spacing: -0.02em; }
+.nf-final-cta p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 40px; line-height: 1.8; }
+.nf-final-cta .nf-btn-primary { background: var(--copper); color: #fff; font-size: 15px; padding: 16px 36px; }
+.nf-final-cta .nf-btn-primary:hover { background: var(--copper-light); box-shadow: 0 4px 20px rgba(200,133,62,0.3); }
+.nf-final-cta .nf-btn-outline { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.25); }
+.nf-final-cta .nf-btn-outline:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+.nf-final-note { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 48px; }
+
+/* ═══ Footer ═══ */
+.nf-footer { background: var(--tea-dark); color: rgba(255,255,255,0.6); padding: 56px 0 40px; font-size: 14px; line-height: 1.8; }
+.nf-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+.nf-footer-brand { font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+.nf-footer-brand .fde { font-weight: 700; color: var(--copper); }
+.nf-footer h5 { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 12px; letter-spacing: 0.04em; }
+.nf-footer a { color: rgba(255,255,255,0.6); transition: color 0.15s; display: block; margin-bottom: 6px; }
+.nf-footer a:hover { color: var(--copper); }
+.nf-footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 860px) {
+  .nf-section { padding: 64px 0; }
+  .nf-hero { padding: 120px 0 64px; }
+  .nf-hero-grid { grid-template-columns: 1fr; }
+  .nf-pain-grid, .nf-steps-grid, .nf-results-grid, .nf-pkg-grid, .nf-insight-grid, .nf-fit-grid { grid-template-columns: 1fr; gap: 16px; }
+  .nf-results-grid { grid-template-columns: repeat(2,1fr); }
+  .nf-footer-grid { grid-template-columns: 1fr 1fr; }
+  .nf-final-cta { padding: 80px 0; }
+}
+</style>
+
+<!-- ═══ Nav ═══ -->
+<nav class="nf-nav">
+  <div class="nf-nav-left">
+    <a href="/" class="nf-nav-logo">
+      <span class="nf-nav-logo-main">NEX<span class="fde">FDE</span></span>
+    </a>
+    <a href="/" class="nf-nav-back">&larr; 返回首页</a>
+  </div>
+  <div class="nf-nav-links" id="navLinks">
+    <a href="#background">需求背景</a>
+    <a href="#challenge">痛点挑战</a>
+    <a href="#solution">解决方案</a>
+    <a href="#process">FDE服务流程</a>
+    <a href="#timeline">迭代时间线</a>
+    <a href="#results">交付结果</a>
+    <a href="#fit">适合谁</a>
+    <a href="#engage" class="nf-nav-cta">合作咨询</a>
+  </div>
+  <button class="nf-nav-toggle" id="navToggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="菜单">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--tea-deep)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<!-- ═══ Hero ═══ -->
+<header class="nf-hero">
+  <div class="nf-container">
+    <div class="nf-hero-grid">
+      <div>
+        <div class="nf-hero-badge">FDE 落地场景案例 #4</div>
+        <h1>NEXFDE 网站<em>构建即案例</em></h1>
+        <p class="nf-hero-sub">你正在浏览的网站本身，就是 FDE 方法论最完整的案例。从设计系统判断、案例页模板标准化到部署上线，每一步都遵循 FDE 三步法——判断→试点→上线。卖的不是工具，是交付能力。</p>
+        <div class="nf-hero-tags">
+          <span class="nf-hero-tag">元案例</span>
+          <span class="nf-hero-tag">AI-Native 构建</span>
+          <span class="nf-hero-tag">FDE 全流程</span>
+          <span class="nf-hero-tag">品牌站点</span>
+          <span class="nf-hero-tag">持续迭代</span>
+        </div>
+        <div class="nf-hero-ctas">
+          <a href="#engage" class="nf-btn nf-btn-primary">合作咨询 &rarr;</a>
+          <a href="#timeline" class="nf-btn nf-btn-outline">查看迭代时间线</a>
+        </div>
+      </div>
+      <div class="nf-hero-stat">
+        <div class="nf-hero-stat-label">NEXFDE 站点构建概况</div>
+        <div class="nf-stat-row">
+          <div class="nf-stat-item">
+            <div class="nf-stat-num">3<em>版本</em></div>
+            <div class="nf-stat-text">v1.0 → v2.0 → v2.2<br>持续迭代中</div>
+          </div>
+          <div class="nf-stat-item">
+            <div class="nf-stat-num">4<em>案例</em></div>
+            <div class="nf-stat-text">FDE 落地场景案例<br>标准化模板复用</div>
+          </div>
+          <div class="nf-stat-item">
+            <div class="nf-stat-num">6<em>项</em></div>
+            <div class="nf-stat-text">GEO 基础设施<br>JSON-LD / llms.txt / sitemap</div>
+          </div>
+          <div class="nf-stat-item">
+            <div class="nf-stat-num">35<em>天</em></div>
+            <div class="nf-stat-text">从初始上线到<br>v2.2 持续迭代</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ 1. 需求背景 ═══ -->
+<section class="nf-section" id="background">
+  <div class="nf-container">
+    <div class="nf-section-label">需求背景</div>
+    <h2 class="nf-section-title">为什么需要<em>一个独立站点</em></h2>
+    <p class="nf-section-desc">NEXFDE 是 ActionThinker 旗下的企业 AI 落地专项服务品牌。一个独立在线存在不是为了展示——而是让 FDE 方法论本身被看见、被验证。</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
+        <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">品牌定位</h3>
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+          <span style="flex-shrink:0;">&#9679;</span>
+          <span><strong style="color:var(--tea-deep);">身份：</strong>NEXFDE 不是卖工具的，也不是停在方案文档的咨询公司——是以 FDE 方法论交付 AI 落地结果的实践品牌</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+          <span style="flex-shrink:0;">&#9679;</span>
+          <span><strong style="color:var(--tea-deep);">母品牌：</strong>ActionThinker（创始人信任背书）+ OPClab（方法论验证背书）</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+          <span style="flex-shrink:0;">&#9679;</span>
+          <span><strong style="color:var(--tea-deep);">核心差异：</strong>以「先判断，再投入」为原则，让客户在决定投入前先看清价值</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted);line-height:1.6;">
+          <span style="flex-shrink:0;">&#9679;</span>
+          <span><strong style="color:var(--tea-deep);">展示方式：</strong>不是「说我们做了什么」，而是「站点的构建方式就是我们的方法」</span>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
+        <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">核心挑战</h3>
+        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+          <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">挑战一：</strong>AI 服务赛道「同质化严重」——蓝色科技风、卖工具、交报告——需要一个从视觉到内容都完全不同的品牌存在。</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">挑战二：</strong>客户问「你们真的懂 AI 落地吗？」——答案不能靠说，要靠展示。站点本身必须是一个活案例。</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">挑战三：</strong>内容需要标准化——每个案例要有统一结构，既便于客户理解，也便于团队快速复制。</p>
+          <p><strong style="color:var(--tea-deep);">挑战四：</strong>AI 搜索渠道（豆包、DeepSeek、元宝、Kimi）需要结构化数据才能引用——必须部署 GEO 基础设施。</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
+      <p style="font-size:15px;color:var(--muted);">核心判断：<strong style="color:var(--tea-deep);">「当客户问我们是否真的懂 AI 落地时，这个站点就是答案。它不是在说 FDE——它本身就是 FDE。」</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 2. 痛点挑战 ═══ -->
+<section class="nf-section" id="challenge" style="background:var(--surface);">
+  <div class="nf-container">
+    <div class="nf-section-label">痛点挑战</div>
+    <h2 class="nf-section-title">构建前的<em>三个关键问题</em></h2>
+    <p class="nf-section-desc">不是「做个网站」那么简单——需要解决品牌辨识度、内容标准化和 AI 可发现性三重问题。</p>
+    <div class="nf-pain-grid">
+      <div class="nf-pain-card">
+        <div class="nf-pain-num">01</div>
+        <div class="nf-pain-title">品牌配色无辨识度</div>
+        <div class="nf-pain-body">v1.x 的深蓝+科技蓝配色在 AI 赛道同质化严重——「太普通了」。蓝色是 AI 行业的默认色，无法传递 FDE 的核心差异：长期陪伴、信任感、扎根行业。需要一个完全不同的视觉语言。</div>
+      </div>
+      <div class="nf-pain-card">
+        <div class="nf-pain-num">02</div>
+        <div class="nf-pain-title">Jekyll 构建失败，技术栈需重新选择</div>
+        <div class="nf-pain-body">初始选择 Jekyll 部署 GitHub Pages，但构建过程不稳定、出错频繁。最终切换为纯静态 HTML（.nojekyll），零构建步骤、极速加载。经验和教训：技术上最可靠的方案往往是最简单的。</div>
+      </div>
+      <div class="nf-pain-card">
+        <div class="nf-pain-num">03</div>
+        <div class="nf-pain-title">内容不可被 AI 搜索发现</div>
+        <div class="nf-pain-body">站点内容对 AI Agent 完全不可见——没有 JSON-LD 结构化数据、没有 llms.txt、没有 sitemap。当客户通过豆包/DeepSeek/Kimi 搜索「AI 落地服务」时，NEXFDE 不会出现在 AI 搜索结果中。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3. 任务需求 ═══ -->
+<section class="nf-section" id="task">
+  <div class="nf-container">
+    <div class="nf-section-label">任务需求</div>
+    <h2 class="nf-section-title">构建一个<em>真正活着的案例</em></h2>
+    <p class="nf-section-desc">不是做一个漂亮的品牌页——而是让站点本身成为 FDE 方法论的完整证明。</p>
+
+    <div class="nf-insight-grid">
+      <div class="nf-insight-card">
+        <div class="nf-insight-icon">&#127912;</div>
+        <div class="nf-insight-title">差异化的品牌视觉系统</div>
+        <div class="nf-insight-body">选择一套能传递「长期陪伴、信任、扎根行业」的配色方案——深茶绿+铜色，在 AI 赛道中几乎无人使用，形成独特的视觉辨识度。沉浸阅读式暖白背景，降低认知负担。</div>
+      </div>
+      <div class="nf-insight-card">
+        <div class="nf-insight-icon">&#128203;</div>
+        <div class="nf-insight-title">标准化的案例页模板</div>
+        <div class="nf-insight-body">每个 FDE 落地场景案例必须有统一的结构：Hero→背景→痛点→解决方案→流程→时间线→结果→洞察→适合谁→定价→CTA。模板即扩展性——新场景可直接复用。</div>
+      </div>
+      <div class="nf-insight-card">
+        <div class="nf-insight-icon">&#127760;</div>
+        <div class="nf-insight-title">AI 搜索可见的 GEO 基础设施</div>
+        <div class="nf-insight-body">部署完整的企业级 GEO 套件：JSON-LD @graph 结构化数据、llms.txt/llms-full.txt、sitemap.xml、robots.txt AI 爬虫指令、.well-known/ai 发现端点、AI 透明度元数据。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. 解决方案 ═══ -->
+<section class="nf-section" id="solution" style="background:var(--surface);">
+  <div class="nf-container">
+    <div class="nf-section-label">解决方案</div>
+    <h2 class="nf-section-title">FDE 三步法在<em>自身站点</em>的应用</h2>
+    <p class="nf-section-desc">NEXFDE 网站不是外包给设计公司做的——它是用 FDE 方法论一步步构建起来的。每一版都是一个 FDE 迭代。</p>
+    <div class="nf-steps-grid">
+      <div class="nf-step-card">
+        <div class="nf-step-num">01</div>
+        <div class="nf-step-title">判断：设计系统与内容策略</div>
+        <div class="nf-step-sub">分析品牌定位、竞品配色、内容结构，判断哪些值得做、哪些先不做。</div>
+        <div class="nf-step-items">
+          <div class="nf-step-item">配色分析：蓝色赛道同质化 → 深茶绿+铜色决策</div>
+          <div class="nf-step-item">技术栈评估：Jekyll 失败 → 纯静态 HTML</div>
+          <div class="nf-step-item">内容策略：13 区块单页结构设计</div>
+          <div class="nf-step-item">GEO 需求识别：AI 搜索可见性诊断</div>
+        </div>
+      </div>
+      <div class="nf-step-card">
+        <div class="nf-step-num">02</div>
+        <div class="nf-step-title">试点：核心页面与案例模板</div>
+        <div class="nf-step-sub">快速搭建可验证的版本，核心是案例页模板标准化。</div>
+        <div class="nf-step-items">
+          <div class="nf-step-item">v1.0 初始落地页上线（13 区块单页）</div>
+          <div class="nf-step-item">v2.0 VIS 品牌重塑（全站配色系统重写）</div>
+          <div class="nf-step-item">案例页模板设计（9 区块 → 11 区块标准化）</div>
+          <div class="nf-step-item">首个案例（社媒数据洞察）模板验证</div>
+        </div>
+      </div>
+      <div class="nf-step-card">
+        <div class="nf-step-num">03</div>
+        <div class="nf-step-title">上线：内容体系与持续迭代</div>
+        <div class="nf-step-sub">部署生产环境，完善内容体系，建立持续迭代机制。</div>
+        <div class="nf-step-items">
+          <div class="nf-step-item">GEO 基础设施全面部署</div>
+          <div class="nf-step-item">案例页模板复用（3 个新增案例）</div>
+          <div class="nf-step-item">BUILDLOG.md 构建记录系统</div>
+          <div class="nf-step-item">GitHub Actions 自动部署</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. FDE 服务流程 ═══ -->
+<section class="nf-section" id="process">
+  <div class="nf-container">
+    <div class="nf-section-label">FDE 服务流程</div>
+    <h2 class="nf-section-title">从判断到迭代，<em>每一环的输出</em></h2>
+    <p class="nf-section-desc">NEXFDE 站点的每一版构建都遵循 FDE 三阶段流程。以下是每个阶段的具体工作清单和对应的成果。</p>
+
+    <div style="margin-top:20px;">
+
+      <!-- Phase 1 -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">1</div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 1</div>
+            <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">判断诊断阶段</div>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border);text-align:left;">
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">工作项</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">具体内容</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">客户价值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">品牌定位诊断</td>
+                <td style="padding:14px 16px;color:var(--muted);">分析行业竞品配色、品牌调性、目标受众感知</td>
+                <td style="padding:14px 16px;color:var(--muted);">避免「看起来都一样」的品牌陷阱</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">技术栈评估</td>
+                <td style="padding:14px 16px;color:var(--muted);">对比 Jekyll / 纯静态 / 框架方案，选择最简可行技术</td>
+                <td style="padding:14px 16px;color:var(--muted);">零构建步骤，极速加载，低维护成本</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">内容策略规划</td>
+                <td style="padding:14px 16px;color:var(--muted);">确定区块结构、叙事弧线、案例页模板框架</td>
+                <td style="padding:14px 16px;color:var(--muted);">内容可扩展，新案例即插即用</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">2</div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 2</div>
+            <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">试点冲刺阶段</div>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border);text-align:left;">
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">工作项</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">具体内容</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">客户价值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">设计系统落地</td>
+                <td style="padding:14px 16px;color:var(--muted);">深茶绿+铜色 VIS 系统，CSS 变量体系，沉浸阅读设计</td>
+                <td style="padding:14px 16px;color:var(--muted);">独特的品牌辨识度，长期阅读舒适</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">案例页模板构建</td>
+                <td style="padding:14px 16px;color:var(--muted);">11 区块标准化模板，自包含 CSS/JS，多定价体系</td>
+                <td style="padding:14px 16px;color:var(--muted);">案例可快速复制，伙伴可清晰理解交付</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">首个案例验证</td>
+                <td style="padding:14px 16px;color:var(--muted);">社媒数据洞察案例页上线，验证模板可行性</td>
+                <td style="padding:14px 16px;color:var(--muted);">模板跑通，后续案例可高效复用</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">3</div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 3</div>
+            <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">生产上线阶段</div>
+          </div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:14px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border);text-align:left;">
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">工作项</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">具体内容</th>
+                <th style="padding:12px 16px;font-weight:600;color:var(--tea-deep);font-size:13px;white-space:nowrap;">客户价值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">GEO 基础设施部署</td>
+                <td style="padding:14px 16px;color:var(--muted);">JSON-LD @graph、llms.txt、sitemap、robots.txt、.well-known/ai</td>
+                <td style="padding:14px 16px;color:var(--muted);">AI 搜索可发现，客户通过豆包/DeepSeek 可找到</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">内容体系扩展</td>
+                <td style="padding:14px 16px;color:var(--muted);">3 个新增脱敏案例、FAQ 扩充、BUILDLOG 构建记录</td>
+                <td style="padding:14px 16px;color:var(--muted);">丰富的内容资产，多方位的客户信任</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">持续迭代机制</td>
+                <td style="padding:14px 16px;color:var(--muted);">GitHub Actions 自动部署、构建记录系统、版本化管理</td>
+                <td style="padding:14px 16px;color:var(--muted);">站点持续进化，每一次构建都有记录可追溯</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. 迭代时间线 ═══ -->
+<section class="nf-section" id="timeline" style="background:var(--surface);">
+  <div class="nf-container">
+    <div class="nf-section-label">迭代时间线</div>
+    <h2 class="nf-section-title">从 v1.0 到 v2.2，<em>35 天的持续进化</em></h2>
+    <p class="nf-section-desc">这不是一次完成的项目——而是 FDE 持续迭代的真实记录。每个版本都是独立判断、验证、上线的完整闭环。</p>
+
+    <div class="nf-timeline">
+      <div class="nf-tl-item">
+        <div class="nf-tl-marker">v1</div>
+        <div class="nf-tl-content">
+          <div class="nf-tl-day">2026-07-02</div>
+          <div class="nf-tl-title">v1.0 — 初始落地页上线</div>
+          <div class="nf-tl-desc">13 区块单页落地页（nav, hero, pain points, value props, 3-step path, deliverables, service packages, why NEXFDE, endorsements, fit/not-fit, FAQ, CTA, footer）。深蓝+科技蓝配色。GitHub Pages 部署 + nexfde.com 自定义域名。JSON-LD: Service + FAQPage 双 Schema。</div>
+        </div>
+      </div>
+      <div class="nf-tl-item">
+        <div class="nf-tl-marker">v2</div>
+        <div class="nf-tl-content">
+          <div class="nf-tl-day">2026-07-03</div>
+          <div class="nf-tl-title">v2.0 — VIS 品牌重塑：深茶绿+铜色</div>
+          <div class="nf-tl-desc">全站配色系统重写：主色 `#102A43`→`#1E3D32`（深茶绿），强调色 `#2F6FEB`→`#C8853E`（铜色），背景 `#FFFFFF`→`#F5F2ED`（暖白）。新增业务路线图区块（Phase 1-3）。沉浸阅读设计。全站无蓝色系残留。</div>
+        </div>
+      </div>
+      <div class="nf-tl-item">
+        <div class="nf-tl-marker">v2</div>
+        <div class="nf-tl-content">
+          <div class="nf-tl-day">2026-07-09</div>
+          <div class="nf-tl-title">v2.1 — 首个案例页上线 + GEO 基础设施</div>
+          <div class="nf-tl-desc">新建 `/cases/social-media-analytics/` 案例页（约500行，自包含CSS/JS）。9 区块结构标准化。GEO 全面部署：JSON-LD @graph（Organization+Service+FAQPage+Article+BreadcrumbList）、llms.txt、llms-full.txt、sitemap.xml、robots.txt、.well-known/ai。AI 透明度元数据。BUILDLOG.md 构建日志系统。</div>
+        </div>
+      </div>
+      <div class="nf-tl-item">
+        <div class="nf-tl-marker">v2</div>
+        <div class="nf-tl-content">
+          <div class="nf-tl-day">2026-08-05</div>
+          <div class="nf-tl-title">v2.2 — 案例体系扩展 + 首页更新</div>
+          <div class="nf-tl-desc">新增 3 个脱敏案例页（AI办公场景部署、物业工单AI化、本页面）。案例页模板从 9 区块扩展到 11 区块。首页导航/路线图/页脚更新案例引用。FAQ 从 5 条扩充到 10 条。首页新增范式解释区、价值量化区、行业判断区。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. 交付结果 ═══ -->
+<section class="nf-section" id="results">
+  <div class="nf-container">
+    <div class="nf-section-label">交付结果</div>
+    <h2 class="nf-section-title">FDE 方法论在<em>自身站点</em>上的量化成果</h2>
+    <p class="nf-section-desc">以下是截至 v2.2 的站点构建成果。所有数据均可从 BUILDLOG.md 和站点文件直接验证。</p>
+    <div class="nf-results-grid">
+      <div class="nf-result-card">
+        <div class="nf-result-num">4</div>
+        <div class="nf-result-label">FDE 落地场景案例</div>
+        <div class="nf-result-note">标准化模板复用，覆盖社媒/办公/物业/元案例</div>
+      </div>
+      <div class="nf-result-card">
+        <div class="nf-result-num">6</div>
+        <div class="nf-result-label">GEO 基础设施文件</div>
+        <div class="nf-result-note">JSON-LD / llms.txt / sitemap / robots / .well-known / AI 透明度</div>
+      </div>
+      <div class="nf-result-card">
+        <div class="nf-result-num">5</div>
+        <div class="nf-result-label">GEO 增强区块</div>
+        <div class="nf-result-note">首页新增范式解释/价值量化/行业判断/FAQ 扩充/案例区</div>
+      </div>
+      <div class="nf-result-card">
+        <div class="nf-result-num">3</div>
+        <div class="nf-result-label">版本迭代</div>
+        <div class="nf-result-note">v1.0 → v2.0 → v2.2, 35 天持续进化</div>
+      </div>
+    </div>
+
+    <div style="margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
+        <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">技术成果</h3>
+        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 纯静态 HTML，零构建步骤，极速加载</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 自包含 CSS 设计系统，每个案例页独立</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 完整 JSON-LD @graph（5 种 Schema 类型）</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> AI 透明度合规（ai-disclosure / ai-system / ai-operator）</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> GitHub Actions 自动部署</p>
+          <p><strong style="color:var(--tea-deep);">&#10003;</strong> 构建日志系统（BUILDLOG.md + .push-history.jsonl）</p>
+        </div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
+        <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">业务成果</h3>
+        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 独特的品牌辨识度（深茶绿+铜色，AI 赛道唯一）</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 4 个脱敏案例，可直接发给客户看</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 可通过 AI 搜索被发现（豆包/DeepSeek/元宝/Kimi）</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 站点即案例——客户看到的是活的方法论展示</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 案例页模板即服务——新场景可快速复制</p>
+          <p><strong style="color:var(--tea-deep);">&#10003;</strong> 无需第三方平台，自有域名+GitHub Pages 自主可控</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8. 洞察与启发 ═══ -->
+<section class="nf-section" id="insights" style="background:var(--surface);">
+  <div class="nf-container">
+    <div class="nf-section-label">洞察与启发</div>
+    <h2 class="nf-section-title">构建过程即<em>方法论资产</em></h2>
+    <p class="nf-section-desc">这个站点的构建过程本身，就是 FDE 方法论最有力的证明。以下是从中沉淀的核心洞察。</p>
+    <div class="nf-insight-grid">
+      <div class="nf-insight-card">
+        <div class="nf-insight-icon">&#128161;</div>
+        <div class="nf-insight-title">卖交付能力，不卖工具</div>
+        <div class="nf-insight-body">站点的构建方式就是 FDE 的展示方式。客户问「你们真的懂 AI 落地吗？」——这个站点就是答案。它不是「说」FDE，它是「做」FDE。每一个区块、每一行代码、每一次迭代，都是方法论的实践记录。</div>
+      </div>
+      <div class="nf-insight-card">
+        <div class="nf-insight-icon">&#128214;</div>
+        <div class="nf-insight-title">模板即扩展性</div>
+        <div class="nf-insight-body">案例页模板标准化后，新增一个案例只需 1-2 小时——填充内容、调整定价、更新首页链接。没有模板时，每个案例都是「从零开始」，有模板后是「填充内容」。标准化的成本是前期的，收益是长期的。</div>
+      </div>
+      <div class="nf-insight-card">
+        <div class="nf-insight-icon">&#128270;</div>
+        <div class="nf-insight-title">AI 搜索是新的「门面」</div>
+        <div class="nf-insight-body">当客户通过豆包/DeepSeek 搜索「AI 落地服务」时，没有 GEO 基础设施的站点等于不存在。JSON-LD、llms.txt、sitemap 不是技术优化——是获客基础设施。就像 2010 年代 SEO 之于 Google，2026 年 GEO 之于 AI 搜索。</div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:28px 32px;text-align:center;">
+      <p style="font-size:15px;color:var(--muted);">核心洞察：<strong style="color:var(--tea-deep);">「构建过程本身就是最有说服力的案例。当你的站点展示的方法论，被你用构建站点的方式验证了，客户就不再需要说服。」</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 9. 适合谁 ═══ -->
+<section class="nf-section" id="fit">
+  <div class="nf-container">
+    <div class="nf-section-label">适合谁</div>
+    <h2 class="nf-section-title">这项服务<em>适合谁</em></h2>
+    <p class="nf-section-desc">FDE 网站构建服务适合以下三类场景。如果你符合其中一条，我们可以聊聊。</p>
+    <div class="nf-fit-grid">
+      <div class="nf-fit-card">
+        <div class="nf-fit-icon">&#127970;</div>
+        <div class="nf-fit-title">品牌站点需要重塑</div>
+        <div class="nf-fit-body">现有站点同质化严重、无法传递品牌差异。需要一套独特的视觉语言和内容结构，让客户第一眼就感受到「这家不一样」。FDE 从品牌定位诊断开始，确保设计系统与业务定位一致。</div>
+      </div>
+      <div class="nf-fit-card">
+        <div class="nf-fit-icon">&#128202;</div>
+        <div class="nf-fit-title">需要「案例即产品」的展示方式</div>
+        <div class="nf-fit-body">你的服务/产品需要案例来证明，但每个案例展示方式不统一，客户难以快速理解你的交付能力。FDE 案例页模板标准化后，每个案例都是统一结构、可量化的交付展示。</div>
+      </div>
+      <div class="nf-fit-card">
+        <div class="nf-fit-icon">&#127760;</div>
+        <div class="nf-fit-title">需要 AI 搜索可见性</div>
+        <div class="nf-fit-body">客户越来越多通过 AI 搜索（豆包、DeepSeek、元宝、Kimi）寻找服务商，但你的站点对 AI 不可见。FDE 的 GEO 基础设施部署确保你的服务会被 AI 推荐给正在搜索的客户。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10. 服务定价 ═══ -->
+<section class="nf-section" id="pricing" style="background:var(--surface);">
+  <div class="nf-container">
+    <div class="nf-section-label">服务定价</div>
+    <h2 class="nf-section-title">FDE 网站构建<em>服务包</em></h2>
+    <p class="nf-section-desc">三个服务包对应不同阶段的需求。诊断阶段可独立购买——先判断值不值得做，再决定要不要推进。</p>
+    <div class="nf-pkg-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px;">
+      <div class="nf-pkg-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">诊断</div>
+        <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">品牌诊断</div>
+        <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥3,999</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥7,999</div>
+        <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">品牌定位与竞品分析</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">设计系统诊断</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">内容策略评估</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">GEO 就绪度检查</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">输出：诊断报告 + 建议路径</div>
+        </div>
+      </div>
+      <div class="nf-pkg-card" style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper);padding:4px 10px;border-radius:5px;margin-bottom:14px;">推荐</div>
+        <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">标准构建</div>
+        <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥14,999</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥29,999</div>
+        <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">品牌诊断报告 + 设计系统落地</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">核心页面（首页 + 2 个案例页）</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">案例页模板标准化</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">GEO 基础设施部署</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">GitHub Pages 自动部署 + 操作手册</div>
+        </div>
+      </div>
+      <div class="nf-pkg-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">持续</div>
+        <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">持续迭代</div>
+        <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥29,999</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥59,999</div>
+        <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">标准构建全部内容</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">最多 5 个案例页</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">持续迭代机制（3 个月）</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">内容更新与版本管理</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">构建日志 + 迭代记录</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;background:var(--copper-pale);border-radius:var(--radius);padding:20px 24px;text-align:center;">
+      <p style="font-size:14px;color:var(--muted);">不确定哪个模式适合你？<a href="#engage" style="color:var(--copper);font-weight:600;">联系我们</a>，聊聊你的品牌现状和期望。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11. Final CTA ═══ -->
+<section class="nf-final-cta" id="engage">
+  <div class="nf-container">
+    <h2>让你的品牌站点也成为 FDE 活案例</h2>
+    <p>从一次品牌诊断开始。3-5 个工作日后，你会拿到一份诊断报告——告诉你哪些值得做、哪些先不做。</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-primary">预约诊断 &rarr;</a>
+      <a href="/" class="nf-btn nf-btn-outline">了解 NEXFDE 方法论</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WeChat Modal ═══ -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(30,61,50,0.6);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「品牌站 + 你的行业」，我们聊聊你的场景</p>
+    <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
+    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+  </div>
+</div>
+
+<!-- ═══ Footer ═══ -->
+<footer class="nf-footer">
+  <div class="nf-container">
+    <div class="nf-footer-grid">
+      <div>
+        <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
+        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+      </div>
+      <div>
+        <h5>服务</h5>
+        <a href="/#method">FDE 方法论</a>
+        <a href="/#services">服务结构</a>
+        <a href="/#deliverables">交付物</a>
+      </div>
+      <div>
+        <h5>案例</h5>
+        <a href="/cases/social-media-analytics/">社媒数据洞察</a>
+        <a href="/cases/ai-office-deployment/">AI办公场景部署</a>
+        <a href="/cases/property-work-order/">物业工单AI化</a>
+        <a href="/cases/nexfde-site-build/">网站构建即案例</a>
+      </div>
+      <div>
+        <h5>联系</h5>
+        <a href="javascript:void(0)" onclick="openWechat()">微信: ActionThinker</a>
+        <a href="mailto:lu@NexFDE.com">lu@NexFDE.com</a>
+        <a href="/">NEXFDE 首页</a>
+      </div>
+    </div>
+    <div class="nf-footer-bottom">
+      <span>&copy; 2026 NEXFDE (ActionThinker). 保留所有权利。</span>
+      <span>案例数据已脱敏 &middot; AI 辅助构建 &middot; FDE 方法论实践</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.nf-page -->
+
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+</script>
+
+</body>
+</html>
