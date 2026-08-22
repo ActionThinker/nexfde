@@ -4,7 +4,7 @@
     <loc>https://nexfde.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-23</lastmod>
   </url>
   <url>
     <loc>https://nexfde.com/cases/social-media-analytics/</loc>
@@ -19,15 +19,9 @@
     <lastmod>2026-08-05</lastmod>
   </url>
   <url>
-    <loc>https://nexfde.com/cases/property-work-order/</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-    <lastmod>2026-08-05</lastmod>
-  </url>
-  <url>
     <loc>https://nexfde.com/cases/nexfde-site-build/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-23</lastmod>
   </url>
 </urlset>
