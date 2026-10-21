@@ -199,6 +199,30 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-nav-cta:hover { background: var(--copper-light) !important; color: #fff !important; }
 .nf-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.nf-nav-drop { position: relative; }
+.nf-nav-drop-toggle { display: inline-flex; align-items: center; gap: 4px; }
+.nf-nav-drop-toggle svg { transition: transform 0.2s; }
+.nf-nav-drop:hover .nf-nav-drop-toggle svg,
+.nf-nav-drop:focus-within .nf-nav-drop-toggle svg { transform: rotate(180deg); }
+.nf-nav-drop-panel {
+  position: absolute; top: calc(100% + 10px); left: -16px; min-width: 340px;
+  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: 0 18px 48px rgba(30,61,50,0.14);
+  padding: 8px; opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.nf-nav-drop:hover .nf-nav-drop-panel,
+.nf-nav-drop:focus-within .nf-nav-drop-panel { opacity: 1; visibility: visible; transform: translateY(0); }
+.nf-nav-drop-item {
+  display: flex; gap: 12px; align-items: flex-start; padding: 12px;
+  border-radius: 8px; text-decoration: none; transition: background 0.15s;
+}
+.nf-nav-drop-item:hover { background: var(--warm-white); }
+.nf-nav-drop-num { flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--copper); letter-spacing: 0.02em; padding-top: 2px; }
+.nf-nav-drop-title { display: block; font-size: 14px; font-weight: 600; color: var(--tea-deep); line-height: 1.4; }
+.nf-nav-drop-desc { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; line-height: 1.5; }
+.nf-nav-drop-foot { display: block; padding: 10px 12px; margin-top: 4px; border-top: 1px solid var(--border); font-size: 13px; font-weight: 600; color: var(--copper); text-decoration: none; }
+.nf-nav-drop-foot:hover { color: var(--tea-deep); }
 
 @media (max-width: 860px) {
   .nf-nav-links { display: none; }
@@ -209,6 +233,14 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     background: var(--warm-white); border-bottom: 1px solid var(--border);
     padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   }
+  .nf-nav-drop-panel {
+    position: static; min-width: 0; opacity: 1; visibility: visible; transform: none;
+    display: none; box-shadow: none; border: none; border-radius: 0;
+    background: transparent; padding: 0; margin: 8px 0 0 16px;
+    border-left: 2px solid var(--border);
+  }
+  .nf-nav-drop.open .nf-nav-drop-panel { display: block; }
+  .nf-nav-drop-item { padding: 8px 0; }
 }
 
 /* ═══ Hero ═══ */
@@ -580,7 +612,24 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div class="nf-nav-links" id="navLinks">
     <a href="#method">方法论</a>
     <a href="#services">服务</a>
-    <a href="/cases/nexfde-site-build/">场景案例</a>
+    <div class="nf-nav-drop">
+      <a href="/cases/nexfde-site-build/" class="nf-nav-drop-toggle">场景案例 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nf-nav-drop-panel">
+        <a class="nf-nav-drop-item" href="/cases/social-media-analytics/">
+          <span class="nf-nav-drop-num">#1</span>
+          <span><span class="nf-nav-drop-title">双平台社媒数据洞察</span><span class="nf-nav-drop-desc">抖音×小红书全量数据诊断，90 天增长路线图</span></span>
+        </a>
+        <a class="nf-nav-drop-item" href="/cases/nexfde-site-build/">
+          <span class="nf-nav-drop-num">#2</span>
+          <span><span class="nf-nav-drop-title">网站构建即案例</span><span class="nf-nav-drop-desc">本站点的构建全过程——FDE 方法论的活案例</span></span>
+        </a>
+        <a class="nf-nav-drop-item" href="/cases/geo-lead-generation/">
+          <span class="nf-nav-drop-num">#3</span>
+          <span><span class="nf-nav-drop-title">GEO 改造获客闭环</span><span class="nf-nav-drop-desc">新域名 3 周跑通获客闭环，16 条渠道伙伴线索</span></span>
+        </a>
+        <a class="nf-nav-drop-foot" href="/cases/nexfde-site-build/">案例总览 →</a>
+      </div>
+    </div>
     <a href="#diagnostic">自测诊断</a>
     <a href="#roadmap">路线图</a>
     <a href="#faq">常见问题</a>
@@ -1191,9 +1240,8 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <p style="font-weight:600;color:var(--tea-deep);margin-bottom:8px;">FDE 落地场景案例</p>
       <div style="display:flex;flex-direction:column;gap:6px;">
         <a href="/cases/social-media-analytics/" style="color:var(--copper);text-decoration:none;">#1 双平台社媒数据洞察</a>
-        <a href="/cases/ai-office-deployment/" style="color:var(--copper);text-decoration:none;">#2 AI 办公场景部署</a>
-        <a href="/cases/nexfde-site-build/" style="color:var(--copper);text-decoration:none;">#3 网站构建即案例</a>
-        <a href="/cases/geo-lead-generation/" style="color:var(--copper);text-decoration:none;">#4 GEO 改造获客闭环</a>
+        <a href="/cases/nexfde-site-build/" style="color:var(--copper);text-decoration:none;">#2 网站构建即案例</a>
+        <a href="/cases/geo-lead-generation/" style="color:var(--copper);text-decoration:none;">#3 GEO 改造获客闭环</a>
       </div>
       <p style="margin-top:16px;">你是有 AI 能力的行业专家？我们正在建立 FDE 交付网络。</p>
       <a href="#" onclick="openWechat();return false">了解加入 NEXFDE 交付网络 →</a>
@@ -1264,7 +1312,6 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">案例</div>
           <a href="/cases/social-media-analytics/" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">社媒数据洞察</a>
-          <a href="/cases/ai-office-deployment/" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">AI 办公部署</a>
           <a href="/cases/nexfde-site-build/" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">网站构建即案例</a>
           <a href="/cases/geo-lead-generation/" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;">GEO 改造获客闭环</a>
         </div>
@@ -1289,7 +1336,8 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 function toggleFaq(btn){var item=btn.parentElement;item.classList.toggle('open');}
 function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
 document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
-document.querySelectorAll('#navLinks a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});});
+document.querySelectorAll('#navLinks a').forEach(function(link){link.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');if(document.querySelector('.nf-nav-drop')){document.querySelector('.nf-nav-drop').classList.remove('open');}});});
+document.querySelector('.nf-nav-drop-toggle').addEventListener('click',function(e){if(window.innerWidth<=860){e.preventDefault();this.parentElement.classList.toggle('open');}});
 (function(){
   var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:0.15,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.nf-animate').forEach(function(el){observer.observe(el);});
