@@ -190,6 +190,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   padding: 6px 14px; border-radius: 99px; margin-bottom: 20px;
 }
 .nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
+.nf-stage-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--tea-mid); background: var(--green-bg);
+  padding: 6px 14px; border-radius: 99px; margin-left: 8px; margin-bottom: 20px;
+}
+.nf-stage-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tea-mid); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
 .nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
@@ -371,7 +378,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div class="nf-container">
     <div class="nf-hero-grid">
       <div>
-        <div class="nf-hero-badge">FDE 落地场景案例 #2</div>
+        <div class="nf-hero-badge">FDE 落地场景案例 #2</div><div class="nf-stage-badge">持续迭代</div>
         <h1>NEXFDE 网站<em>构建即案例</em></h1>
         <p class="nf-hero-sub">你正在浏览的网站本身，就是 FDE 方法论最完整的案例。从设计系统判断、案例页模板标准化到部署上线，每一步都遵循 FDE 三步法——判断→试点→上线。卖的不是工具，是交付能力。</p>
         <div class="nf-hero-tags">
@@ -666,7 +673,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">内容体系扩展</td>
-                <td style="padding:14px 16px;color:var(--muted);">3 个新增脱敏案例、FAQ 扩充、BUILDLOG 构建记录</td>
+                <td style="padding:14px 16px;color:var(--muted);">3 个新增案例、FAQ 扩充、BUILDLOG 构建记录</td>
                 <td style="padding:14px 16px;color:var(--muted);">丰富的内容资产，多方位的客户信任</td>
               </tr>
               <tr>
@@ -719,7 +726,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <div class="nf-tl-content">
           <div class="nf-tl-day">2026-08-05</div>
           <div class="nf-tl-title">v2.2 — 案例体系扩展 + 首页更新</div>
-          <div class="nf-tl-desc">新增 3 个脱敏案例页（AI办公场景部署、物业工单AI化、本页面）。案例页模板从 9 区块扩展到 11 区块。首页导航/路线图/页脚更新案例引用。FAQ 从 5 条扩充到 10 条。首页新增范式解释区、价值量化区、行业判断区。</div>
+          <div class="nf-tl-desc">新增 3 个案例页（AI办公场景部署、物业工单AI化、本页面）。案例页模板从 9 区块扩展到 11 区块。首页导航/路线图/页脚更新案例引用。FAQ 从 5 条扩充到 10 条。首页新增范式解释区、价值量化区、行业判断区。</div>
         </div>
       </div>
       <div class="nf-tl-item">
@@ -803,7 +810,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">业务成果</h3>
         <div style="font-size:14px;color:var(--muted);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 独特的品牌辨识度（深茶绿+铜色，AI 赛道唯一）</p>
-          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 3 个脱敏案例，可直接发给客户看</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 3 个案例页，可直接发给客户看</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 可通过 AI 搜索被发现（豆包/DeepSeek/元宝/Kimi）</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 站点即案例——客户看到的是活的方法论展示</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 案例页模板即服务——新场景可快速复制</p>
@@ -977,7 +984,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
     <div class="nf-footer-bottom">
       <span>&copy; 2026 NEXFDE (ActionThinker). 保留所有权利。</span>
-      <span>案例数据已脱敏 &middot; AI 辅助构建 &middot; FDE 方法论实践</span>
+      <span>自营实践数据可验证 &middot; AI 辅助构建 &middot; FDE 方法论实践 &middot; 案例受保护：转载 / 抓取 / 训练须书面授权</span>
     </div>
   </div>
 </footer>

@@ -190,6 +190,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   padding: 6px 14px; border-radius: 99px; margin-bottom: 20px;
 }
 .nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
+.nf-stage-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--tea-mid); background: var(--green-bg);
+  padding: 6px 14px; border-radius: 99px; margin-left: 8px; margin-bottom: 20px;
+}
+.nf-stage-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tea-mid); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
 .nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
@@ -371,7 +378,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div class="nf-container">
     <div class="nf-hero-grid">
       <div>
-        <div class="nf-hero-badge">FDE 落地场景案例 #4</div>
+        <div class="nf-hero-badge">FDE 落地场景案例 #4</div><div class="nf-stage-badge">生产运行</div>
         <h1>备课周期从<em>2 周</em>压缩到 3 天</h1>
         <p class="nf-hero-sub">我们自己做培训交付——第一门课备课花了 2 周，到同一客户第二门课，方案、课件到上课只用了 3 天。背后是一条六步闭环的课程生产链路：需求收集、方案输出、调研、大纲、课件包、案例资产，每一步都有生成器承接。卖的不是「会讲课」，是「把课程开发变成流水线」的交付能力。</p>
         <div class="nf-hero-tags">
@@ -938,7 +945,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
     <div class="nf-footer-bottom">
       <span>&copy; 2026 NEXFDE (ActionThinker). 保留所有权利。</span>
-      <span>自营实践数据可验证 &middot; AI 辅助构建 &middot; FDE 方法论实践</span>
+      <span>自营实践数据可验证 &middot; AI 辅助构建 &middot; FDE 方法论实践 &middot; 案例受保护：转载 / 抓取 / 训练须书面授权</span>
     </div>
   </div>
 </footer>

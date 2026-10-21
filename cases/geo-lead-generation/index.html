@@ -190,6 +190,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   padding: 6px 14px; border-radius: 99px; margin-bottom: 20px;
 }
 .nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
+.nf-stage-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--tea-mid); background: var(--green-bg);
+  padding: 6px 14px; border-radius: 99px; margin-left: 8px; margin-bottom: 20px;
+}
+.nf-stage-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tea-mid); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
 .nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
@@ -371,7 +378,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div class="nf-container">
     <div class="nf-hero-grid">
       <div>
-        <div class="nf-hero-badge">FDE 落地场景案例 #3</div>
+        <div class="nf-hero-badge">FDE 落地场景案例 #3</div><div class="nf-stage-badge">生产运行</div>
         <h1>GEO 改造让新域名<em>3 周</em>跑通获客闭环</h1>
         <p class="nf-hero-sub">一个 8 月刚上线的新品牌域名——上线初期即完成 GEO 基础设施部署，9 月底打通渠道伙伴合作申请通道，随后 3 周收到 16 条合作线索，其中 69% 来自搜索。零投放、纯自然流量。卖的不是 GEO 工具，是「让新站点从第一天就被 AI 看见」的交付能力。</p>
         <div class="nf-hero-tags">
@@ -970,7 +977,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
     <div class="nf-footer-bottom">
       <span>&copy; 2026 NEXFDE (ActionThinker). 保留所有权利。</span>
-      <span>自营实践数据可验证 &middot; AI 辅助构建 &middot; FDE 方法论实践</span>
+      <span>自营实践数据可验证 &middot; AI 辅助构建 &middot; FDE 方法论实践 &middot; 案例受保护：转载 / 抓取 / 训练须书面授权</span>
     </div>
   </div>
 </footer>
