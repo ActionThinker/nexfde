@@ -70,12 +70,14 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://nexfde.com" },
-          { "@type": "ListItem", "position": 2, "name": "场景案例", "item": "https://nexfde.com/cases/ai-course-production-line/" }
+          { "@type": "ListItem", "position": 2, "name": "案例库", "item": "https://nexfde.com/cases/" },
+          { "@type": "ListItem", "position": 3, "name": "课程生产链路", "item": "https://nexfde.com/cases/ai-course-production-line/" }
         ]
       }
     ]
   }
   </script>
+  <script defer src="/assets/wbl-track.js"></script>
 </head>
 <body>
 
@@ -359,6 +361,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <a href="/" class="nf-nav-back">&larr; 返回首页</a>
   </div>
   <div class="nf-nav-links" id="navLinks">
+    <a href="/cases/">案例库</a>
     <a href="#background">需求背景</a>
     <a href="#challenge">痛点挑战</a>
     <a href="#solution">解决方案</a>
@@ -898,7 +901,8 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <h2>把你们的课程开发，也变成一条流水线</h2>
     <p>告诉我们你的培训场景——机构、企业内训，还是想把方法论沉淀成课程。我们先花半天梳理需求，给你一份合作方案与调研计划。</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-primary">预约需求梳理 &rarr;</a>
+      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-primary" data-track="wechat_fallback">预约需求梳理 &rarr;</a>
+      <a href="/enterprise/" class="nf-btn nf-btn-outline" data-track="case_similar_request">发起同类需求 &rarr;</a>
       <a href="/" class="nf-btn nf-btn-outline">了解 NEXFDE 方法论</a>
     </div>
   </div>

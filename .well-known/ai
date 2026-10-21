@@ -12,6 +12,9 @@
     { "path": "/llms.txt", "format": "text/markdown", "description": "AI agent site summary" },
     { "path": "/llms-full.txt", "format": "text/markdown", "description": "Full content Markdown for RAG pipelines" },
     { "path": "/sitemap.xml", "format": "application/xml", "description": "Site sitemap" },
+    { "path": "/cases/", "format": "text/html", "description": "FDE case library hub — verified case matrix and industry fit" },
+    { "path": "/enterprise/", "format": "text/html", "description": "Enterprise cooperation — three engagement modes and needs submission" },
+    { "path": "/network/", "format": "text/html", "description": "FDE collaborative delivery network — expert application and project records" },
     { "path": "/BUILDLOG.md", "format": "text/markdown", "description": "Site build log with iteration decisions" }
   ],
   "aiDisclosure": {

@@ -6,8 +6,8 @@
 
 ## 项目信息
 
-- **站点**: nexfde.com v2.5.1
-- **类型**: 多页静态站点（首页 + 场景案例页），纯静态 HTML + CSS + JS
+- **站点**: nexfde.com v2.6.0
+- **类型**: 多页静态站点（首页 + 案例库 + 交付网络 + 企业合作 + 场景案例页），纯静态 HTML + CSS + JS
 - **部署**: GitHub Pages（`ActionThinker/nexfde`），无构建步骤
 - **设计系统**: Deep Tea Green (#1E3D32) + Copper (#C8853E)，Inter 字体，暖白背景 (#F5F2ED)
 - **AI 构建**: Claude (Anthropic) 辅助，FDE-style AI Deployment 方法
@@ -17,6 +17,9 @@
 | 路径 | 用途 |
 |:---|:---|
 | `index.html` | 主落地页（自包含 CSS/JS） |
+| `cases/index.html` | 案例库 hub（案例矩阵 + 行业适配 + 授权声明） |
+| `network/index.html` | FDE 协同交付网络（专家/伙伴侧，专家申请表单） |
+| `enterprise/index.html` | 企业合作（客户侧，需求提交表单） |
 | `cases/{scenario}/index.html` | 场景案例页（每场景独立子目录） |
 | `assets/` | 静态资源（微信二维码、OG 图片） |
 | `BUILDLOG.md` | 构建日志（每次迭代记录） |
@@ -122,3 +125,16 @@
 4. 成果仪表盘 5. 核心发现 6. 交付物清单 7. 服务定价 8. 交付流程 9. 伙伴价值+CTA
 
 约束：客户信息脱敏、真实数据指标、定价保持与已验证体系一致、每页自包含CSS/JS。
+
+---
+
+## 统计协议（CF 五件套 + 埋点）
+
+- **架构**：CF Web Analytics（页面 UV/PV/来源渠道，token 待 NS 迁移后注入，beacon 脚本注入全站 head）+ CF Worker `nexfde-events`（`/api/evt` 路由，事件写 Analytics Engine 数据集 `nexfde_events`，绑定名 `WBL_ANALYTICS`）+ Bot Analytics（AI 爬虫抓取=AI 引用代理指标①）+ Web Analytics Referrers（chatgpt.com/豆包等来源=代理指标②）
+- **CTA 埋点机制**：按钮/链接加 `data-track="事件名"`，`assets/wbl-track.js` 全局 click 委托 → `navigator.sendBeacon('/api/evt?n=事件名&p=页面路径')`；事件名只含 `[a-z_]`
+- **事件命名规范**：主转化 `diagnostic_booking`（预约部署诊断）/ `client_form_open`（客户需求表单）/ `expert_form_open`（专家申请表单）；页面级 `case_similar_request`（案例页发起同类需求）/ `case_view_*` / `cta_cases_hub` / `cta_network` / `cta_enterprise` / `wechat_fallback`；新增落地页必须配专属事件名
+- **新页面加入规则**：①head 注入 beacon 脚本 + `<script defer src="/assets/wbl-track.js"></script>` ②所有飞书表单/关键 CTA 加 data-track ③BUILDLOG 记录
+- **查询**：Web Analytics 仪表板看页面级；Analytics Engine SQL 看事件级（SQL 集见 `D:\shared\methodology\website-analytics\sql-queries.md`）
+- **转化口径**：CTA 点击=代理转化；表单提交用飞书 Base 落库量做第二数据源（不做 Worker 代理表单）；CF Web Analytics 不支持自定义事件，不要在 beacon 上做事件
+- **部署行尾纪律**：git 历史行尾混合——写文件后按父提交行尾逐文件恢复，并用 `git -c core.autocrlf=false add`
+- **当前状态**：wbl-track.js 已全站接入（Worker 未建前 beacon 落到 GitHub 404 无害）；CF 接入需用户按 SOP 手动做 NS 迁移（约 30 分钟），完成后把 token 注入全站 head

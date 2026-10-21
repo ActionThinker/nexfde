@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>企业 AI 落地案例库：真实 FDE 项目案例与交付成效 | NEXFDE</title>
+  <meta name="description" content="NEXFDE 企业 AI 落地案例库——4 个真实交付场景：社媒数据洞察、GEO 获客、课程生产链路与元案例。每个案例含行业背景、交付结果与可验证数据，帮助判断你的业务是否适合 AI 落地。">
+
+  <link rel="canonical" href="https://nexfde.com/cases/">
+
+  <meta property="og:title" content="企业 AI 落地案例库：真实 FDE 项目案例与交付成效 | NEXFDE">
+  <meta property="og:description" content="NEXFDE 企业 AI 落地案例库——4 个真实交付场景，行业背景、交付结果与数据均可验证，客户信息已脱敏。">
+  <meta property="og:url" content="https://nexfde.com/cases/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEXFDE">
+  <meta property="og:image" content="https://nexfde.com/assets/nexfde-og.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="企业 AI 落地案例库：真实 FDE 项目案例与交付成效 | NEXFDE">
+  <meta name="twitter:description" content="4 个真实交付场景：社媒数据洞察、GEO 获客、课程生产链路与元案例。">
+  <meta name="twitter:image" content="https://nexfde.com/assets/nexfde-og.svg">
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="NEXFDE (ActionThinker)">
+  <link rel="alternate" hreflang="zh-CN" href="https://nexfde.com/cases/">
+
+  <meta name="ai-disclosure" content="ai-assisted">
+  <meta name="ai-system" content="Claude (Anthropic)">
+  <meta name="ai-operator" content="ActionThinker">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization", "@id": "https://nexfde.com/#organization",
+        "name": "NEXFDE", "url": "https://nexfde.com",
+        "logo": "https://nexfde.com/assets/nexfde-og.svg",
+        "email": "lu@NexFDE.com",
+        "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "lu@NexFDE.com", "availableLanguage": ["zh-CN", "en"] }
+      },
+      {
+        "@type": "Service", "@id": "https://nexfde.com/cases/#service",
+        "name": "NEXFDE 企业 AI 落地案例库",
+        "description": "NEXFDE 真实交付案例库——社媒数据洞察、GEO 获客改造、AI 课程生产链路与元案例，每个案例含行业背景、FDE 三步交付过程与可验证结果。",
+        "provider": { "@id": "https://nexfde.com/#organization" },
+        "serviceType": "Enterprise AI Deployment Cases",
+        "areaServed": { "@type": "Country", "name": "China" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question", "name": "这些 FDE 案例是真实的吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "每个案例都是真实交付沉淀：需求、方案、时间线与交付结果可追溯，数据来自交付记录。客户名称一律脱敏，行业、规模与数据保持真实。" }
+          },
+          {
+            "@type": "Question", "name": "案例里的客户为什么都是匿名的？",
+            "acceptedAnswer": { "@type": "Answer", "text": "NEXFDE 遵循脱敏与有限授权原则：行业背景与交付数据真实呈现，客户名称与品牌不公开。案例内容受保护，转载、抓取或用于训练须获得书面授权。" }
+          },
+          {
+            "@type": "Question", "name": "我的行业和案例不一样，还有参考价值吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "有。案例回答的是方法论层面的问题——值不值得做、怎么做到、会遇到什么坑。行业适配区块给出了案例到行业的映射：制造、工程、政务、金融与专业服务均适用。" }
+          },
+          {
+            "@type": "Question", "name": "找 FDE 服务应该怎么选？",
+            "acceptedAnswer": { "@type": "Answer", "text": "看三件事：有没有同行业或相近行业的真实案例；交付流程是否透明、是否先诊断再承诺；结果是否可验证。案例库按这三条标准呈现。" }
+          },
+          {
+            "@type": "Question", "name": "如何发起类似的项目合作？",
+            "acceptedAnswer": { "@type": "Answer", "text": "在企业合作页提交你的业务问题，48 小时内回复——包括「这件事现在不值得做」的判断。也可以先预约一次部署诊断，用 1 周锁定最值得跑通的场景。" }
+          }
+        ]
+      },
+      {
+        "@type": "Article", "@id": "https://nexfde.com/cases/#article",
+        "headline": "企业 AI 落地案例库：真实 FDE 项目案例与交付成效",
+        "description": "NEXFDE 企业 AI 落地案例库——4 个真实交付场景：社媒数据洞察、GEO 获客、课程生产链路与元案例。",
+        "author": { "@id": "https://nexfde.com/#organization" },
+        "publisher": { "@id": "https://nexfde.com/#organization" },
+        "url": "https://nexfde.com/cases/",
+        "datePublished": "2026-10-21", "dateModified": "2026-10-21", "version": "2.6.0", "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://nexfde.com" },
+          { "@type": "ListItem", "position": 2, "name": "案例库", "item": "https://nexfde.com/cases/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script defer src="/assets/wbl-track.js"></script>
+</head>
+<body>
+
+<div class="nf-page">
+
+<style>
+/* ═══ NEXFDE Design System — 深茶绿 + 铜色 ═══ */
+:root {
+  --tea-deep: #1E3D32;
+  --tea-dark: #152D25;
+  --tea-mid: #2A5A4A;
+  --copper: #C8853E;
+  --copper-light: #D9A35E;
+  --copper-pale: #FBF6ED;
+  --warm-white: #F5F2ED;
+  --surface: #FFFFFF;
+  --bg-alt: #EDEAE4;
+  --border: #D4CFC6;
+  --ink: #1A1A1A;
+  --muted: #6B7A73;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --green-bg: #E8F0EC;
+}
+
+.nf-page { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; line-height: 1.7; color: var(--ink); background: var(--warm-white); -webkit-font-smoothing: antialiased; }
+.nf-page *, .nf-page *::before, .nf-page *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.nf-page h1, .nf-page h2, .nf-page h3, .nf-page h4 { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 600; line-height: 1.2; color: var(--tea-deep); letter-spacing: -0.02em; }
+.nf-page p { margin: 0; }
+.nf-page ul { margin: 0; padding: 0; list-style: none; }
+.nf-page a { text-decoration: none; color: inherit; }
+
+.nf-container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.nf-section { padding: 110px 0; }
+
+.nf-section-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--copper); margin-bottom: 14px;
+}
+.nf-section-title {
+  font-size: clamp(26px, 4vw, 36px); font-weight: 700;
+  color: var(--tea-deep); margin-bottom: 16px; line-height: 1.25; letter-spacing: -0.02em;
+}
+.nf-section-title em { font-style: normal; color: var(--copper); }
+.nf-section-desc {
+  font-size: 17px; color: var(--muted);
+  max-width: 620px; line-height: 1.8; margin-bottom: 52px;
+}
+
+/* Buttons */
+.nf-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 30px; border-radius: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px; font-weight: 600; cursor: pointer; border: none;
+  transition: all 0.2s ease; white-space: nowrap;
+}
+a.nf-btn-primary { background: var(--copper); color: #fff; }
+a.nf-btn-primary:hover { background: var(--copper-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,133,62,0.3); }
+a.nf-btn-outline { background: transparent; color: var(--tea-deep); border: 1.5px solid var(--border); }
+a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); transform: translateY(-1px); }
+
+/* ═══ Nav ═══ */
+.nf-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(245,242,237,0.94); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nf-nav-left { display: flex; align-items: center; gap: 20px; }
+.nf-nav-logo { display: flex; align-items: center; gap: 10px; }
+.nf-nav-logo-main {
+  font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600;
+  color: var(--tea-deep); letter-spacing: -0.02em;
+}
+.nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
+.nf-nav-back {
+  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
+}
+.nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
+.nf-nav-links { display: flex; align-items: center; gap: 24px; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a:hover { color: var(--tea-deep); }
+.nf-nav-links a.nf-nav-here { color: var(--tea-deep); font-weight: 600; }
+.nf-nav-cta {
+  font-size: 13px; font-weight: 600; color: #fff !important;
+  background: var(--copper); padding: 8px 18px; border-radius: 6px;
+  transition: background 0.2s !important;
+}
+.nf-nav-cta:hover { background: var(--copper-light) !important; color: #fff !important; }
+.nf-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+
+@media (max-width: 860px) {
+  .nf-nav-links { display: none; }
+  .nf-nav-toggle { display: block; }
+  .nf-nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 60px; left: 0; right: 0;
+    background: var(--warm-white); border-bottom: 1px solid var(--border);
+    padding: 20px 24px; gap: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+}
+
+/* ═══ Hero ═══ */
+.nf-hero { padding: 150px 0 90px; background: var(--warm-white); }
+.nf-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--copper); background: var(--copper-pale);
+  padding: 6px 14px; border-radius: 99px; margin-bottom: 20px;
+}
+.nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
+.nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
+.nf-hero h1 em { font-style: normal; color: var(--copper); }
+.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 30px; }
+.nf-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+.nf-hero-note { font-size: 13px; color: var(--muted); margin-top: 18px; }
+
+/* ═══ Case Cards ═══ */
+.nf-case-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-top: 20px; }
+.nf-case-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  display: flex; flex-direction: column;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.nf-case-card:hover { border-color: rgba(200,133,62,0.4); transform: translateY(-2px); }
+.nf-case-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.nf-case-no { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: var(--tea-mid); background: var(--green-bg); padding: 4px 10px; border-radius: 5px; }
+.nf-case-stage { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--copper); background: var(--copper-pale); padding: 4px 10px; border-radius: 5px; }
+.nf-case-industry { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 8px; }
+.nf-case-title { font-size: 20px; font-weight: 700; color: var(--tea-deep); margin-bottom: 14px; }
+.nf-case-metric {
+  font-size: 14px; color: var(--muted); line-height: 1.6;
+  background: var(--copper-pale); border-radius: var(--radius);
+  padding: 12px 16px; margin-bottom: 14px;
+}
+.nf-case-metric strong { color: var(--tea-deep); font-size: 16px; }
+.nf-case-client { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.nf-case-ctas { margin-top: auto; display: flex; gap: 20px; align-items: center; border-top: 1px solid var(--border); padding-top: 18px; }
+.nf-case-ctas a { font-size: 14px; font-weight: 600; }
+.nf-case-ctas a.nf-case-go { color: var(--copper); }
+.nf-case-ctas a.nf-case-go:hover { color: var(--copper-light); }
+.nf-case-ctas a.nf-case-alt { color: var(--muted); }
+.nf-case-ctas a.nf-case-alt:hover { color: var(--tea-deep); }
+
+/* ═══ Verifiable ═══ */
+.nf-verify-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
+.nf-verify-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px 28px;
+}
+.nf-verify-card h3 { font-size: 18px; font-weight: 600; color: var(--tea-deep); margin-bottom: 18px; }
+.nf-verify-item { display: flex; gap: 14px; margin-bottom: 16px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+.nf-verify-item:last-child { margin-bottom: 0; }
+.nf-verify-tag {
+  flex-shrink: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  color: var(--tea-mid); background: var(--green-bg); padding: 3px 10px; border-radius: 5px; height: fit-content;
+}
+.nf-verify-note {
+  margin-top: 20px; background: var(--copper-pale); border-radius: var(--radius);
+  padding: 20px 24px; font-size: 14px; color: var(--muted); line-height: 1.7;
+}
+
+/* ═══ Fit ═══ */
+.nf-fit-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.nf-fit-table th {
+  text-align: left; padding: 14px 18px; font-size: 13px; font-weight: 600;
+  color: var(--tea-deep); background: var(--bg-alt); white-space: nowrap;
+}
+.nf-fit-table td { padding: 14px 18px; color: var(--muted); border-top: 1px solid var(--border); line-height: 1.7; }
+.nf-fit-table td a { color: var(--copper); font-weight: 600; }
+.nf-fit-table td a:hover { text-decoration: underline; }
+
+/* ═══ FAQ ═══ */
+.nf-faq-list { max-width: 760px; margin: 20px auto 0; }
+.nf-faq-item { border-bottom: 1px solid var(--border); }
+.nf-faq-q {
+  width: 100%; background: none; border: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 4px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px; font-weight: 600; color: var(--tea-deep); text-align: left;
+}
+.nf-faq-a { display: none; padding: 0 4px 20px; font-size: 14px; color: var(--muted); line-height: 1.8; }
+.nf-faq-a p { margin: 0; }
+
+/* ═══ Final CTA ═══ */
+.nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
+.nf-final-cta h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: #fff; margin-bottom: 18px; letter-spacing: -0.02em; }
+.nf-final-cta p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 40px; line-height: 1.8; }
+.nf-final-cta .nf-btn-primary { background: var(--copper); color: #fff; font-size: 15px; padding: 16px 36px; }
+.nf-final-cta .nf-btn-primary:hover { background: var(--copper-light); box-shadow: 0 4px 20px rgba(200,133,62,0.3); }
+.nf-final-cta .nf-btn-outline { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.25); }
+.nf-final-cta .nf-btn-outline:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+.nf-final-note { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 48px; }
+
+/* ═══ Footer ═══ */
+.nf-footer { background: var(--tea-dark); color: rgba(255,255,255,0.6); padding: 56px 0 40px; font-size: 14px; line-height: 1.8; }
+.nf-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+.nf-footer-brand { font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+.nf-footer-brand .fde { font-weight: 700; color: var(--copper); }
+.nf-footer h5 { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 12px; letter-spacing: 0.04em; }
+.nf-footer a { color: rgba(255,255,255,0.6); transition: color 0.15s; display: block; margin-bottom: 6px; }
+.nf-footer a:hover { color: var(--copper); }
+.nf-footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; font-size: 13px; color: rgba(255,255,255,0.35); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 860px) {
+  .nf-section { padding: 64px 0; }
+  .nf-hero { padding: 120px 0 64px; }
+  .nf-case-grid, .nf-verify-grid { grid-template-columns: 1fr; }
+  .nf-footer-grid { grid-template-columns: 1fr 1fr; }
+  .nf-final-cta { padding: 80px 0; }
+  .nf-fit-table { display: block; overflow-x: auto; }
+}
+</style>
+
+<!-- ═══ Nav ═══ -->
+<nav class="nf-nav">
+  <div class="nf-nav-left">
+    <a href="/" class="nf-nav-logo">
+      <span class="nf-nav-logo-main">NEX<span class="fde">FDE</span></span>
+    </a>
+    <a href="/" class="nf-nav-back">&larr; 返回首页</a>
+  </div>
+  <div class="nf-nav-links" id="navLinks">
+    <a href="/cases/" class="nf-nav-here">案例库</a>
+    <a href="/network/">交付网络</a>
+    <a href="/enterprise/">企业合作</a>
+    <a href="/#roadmap">路线图</a>
+    <a href="javascript:void(0)" onclick="openWechat()" class="nf-nav-cta" data-track="diagnostic_booking">预约部署诊断</a>
+  </div>
+  <button class="nf-nav-toggle" id="navToggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="菜单">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--tea-deep)" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<!-- ═══ Hero ═══ -->
+<header class="nf-hero">
+  <div class="nf-container">
+    <div class="nf-hero-badge">FDE 落地案例库</div>
+    <h1>发现与你业务相似的<em>FDE 案例</em></h1>
+    <p class="nf-hero-sub">看案例不是看热闹。每个案例回答同一个问题：值不值得做，怎么做到。行业背景、痛点、方案与交付结果均可追溯——客户信息已脱敏，数据可验证。</p>
+    <div class="nf-hero-ctas">
+      <a href="#matrix" class="nf-btn nf-btn-primary">浏览案例矩阵 &darr;</a>
+      <a href="/enterprise/" class="nf-btn nf-btn-outline" data-track="case_similar_request">发起同类需求 &rarr;</a>
+    </div>
+    <p class="nf-hero-note">当前 4 个案例，覆盖专业服务、品牌增长、培训交付与自营实践。</p>
+  </div>
+</header>
+
+<!-- ═══ 1. 案例矩阵 ═══ -->
+<section class="nf-section" id="matrix" style="background:var(--surface);">
+  <div class="nf-container">
+    <div class="nf-section-label">案例矩阵</div>
+    <h2 class="nf-section-title">NEXFDE 做过的<em>真实项目</em></h2>
+    <p class="nf-section-desc">每个案例标注所处阶段：真实验证、持续迭代或生产运行。指标来自交付记录，不夸张、不修饰。</p>
+
+    <div class="nf-case-grid">
+      <div class="nf-case-card">
+        <div class="nf-case-top"><span class="nf-case-no">Case 001</span><span class="nf-case-stage">真实验证</span></div>
+        <div class="nf-case-industry">切入行业：专业服务（营建 / 设计 / 咨询）</div>
+        <div class="nf-case-title">双平台社媒数据洞察</div>
+        <div class="nf-case-metric"><strong>数百条</strong> 内容 → 结构化数据卡片</div>
+        <div class="nf-case-client">某传统专业服务企业 · 创始人 IP</div>
+        <div class="nf-case-ctas">
+          <a href="/cases/social-media-analytics/" class="nf-case-go" data-track="case_view_social">查看案例详情 &rarr;</a>
+          <a href="/enterprise/" class="nf-case-alt" data-track="case_similar_request">发起同类需求 &rarr;</a>
+        </div>
+      </div>
+
+      <div class="nf-case-card">
+        <div class="nf-case-top"><span class="nf-case-no">Case 002</span><span class="nf-case-stage">持续迭代</span></div>
+        <div class="nf-case-industry">切入行业：自营 · 品牌站</div>
+        <div class="nf-case-title">网站构建即案例</div>
+        <div class="nf-case-metric"><strong>v1.0 → v2.6.0</strong> · 持续迭代</div>
+        <div class="nf-case-client">NEXFDE 自身（元案例）</div>
+        <div class="nf-case-ctas">
+          <a href="/cases/nexfde-site-build/" class="nf-case-go" data-track="case_view_site">查看案例详情 &rarr;</a>
+          <a href="/enterprise/" class="nf-case-alt" data-track="case_similar_request">发起同类需求 &rarr;</a>
+        </div>
+      </div>
+
+      <div class="nf-case-card">
+        <div class="nf-case-top"><span class="nf-case-no">Case 003</span><span class="nf-case-stage">生产运行</span></div>
+        <div class="nf-case-industry">切入行业：自营 · 增长实践</div>
+        <div class="nf-case-title">GEO 改造获客闭环</div>
+        <div class="nf-case-metric"><strong>3 周 16 条</strong> 渠道伙伴合作线索</div>
+        <div class="nf-case-client">NEXFDE 自身（新域名冷启动）</div>
+        <div class="nf-case-ctas">
+          <a href="/cases/geo-lead-generation/" class="nf-case-go" data-track="case_view_geo">查看案例详情 &rarr;</a>
+          <a href="/enterprise/" class="nf-case-alt" data-track="case_similar_request">发起同类需求 &rarr;</a>
+        </div>
+      </div>
+
+      <div class="nf-case-card">
+        <div class="nf-case-top"><span class="nf-case-no">Case 004</span><span class="nf-case-stage">生产运行</span></div>
+        <div class="nf-case-industry">切入行业：培训交付（制造 / 工程 / 金融 / 政务）</div>
+        <div class="nf-case-title">AI 课程生产链路</div>
+        <div class="nf-case-metric"><strong>备课 2 周 → 3 天</strong> · 5 次以上真实交付</div>
+        <div class="nf-case-client">某建筑工程央企 · 某城市商业银行 · 政务系统</div>
+        <div class="nf-case-ctas">
+          <a href="/cases/ai-course-production-line/" class="nf-case-go" data-track="case_view_course">查看案例详情 &rarr;</a>
+          <a href="/enterprise/" class="nf-case-alt" data-track="case_similar_request">发起同类需求 &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 2. 案例怎么读 ═══ -->
+<section class="nf-section" id="verifiable">
+  <div class="nf-container">
+    <div class="nf-section-label">案例怎么读</div>
+    <h2 class="nf-section-title">数据可验证，<em>客户名称不会出现</em></h2>
+    <p class="nf-section-desc">这是案例库的底线，不是卖点。看案例时，先看阶段标签，再看数据口径。</p>
+
+    <div class="nf-verify-grid">
+      <div class="nf-verify-card">
+        <h3>阶段标签说明</h3>
+        <div class="nf-verify-item">
+          <span class="nf-verify-tag">真实验证</span>
+          <span>已完成真实交付与结果验证，正在观察后续效果与可复制性。</span>
+        </div>
+        <div class="nf-verify-item">
+          <span class="nf-verify-tag">持续迭代</span>
+          <span>自营项目，仍在持续演进——元案例本身即交付过程的公开记录。</span>
+        </div>
+        <div class="nf-verify-item">
+          <span class="nf-verify-tag">生产运行</span>
+          <span>已进入稳定运转，数据按口径周期更新，可作为同类需求的参照。</span>
+        </div>
+      </div>
+      <div class="nf-verify-card">
+        <h3>脱敏与有限授权</h3>
+        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+          <p style="margin-bottom:12px;">客户名称与品牌一律不公开，行业、规模与交付数据保持真实——你可以相信数据，但不用知道是谁。</p>
+          <p style="margin-bottom:12px;">指标口径在案例页内注明，可逐条核对。</p>
+          <p>案例内容受保护：转载、抓取或用于模型训练，须获得 NEXFDE 书面授权。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3. 行业适配 ═══ -->
+<section class="nf-section" id="fit" style="background:var(--surface);">
+  <div class="nf-container">
+    <div class="nf-section-label">行业适配</div>
+    <h2 class="nf-section-title">我的行业，<em>适合吗</em></h2>
+    <p class="nf-section-desc">案例与行业不是一对一，而是场景与方法的映射。对照下表，看你的业务问题落在哪里。</p>
+
+    <table class="nf-fit-table">
+      <thead>
+        <tr><th>案例</th><th>业务问题</th><th>适配行业与场景</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/cases/social-media-analytics/">社媒数据洞察</a></td>
+          <td>多账号内容数据不可用，运营凭感觉</td>
+          <td>专业服务、制造、工程类企业的创始人 IP 与内容团队；矩阵账号运营</td>
+        </tr>
+        <tr>
+          <td><a href="/cases/geo-lead-generation/">GEO 改造获客</a></td>
+          <td>客户在 AI 搜索里找不到你，线索无法归因</td>
+          <td>任何有官网、依赖获客的 B2B 企业与服务商；新品牌冷启动</td>
+        </tr>
+        <tr>
+          <td><a href="/cases/ai-course-production-line/">课程生产链路</a></td>
+          <td>培训备课周期长，交付质量依赖个人</td>
+          <td>制造、工程、金融、政务等行业的培训部门与内训体系</td>
+        </tr>
+        <tr>
+          <td><a href="/cases/nexfde-site-build/">网站构建即案例</a></td>
+          <td>从零建站，或现有站点 AI 不可读</td>
+          <td>B2B 品牌站、服务商站点；把建站过程本身沉淀为资产</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ 4. FAQ ═══ -->
+<section class="nf-section" id="faq">
+  <div class="nf-container">
+    <div class="nf-section-label">常见问题</div>
+    <h2 class="nf-section-title">关于案例库，<em>你可能想问</em></h2>
+    <p class="nf-section-desc">先回答几个关于真实性与适用性的问题，剩下的可以在企业合作页继续聊。</p>
+
+    <div class="nf-faq-list">
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">这些 FDE 案例是真实的吗？<span>+</span></button>
+        <div class="nf-faq-a"><p>每个案例都是真实交付沉淀：需求、方案、时间线与交付结果可追溯，数据来自交付记录。客户名称一律脱敏，行业、规模与数据保持真实。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">案例里的客户为什么都是匿名的？<span>+</span></button>
+        <div class="nf-faq-a"><p>NEXFDE 遵循<strong>脱敏与有限授权</strong>原则：行业背景与交付数据真实呈现，客户名称与品牌不公开。案例内容受保护，转载、抓取或用于训练须获得书面授权。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">我的行业和案例不一样，还有参考价值吗？<span>+</span></button>
+        <div class="nf-faq-a"><p>有。案例回答的是方法论层面的问题——值不值得做、怎么做到、会遇到什么坑。行业适配区块给出了案例到行业的映射：制造、工程、政务、金融与专业服务均适用。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">找 FDE 服务应该怎么选？<span>+</span></button>
+        <div class="nf-faq-a"><p>看三件事：有没有同行业或相近行业的真实案例；交付流程是否透明、是否先诊断再承诺；结果是否可验证。案例库按这三条标准呈现。</p></div>
+      </div>
+      <div class="nf-faq-item">
+        <button class="nf-faq-q" onclick="toggleFaq(this)">如何发起类似的项目合作？<span>+</span></button>
+        <div class="nf-faq-a"><p>在<a href="/enterprise/" style="color:var(--copper);font-weight:600;">企业合作页</a>提交你的业务问题，48 小时内回复——包括「这件事现在不值得做」的判断。也可以先预约一次部署诊断，用 1 周锁定最值得跑通的场景。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. Final CTA ═══ -->
+<section class="nf-final-cta" id="engage">
+  <div class="nf-container">
+    <h2>从一个真实项目开始</h2>
+    <p>不承诺通用 AI 化。先判断你的业务里哪一条最值得跑通——提交你的业务问题，我们帮你判断从哪里开始。</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="/enterprise/" class="nf-btn nf-btn-primary" data-track="client_form_open">提交企业合作需求 &rarr;</a>
+      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-outline" data-track="diagnostic_booking">预约部署诊断</a>
+    </div>
+    <p class="nf-final-note">提交需求后 48 小时内回复 · 包括「这件事现在不值得做」</p>
+  </div>
+</section>
+
+<!-- ═══ WeChat Modal ═══ -->
+<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(30,61,50,0.6);z-index:9999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
+    <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「部署诊断 + 你的行业」，我们聊聊你的场景</p>
+    <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
+    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+  </div>
+</div>
+
+<!-- ═══ Footer ═══ -->
+<footer class="nf-footer">
+  <div class="nf-container">
+    <div class="nf-footer-grid">
+      <div>
+        <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
+        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+      </div>
+      <div>
+        <h5>服务</h5>
+        <a href="/#method">FDE 方法论</a>
+        <a href="/#services">服务结构</a>
+        <a href="/#deliverables">交付物</a>
+        <a href="/enterprise/">企业合作</a>
+      </div>
+      <div>
+        <h5>案例</h5>
+        <a href="/cases/">案例库（全部案例）</a>
+        <a href="/cases/social-media-analytics/">社媒数据洞察</a>
+        <a href="/cases/geo-lead-generation/">GEO 改造获客闭环</a>
+        <a href="/cases/ai-course-production-line/">课程生产链路</a>
+      </div>
+      <div>
+        <h5>合作</h5>
+        <a href="/network/">FDE 交付网络</a>
+        <a href="javascript:void(0)" onclick="openWechat()" data-track="wechat_fallback">微信: ActionThinker</a>
+        <a href="mailto:lu@NexFDE.com">lu@NexFDE.com</a>
+        <a href="/">NEXFDE 首页</a>
+      </div>
+    </div>
+    <div class="nf-footer-bottom">
+      <span>&copy; 2026 NEXFDE (ActionThinker). 保留所有权利。</span>
+      <span>自营实践数据可验证 &middot; AI 辅助构建 &middot; 案例受保护：转载 / 抓取 / 训练须书面授权</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.nf-page -->
+
+<script>
+function openWechat(){var m=document.getElementById('wechat-modal');m.style.display='flex';}
+function toggleFaq(btn){
+  var a=btn.parentElement.querySelector('.nf-faq-a');
+  var open=a.style.display==='block';
+  a.style.display=open?'none':'block';
+  btn.querySelector('span').textContent=open?'+':'−';
+}
+</script>
+
+</body>
+</html>

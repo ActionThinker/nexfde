@@ -64,18 +64,20 @@
         "author": { "@id": "https://nexfde.com/#organization" },
         "publisher": { "@id": "https://nexfde.com/#organization" },
         "url": "https://nexfde.com/cases/social-media-analytics/",
-        "datePublished": "2026-07-09", "version": "1.1.0", "inLanguage": "zh-CN"
+        "datePublished": "2026-07-09", "dateModified": "2026-10-21", "version": "1.1.0", "inLanguage": "zh-CN"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://nexfde.com" },
-          { "@type": "ListItem", "position": 2, "name": "场景案例", "item": "https://nexfde.com/cases/social-media-analytics/" }
+          { "@type": "ListItem", "position": 2, "name": "案例库", "item": "https://nexfde.com/cases/" },
+          { "@type": "ListItem", "position": 3, "name": "双平台社媒数据洞察", "item": "https://nexfde.com/cases/social-media-analytics/" }
         ]
       }
     ]
   }
   </script>
+  <script defer src="/assets/wbl-track.js"></script>
 </head>
 <body>
 
@@ -381,6 +383,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <a href="/" class="nf-nav-back">&larr; 返回首页</a>
   </div>
   <div class="nf-nav-links" id="navLinks">
+    <a href="/cases/">案例库</a>
     <a href="#background">需求背景</a>
     <a href="#challenge">痛点挑战</a>
     <a href="#solution">解决方案</a>
@@ -987,7 +990,8 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <h2>把你的社媒数据，变成可行动的增长策略</h2>
     <p>从提供各平台主页链接开始。两周后你会拿到一份让团队说「原来如此」的数据洞察报告——以及一张可以照着执行的路线图。</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-primary">微信咨询 &rarr;</a>
+      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-primary" data-track="wechat_fallback">微信咨询 &rarr;</a>
+      <a href="/enterprise/" class="nf-btn nf-btn-outline" data-track="case_similar_request">发起同类需求 &rarr;</a>
       <a href="/" class="nf-btn nf-btn-outline">了解 NEXFDE 方法论</a>
     </div>
   </div>

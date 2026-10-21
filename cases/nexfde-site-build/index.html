@@ -70,12 +70,14 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://nexfde.com" },
-          { "@type": "ListItem", "position": 2, "name": "场景案例", "item": "https://nexfde.com/cases/nexfde-site-build/" }
+          { "@type": "ListItem", "position": 2, "name": "案例库", "item": "https://nexfde.com/cases/" },
+          { "@type": "ListItem", "position": 3, "name": "网站构建即案例", "item": "https://nexfde.com/cases/nexfde-site-build/" }
         ]
       }
     ]
   }
   </script>
+  <script defer src="/assets/wbl-track.js"></script>
 </head>
 <body>
 
@@ -359,6 +361,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <a href="/" class="nf-nav-back">&larr; 返回首页</a>
   </div>
   <div class="nf-nav-links" id="navLinks">
+    <a href="/cases/">案例库</a>
     <a href="#background">需求背景</a>
     <a href="#challenge">痛点挑战</a>
     <a href="#solution">解决方案</a>
@@ -398,7 +401,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <div class="nf-stat-row">
           <div class="nf-stat-item">
             <div class="nf-stat-num">3<em>版本</em></div>
-            <div class="nf-stat-text">v1.0 → v2.5.0<br>持续迭代中</div>
+            <div class="nf-stat-text">v1.0 → v2.6.0<br>持续迭代中</div>
           </div>
           <div class="nf-stat-item">
             <div class="nf-stat-num">3<em>案例</em></div>
@@ -410,7 +413,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
           </div>
           <div class="nf-stat-item">
             <div class="nf-stat-num">52<em>天</em></div>
-            <div class="nf-stat-text">从初始上线到<br>v2.5.0 持续迭代</div>
+            <div class="nf-stat-text">从初始上线到<br>v2.6.0 持续迭代</div>
           </div>
         </div>
       </div>
@@ -693,7 +696,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 <section class="nf-section" id="timeline" style="background:var(--surface);">
   <div class="nf-container">
     <div class="nf-section-label">迭代时间线</div>
-    <h2 class="nf-section-title">从 v1.0 到 v2.5.0，<em>111 天的持续进化</em></h2>
+    <h2 class="nf-section-title">从 v1.0 到 v2.6.0，<em>111 天的持续进化</em></h2>
     <p class="nf-section-desc">这不是一次完成的项目——而是 FDE 持续迭代的真实记录。每个版本都是独立判断、验证、上线的完整闭环。</p>
 
     <div class="nf-timeline">
@@ -761,6 +764,14 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
           <div class="nf-tl-desc">新案例 /cases/ai-course-production-line/ 上线——六步闭环课程生产链路，备课周期从 2 周压缩到 3 天，5 次+ 企业内训真实交付验证。案例矩阵达到 4 个。</div>
         </div>
       </div>
+      <div class="nf-tl-item">
+        <div class="nf-tl-marker">v2</div>
+        <div class="nf-tl-content">
+          <div class="nf-tl-day">2026-10-21</div>
+          <div class="nf-tl-title">v2.6.0 — 三入口结构与交付网络公开化</div>
+          <div class="nf-tl-desc">新增 /cases/ 案例库、/network/ 交付网络、/enterprise/ 企业合作三个独立入口——路线图 Phase 2/3 进入进行中，案例导入获客矩阵上线，飞书表单承接需求提交与专家申请，全站接入埋点。</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -770,12 +781,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div class="nf-container">
     <div class="nf-section-label">交付结果</div>
     <h2 class="nf-section-title">FDE 方法论在<em>自身站点</em>上的量化成果</h2>
-    <p class="nf-section-desc">以下是截至 v2.5.0 的站点构建成果。所有数据均可从 BUILDLOG.md 和站点文件直接验证。</p>
+    <p class="nf-section-desc">以下是截至 v2.6.0 的站点构建成果。所有数据均可从 BUILDLOG.md 和站点文件直接验证。</p>
     <div class="nf-results-grid">
       <div class="nf-result-card">
         <div class="nf-result-num">3</div>
         <div class="nf-result-label">FDE 落地场景案例</div>
-        <div class="nf-result-note">标准化模板复用，覆盖社媒/办公/元案例</div>
+        <div class="nf-result-note">标准化模板复用，覆盖社媒/GEO/课程/元案例</div>
       </div>
       <div class="nf-result-card">
         <div class="nf-result-num">6</div>
@@ -790,7 +801,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <div class="nf-result-card">
         <div class="nf-result-num">3</div>
         <div class="nf-result-label">版本迭代</div>
-        <div class="nf-result-note">v1.0 → v2.5.0, 111 天持续进化</div>
+        <div class="nf-result-note">v1.0 → v2.6.0, 111 天持续进化</div>
       </div>
     </div>
 
@@ -810,7 +821,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">业务成果</h3>
         <div style="font-size:14px;color:var(--muted);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 独特的品牌辨识度（深茶绿+铜色，AI 赛道唯一）</p>
-          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 3 个案例页，可直接发给客户看</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 案例库 + 4 个案例页，可直接发给客户看</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 可通过 AI 搜索被发现（豆包/DeepSeek/元宝/Kimi）</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 站点即案例——客户看到的是活的方法论展示</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 案例页模板即服务——新场景可快速复制</p>
@@ -937,7 +948,8 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <h2>让你的品牌站点也成为 FDE 活案例</h2>
     <p>从一次品牌诊断开始。3-5 个工作日后，你会拿到一份诊断报告——告诉你哪些值得做、哪些先不做。</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-primary">预约诊断 &rarr;</a>
+      <a href="javascript:void(0)" onclick="openWechat()" class="nf-btn nf-btn-primary" data-track="wechat_fallback">预约诊断 &rarr;</a>
+      <a href="/enterprise/" class="nf-btn nf-btn-outline" data-track="case_similar_request">发起同类需求 &rarr;</a>
       <a href="/" class="nf-btn nf-btn-outline">了解 NEXFDE 方法论</a>
     </div>
   </div>
