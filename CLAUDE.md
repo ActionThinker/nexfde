@@ -6,7 +6,7 @@
 
 ## 项目信息
 
-- **站点**: nexfde.com v2.6.0
+- **站点**: nexfde.com v2.6.1
 - **类型**: 多页静态站点（首页 + 案例库 + 交付网络 + 企业合作 + 场景案例页），纯静态 HTML + CSS + JS
 - **部署**: GitHub Pages（`ActionThinker/nexfde`），无构建步骤
 - **设计系统**: Deep Tea Green (#1E3D32) + Copper (#C8853E)，Inter 字体，暖白背景 (#F5F2ED)
@@ -94,6 +94,7 @@
 2. 更新 .push-history.jsonl（自动记录 push 事件）
 3. 提交信息写"为什么"，不写"改了什么"
 4. 版本号递增（MAJOR.MINOR.PATCH）
+5. BUILDLOG 公开版脱敏铁律：客户品牌/IP 名、细分行业表述、具体引用来源（对标站点名）、内部生态站名一律不写；完整版同步追加到 `D:\海角\nexfde\BUILDLOG-internal.md`（仓库外，不入 Pages 仓库）
 
 ---
 
