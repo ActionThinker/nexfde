@@ -4,3 +4,7 @@ _site/
 .jekyll-metadata
 vendor/
 .DS_Store
+
+# 内部文档（仅本地保留，不入 Pages 公开仓库）
+.project-meta.md
+sales-methodology-and-hook-library.md
