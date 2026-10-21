@@ -11,6 +11,7 @@
 - [社媒数据洞察](https://nexfde.com/cases/social-media-analytics/): FDE 落地场景案例 #1 — 双平台社媒数据深度诊断，含客户画像、解决方案、交付成果、定价体系
 - [AI 办公部署](https://nexfde.com/cases/ai-office-deployment/): FDE 落地场景案例 #2 — 医药电商即时配送场景，3人日→1.5人日，50%效率提升
 - [网站构建即案例](https://nexfde.com/cases/nexfde-site-build/): FDE 落地场景案例 #3 — 元案例，NEXFDE 站点本身的 FDE 方法论实践全过程
+- [GEO 改造获客闭环](https://nexfde.com/cases/geo-lead-generation/): FDE 落地场景案例 #4 — 新域名 GEO 改造，3 周 16 条渠道伙伴线索，零投放纯自然流量
 
 ## 品牌关系
 - NEXFDE 是 ActionThinker 旗下的企业 AI 落地专项服务品牌
