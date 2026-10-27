@@ -81,6 +81,8 @@
 </head>
 <body>
 
+<!-- NEXFDE Build: v2.7.4 | 2026-10-28 | VIS: 深茶绿+铜色 | AI-Native -->
+
 <div class="nf-page">
 
 <style>
@@ -98,6 +100,9 @@
   --border: #D4CFC6;
   --ink: #1A1A1A;
   --muted: #6B7A73;
+  --copper-ink: #9A6228;   /* 合规·小字强调 / 主按钮铜底（白字 5.06:1） */
+  --copper-deep: #8A5722;  /* 合规·主按钮悬停（白字 6.06:1） */
+  --muted-ink: #5C6B64;    /* 合规·次级正文（5.02:1） */
   --radius: 12px;
   --radius-lg: 16px;
   --green-bg: #E8F0EC;
@@ -123,7 +128,7 @@
 }
 .nf-section-title em { font-style: normal; color: var(--copper); }
 .nf-section-desc {
-  font-size: 17px; color: var(--muted);
+  font-size: 17px; color: var(--muted-ink);
   max-width: 620px; line-height: 1.8; margin-bottom: 52px;
 }
 
@@ -156,12 +161,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
 .nf-nav-back {
-  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  font-size: 13px; color: var(--muted-ink); padding: 6px 12px;
   border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
 }
 .nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
 .nf-nav-links { display: flex; align-items: center; gap: 24px; }
-.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted-ink); transition: color 0.15s; }
 .nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-cta {
   font-size: 13px; font-weight: 600; color: #fff !important;
@@ -201,7 +206,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-stage-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tea-mid); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
-.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
+.nf-hero-sub { font-size: 17px; color: var(--muted-ink); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
 .nf-hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .nf-hero-tag {
   font-size: 12px; font-weight: 500; color: var(--tea-mid);
@@ -216,13 +221,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-hero-stat-label {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+  text-transform: uppercase; color: var(--muted-ink); margin-bottom: 20px;
 }
 .nf-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .nf-stat-item { text-align: center; padding: 12px 8px; background: var(--copper-pale); border-radius: var(--radius); }
 .nf-stat-num { font-size: 24px; font-weight: 700; color: var(--tea-deep); line-height: 1.2; }
 .nf-stat-num em { font-style: normal; color: var(--copper); font-size: 14px; }
-.nf-stat-text { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+.nf-stat-text { font-size: 11px; color: var(--muted-ink); margin-top: 4px; line-height: 1.4; }
 
 /* ═══ Pain/Challenge Cards ═══ */
 .nf-pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; }
@@ -233,7 +238,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   color: var(--border); margin-bottom: 16px; line-height: 1;
 }
 .nf-pain-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-pain-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Solution Steps ═══ */
 .nf-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -249,10 +254,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   line-height: 1;
 }
 .nf-step-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 6px; }
-.nf-step-sub { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+.nf-step-sub { font-size: 14px; color: var(--muted-ink); margin-bottom: 14px; line-height: 1.6; }
 .nf-step-items { border-top: 1px solid var(--border); padding-top: 14px; }
 .nf-step-item {
-  font-size: 13px; color: var(--muted); margin-bottom: 6px;
+  font-size: 13px; color: var(--muted-ink); margin-bottom: 6px;
   padding-left: 14px; position: relative; line-height: 1.6;
 }
 .nf-step-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
@@ -270,7 +275,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: clamp(24px, 3.5vw, 34px); font-weight: 700;
   color: var(--tea-deep); line-height: 1.2; margin-bottom: 6px;
 }
-.nf-result-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.nf-result-label { font-size: 13px; color: var(--muted-ink); line-height: 1.5; }
 .nf-result-note { font-size: 11px; color: var(--border); margin-top: 4px; }
 
 /* ═══ Insight Cards ═══ */
@@ -287,7 +292,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: 20px; margin-bottom: 20px;
 }
 .nf-insight-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-insight-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-insight-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Timeline ═══ */
 .nf-timeline { max-width: 760px; margin: 20px auto 0; }
@@ -307,7 +312,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-tl-content { padding-top: 8px; }
 .nf-tl-day { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper); margin-bottom: 4px; }
 .nf-tl-title { font-weight: 600; font-size: 16px; color: var(--tea-deep); margin-bottom: 4px; }
-.nf-tl-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.nf-tl-desc { font-size: 13px; color: var(--muted-ink); line-height: 1.6; }
 
 /* ═══ Scenario Fit ═══ */
 .nf-fit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -319,7 +324,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-fit-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
 .nf-fit-icon { font-size: 28px; margin-bottom: 16px; }
 .nf-fit-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-fit-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-fit-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Final CTA ═══ */
 .nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
@@ -350,6 +355,25 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   .nf-footer-grid { grid-template-columns: 1fr 1fr; }
   .nf-final-cta { padding: 80px 0; }
 }
+
+/* ═══ 对比度合规补丁 v2.7.4（整改清单 v1.0.0 全量落地 · 2026-10-28） ═══ */
+.nf-section-label, .nf-nav-logo-sub, .nf-nav-drop-num, .nf-nav-drop-foot, .nf-hero-badge,
+.nf-hero-credit a, .nf-signal-src, .nf-paradigm-subtitle, .nf-step-tag, .nf-deliver-num,
+.nf-pkg-tag, .nf-why-card-icon, .nf-roadmap-card.active .nf-roadmap-phase,
+.nf-roadmap-card.active .nf-roadmap-status, .nf-roadmap-footer a, .nf-faq-q:hover,
+.nf-value-quant .nf-value-card--growth .nf-value-label,
+.nf-value-quant .nf-value-card--efficiency .nf-value-label,
+.nf-provide-tag, .nf-case-stage, .nf-step-sub, .nf-rel-arrow, .nf-rel-all,
+.nf-record-link, .nf-case-ctas a.nf-case-go, .nf-fit-table td a,
+.nf-tl-marker, .nf-tl-day, .nf-stat-num em { color: var(--copper-ink); }
+a.nf-btn-outline:hover { color: var(--copper-ink); }
+a.nf-btn-primary, .nf-nav-cta, .nf-final-cta .nf-btn-primary,
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper-ink); color: #fff; }
+a.nf-btn-primary:hover, .nf-final-cta .nf-btn-primary:hover { background: var(--copper-deep); }
+.nf-nav-cta:hover { background: var(--copper-deep) !important; }
+.nf-footer a:hover { color: var(--copper-light); }
+.nf-nav-back:hover { border-color: var(--copper-ink); color: var(--copper-ink); }
+.nf-verify-card h3 span { color: var(--copper-ink); }
 </style>
 
 <!-- ═══ Nav ═══ -->
@@ -431,19 +455,19 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">站点定位</h3>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">身份：</strong>面向企业 AI 应用落地的品牌站点，承接两类诉求——企业客户的落地咨询、渠道伙伴的合作申请</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">起点：</strong>新域名冷启动——零收录、零权重、零自然流量，没有任何「等来的」渠道</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">架构：</strong>纯静态页面体系（首页 + 课程页 + 决策内容页 + 结构化问答），零后端、极速加载</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">目标：</strong>不依赖广告投放，让客户「在 AI 搜索里找到我们」</span>
         </div>
@@ -451,7 +475,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">获客环境变化</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">变化一：</strong>客户找服务商的方式变了——先在 AI 里问「企业 AI 应用落地找谁」，再看 AI 给出的答案。</p>
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">变化二：</strong>AI 搜索不点链接——用户停留在答案页，页面必须成为「答案里被引用的来源」，流量才会发生。</p>
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">变化三：</strong>新域名没有资格「等」——传统 SEO 要数月见效，AI 时代必须从第一天就被引用。</p>
@@ -461,7 +485,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
-      <p style="font-size:15px;color:var(--muted);">核心判断：<strong style="color:var(--tea-deep);">「新域名没有资格『等』。AI 搜索时代，被引用的前提是从上线第一天就把内容做成 AI 可读、可引用的形态——这是冷启动的确定性路径。」</strong></p>
+      <p style="font-size:15px;color:var(--muted-ink);">核心判断：<strong style="color:var(--tea-deep);">「新域名没有资格『等』。AI 搜索时代，被引用的前提是从上线第一天就把内容做成 AI 可读、可引用的形态——这是冷启动的确定性路径。」</strong></p>
     </div>
   </div>
 </section>
@@ -575,9 +599,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 1 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">1</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">1</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 1</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 1</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">判断诊断阶段</div>
           </div>
         </div>
@@ -593,23 +617,23 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">GEO 就绪度检查</td>
-                <td style="padding:14px 16px;color:var(--muted);">诊断站点对 AI 搜索的可见度：结构化数据、AI 可读文件、爬虫策略、内容引用面</td>
-                <td style="padding:14px 16px;color:var(--muted);">知道站点在 AI 搜索里的真实位置</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">诊断站点对 AI 搜索的可见度：结构化数据、AI 可读文件、爬虫策略、内容引用面</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">知道站点在 AI 搜索里的真实位置</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">内容审计与缺口清单</td>
-                <td style="padding:14px 16px;color:var(--muted);">逐页审计现有内容，识别「AI 无法引用」的页面与缺失的决策型内容</td>
-                <td style="padding:14px 16px;color:var(--muted);">拿到可执行的改造清单，不盲目重做</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">逐页审计现有内容，识别「AI 无法引用」的页面与缺失的决策型内容</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">拿到可执行的改造清单，不盲目重做</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">AI 渠道目标设定</td>
-                <td style="padding:14px 16px;color:var(--muted);">确定目标 AI 渠道与每个渠道的引用偏好，明确「先打哪几个」</td>
-                <td style="padding:14px 16px;color:var(--muted);">改造方向有依据，不撒胡椒面</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">确定目标 AI 渠道与每个渠道的引用偏好，明确「先打哪几个」</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">改造方向有依据，不撒胡椒面</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">爬虫策略分层</td>
-                <td style="padding:14px 16px;color:var(--muted);">区分 AI 搜索爬虫与训练爬虫：放行搜索、封禁训练，保护内容资产</td>
-                <td style="padding:14px 16px;color:var(--muted);">被 AI 引用，同时不被免费训练</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">区分 AI 搜索爬虫与训练爬虫：放行搜索、封禁训练，保护内容资产</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">被 AI 引用，同时不被免费训练</td>
               </tr>
             </tbody>
           </table>
@@ -619,9 +643,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 2 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">2</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">2</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 2</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 2</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">试点冲刺阶段</div>
           </div>
         </div>
@@ -637,18 +661,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">GEO 基础设施部署</td>
-                <td style="padding:14px 16px;color:var(--muted);">AI 可读文件、全站 JSON-LD 结构化数据、站点地图、爬虫指令</td>
-                <td style="padding:14px 16px;color:var(--muted);">站点从「AI 不可读」变为「AI 可读」</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">AI 可读文件、全站 JSON-LD 结构化数据、站点地图、爬虫指令</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">站点从「AI 不可读」变为「AI 可读」</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">页面结构化改造</td>
-                <td style="padding:14px 16px;color:var(--muted);">标题问题化、H2 层级清晰、问答结构化、关键术语加粗</td>
-                <td style="padding:14px 16px;color:var(--muted);">每个页面独立可被 AI 引用</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">标题问题化、H2 层级清晰、问答结构化、关键术语加粗</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">每个页面独立可被 AI 引用</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">合作申请通道上线</td>
-                <td style="padding:14px 16px;color:var(--muted);">申请表单资源画像前置，提交即落库自动建档</td>
-                <td style="padding:14px 16px;color:var(--muted);">获客闭环的最小闭环跑通，线索开始进入</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">申请表单资源画像前置，提交即落库自动建档</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">获客闭环的最小闭环跑通，线索开始进入</td>
               </tr>
             </tbody>
           </table>
@@ -658,9 +682,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 3 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">3</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">3</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 3</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 3</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">生产上线阶段</div>
           </div>
         </div>
@@ -676,18 +700,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">内容矩阵扩充</td>
-                <td style="padding:14px 16px;color:var(--muted);">决策内容页（选型 / 对比 / 预算）、课程矩阵、需求诊断页持续上线</td>
-                <td style="padding:14px 16px;color:var(--muted);">可被引用的内容面扩大，线索加速</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">决策内容页（选型 / 对比 / 预算）、课程矩阵、需求诊断页持续上线</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">可被引用的内容面扩大，线索加速</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">统计归因体系</td>
-                <td style="padding:14px 16px;color:var(--muted);">页面访问、按钮点击、AI 抓取三类统计全链路接入</td>
-                <td style="padding:14px 16px;color:var(--muted);">每条线索可追溯到渠道与页面</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">页面访问、按钮点击、AI 抓取三类统计全链路接入</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">每条线索可追溯到渠道与页面</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">持续迭代机制</td>
-                <td style="padding:14px 16px;color:var(--muted);">构建日志、版本管理、周期归因复盘</td>
-                <td style="padding:14px 16px;color:var(--muted);">增长有记录、有复盘、可复制</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">构建日志、版本管理、周期归因复盘</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">增长有记录、有复盘、可复制</td>
               </tr>
             </tbody>
           </table>
@@ -789,7 +813,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div style="margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">技术成果</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 六项 GEO 基础设施：AI 可读文件 / JSON-LD / 结构化问答 / 站点地图 / 爬虫分层 / AI 透明度</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 全站页面结构化改造，每页独立可被 AI 引用</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 爬虫策略分层：放行 AI 搜索、封禁训练爬虫</p>
@@ -800,7 +824,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       </div>
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">业务成果</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 新域名 3 周收到 16 条合作线索</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 零广告投放，纯自然流量</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 16/16 有效联系方式，零无效线索</p>
@@ -812,7 +836,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
-      <p style="font-size:14px;color:var(--muted);">口径说明：线索统计区间为合作申请通道上线（2026-09-27）至 2026-10-20；数据来自申请表单落库记录，可逐条核对。</p>
+      <p style="font-size:14px;color:var(--muted-ink);">口径说明：线索统计区间为合作申请通道上线（2026-09-27）至 2026-10-20；数据来自申请表单落库记录，可逐条核对。</p>
     </div>
   </div>
 </section>
@@ -842,7 +866,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:32px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:28px 32px;text-align:center;">
-      <p style="font-size:15px;color:var(--muted);">核心洞察：<strong style="color:var(--tea-deep);">「跑通新域名获客闭环，靠的不是预算，是三件事的次序——先让 AI 读得懂，再让 AI 有得引，最后让每一分转化可归因。」</strong></p>
+      <p style="font-size:15px;color:var(--muted-ink);">核心洞察：<strong style="color:var(--tea-deep);">「跑通新域名获客闭环，靠的不是预算，是三件事的次序——先让 AI 读得懂，再让 AI 有得引，最后让每一分转化可归因。」</strong></p>
     </div>
   </div>
 </section>
@@ -881,48 +905,48 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <p class="nf-section-desc">三个服务包对应不同阶段的需求。诊断阶段可独立购买——先判断值不值得做，再决定要不要推进。</p>
     <div class="nf-pkg-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px;">
       <div class="nf-pkg-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">诊断</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper-ink);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">诊断</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">GEO 就绪诊断</div>
         <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥3,999</div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥7,999</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">— ¥7,999</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">AI 搜索可见度诊断</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">内容审计与缺口清单</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">爬虫策略诊断</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">提交信息通道盘点</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">输出：诊断报告 + 改造路径</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">AI 搜索可见度诊断</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">内容审计与缺口清单</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">爬虫策略诊断</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">提交信息通道盘点</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">输出：诊断报告 + 改造路径</div>
         </div>
       </div>
       <div class="nf-pkg-card" style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper);padding:4px 10px;border-radius:5px;margin-bottom:14px;">推荐</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper-ink);padding:4px 10px;border-radius:5px;margin-bottom:14px;">推荐</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">GEO 改造实施</div>
         <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥14,999</div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥29,999</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">— ¥29,999</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">诊断报告 + 基础设施部署</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">AI 可读文件 + JSON-LD 全站改造</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">结构化内容矩阵（问答 + 决策页）</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">提交信息通道打通</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">转化统计接入</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">诊断报告 + 基础设施部署</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">AI 可读文件 + JSON-LD 全站改造</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">结构化内容矩阵（问答 + 决策页）</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">提交信息通道打通</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">转化统计接入</div>
         </div>
       </div>
       <div class="nf-pkg-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">持续</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper-ink);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">持续</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">GEO 持续运营</div>
         <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥29,999</div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥59,999</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">— ¥59,999</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">改造实施全部内容</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">月度内容矩阵扩充</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">归因分析与月报</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">持续迭代机制（3 个月）</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">构建日志 + 迭代记录</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">改造实施全部内容</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">月度内容矩阵扩充</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">归因分析与月报</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">持续迭代机制（3 个月）</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">构建日志 + 迭代记录</div>
         </div>
       </div>
     </div>
 
     <div style="margin-top:28px;background:var(--copper-pale);border-radius:var(--radius);padding:20px 24px;text-align:center;">
-      <p style="font-size:14px;color:var(--muted);">不确定哪个模式适合你？<a href="#engage" style="color:var(--copper);font-weight:600;">联系我们</a>，聊聊你的站点现状和期望。</p>
+      <p style="font-size:14px;color:var(--muted-ink);">不确定哪个模式适合你？<a href="#engage" style="color:var(--copper-ink);font-weight:600;">联系我们</a>，聊聊你的站点现状和期望。</p>
     </div>
   </div>
 </section>
@@ -945,9 +969,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
     <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「GEO 诊断 + 你的行业」，我们聊聊你的场景</p>
+    <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;">发送「GEO 诊断 + 你的行业」，我们聊聊你的场景</p>
     <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
-    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+    <p style="font-size:11px;color:var(--muted-ink);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
   </div>
 </div>
 
@@ -957,7 +981,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div class="nf-footer-grid">
       <div>
         <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
-        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">
+          FDE-style AI Deployment
+        </div>
+        <p style="font-size:13px;max-width:220px;">把 AI 从判断推进到生产。</p>
       </div>
       <div>
         <h5>服务</h5>

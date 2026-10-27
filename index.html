@@ -111,7 +111,7 @@
 </head>
 <body>
 
-<!-- NEXFDE Build: v2.7.3 | 2026-10-27 | VIS: 深茶绿+铜色 | AI-Native -->
+<!-- NEXFDE Build: v2.7.4 | 2026-10-28 | VIS: 深茶绿+铜色 | AI-Native -->
 <style>
 /* ═══ NEXFDE Design System v2.0 — 深茶绿 + 铜色 ═══ */
 :root {
@@ -127,6 +127,9 @@
   --border: #D4CFC6;
   --ink: #1A1A1A;
   --muted: #6B7A73;
+  --copper-ink: #9A6228;
+  --muted-ink: #5C6B64;
+  --copper-deep: #8A5722;
   --radius: 12px;
   --radius-lg: 16px;
 }
@@ -154,7 +157,7 @@
   font-style: normal; color: var(--copper);
 }
 .nf-section-desc {
-  font-size: 17px; color: var(--muted);
+  font-size: 17px; color: var(--muted-ink);
   max-width: 620px; line-height: 1.8; margin-bottom: 52px;
 }
 
@@ -191,7 +194,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   padding-left: 10px; border-left: 1.5px solid var(--border);
 }
 .nf-nav-links { display: flex; align-items: center; gap: 32px; }
-.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted-ink); transition: color 0.15s; }
 .nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-cta {
   font-size: 13px; font-weight: 600; color: #fff !important;
@@ -221,7 +224,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-nav-drop-item:hover { background: var(--warm-white); }
 .nf-nav-drop-num { flex-shrink: 0; font-size: 11px; font-weight: 700; color: var(--copper); letter-spacing: 0.02em; padding-top: 2px; }
 .nf-nav-drop-title { display: block; font-size: 14px; font-weight: 600; color: var(--tea-deep); line-height: 1.4; }
-.nf-nav-drop-desc { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; line-height: 1.5; }
+.nf-nav-drop-desc { display: block; font-size: 12px; color: var(--muted-ink); margin-top: 2px; line-height: 1.5; }
 .nf-nav-drop-foot { display: block; padding: 10px 12px; margin-top: 4px; border-top: 1px solid var(--border); font-size: 13px; font-weight: 600; color: var(--copper); text-decoration: none; }
 .nf-nav-drop-foot:hover { color: var(--tea-deep); }
 
@@ -256,10 +259,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
 .nf-hero h1 { font-size: clamp(36px, 6vw, 54px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 24px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
-.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 14px; }
-.nf-hero-note { font-size: 14px; color: var(--muted); margin-bottom: 36px; line-height: 1.7; }
+.nf-hero-sub { font-size: 17px; color: var(--muted-ink); max-width: 500px; line-height: 1.8; margin-bottom: 14px; }
+.nf-hero-note { font-size: 14px; color: var(--muted-ink); margin-bottom: 36px; line-height: 1.7; }
 .nf-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
-.nf-hero-credit { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; }
+.nf-hero-credit { font-size: 12px; color: var(--muted-ink); letter-spacing: 0.02em; }
 .nf-hero-credit a { color: var(--copper); font-weight: 500; }
 .nf-hero-credit a:hover { text-decoration: underline; }
 
@@ -271,7 +274,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-hero-flow-label {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 24px;
+  text-transform: uppercase; color: var(--muted-ink); margin-bottom: 24px;
 }
 .nf-flow-step {
   display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;
@@ -284,7 +287,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: 22px; font-weight: 700; color: var(--copper); line-height: 1; min-width: 32px;
 }
 .nf-flow-step-title { font-weight: 600; font-size: 15px; color: var(--tea-deep); margin-bottom: 3px; }
-.nf-flow-step-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.nf-flow-step-desc { font-size: 13px; color: var(--muted-ink); line-height: 1.5; }
 .nf-flow-arrow {
   display: flex; align-items: center; justify-content: center;
   color: var(--border); font-size: 18px; height: 8px; margin: 0 0 4px 30px;
@@ -303,7 +306,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   text-transform: uppercase; color: var(--copper); margin-bottom: 10px;
 }
 .nf-signal-title { font-weight: 600; font-size: 16px; color: var(--tea-deep); margin-bottom: 10px; line-height: 1.5; }
-.nf-signal-body { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.nf-signal-body { font-size: 13px; color: var(--muted-ink); line-height: 1.7; }
 .nf-signal-stat {
   display: block; font-size: 24px; font-weight: 700; color: var(--copper);
   line-height: 1.2; margin-bottom: 6px;
@@ -313,14 +316,14 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-paradigm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
 .nf-paradigm-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px 28px; text-align: center; transition: border-color 0.2s, transform 0.15s; }
 .nf-paradigm-card:hover { border-color: var(--copper); transform: translateY(-2px); }
-.nf-paradigm-era { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+.nf-paradigm-era { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-ink); margin-bottom: 16px; }
 .nf-paradigm-icon-wrap { width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; }
 .nf-paradigm-icon-wrap--digital { background: #e8f0ee; color: var(--tea-deep); }
 .nf-paradigm-icon-wrap--online { background: #f0ebe3; color: var(--copper); }
 .nf-paradigm-icon-wrap--intelligent { background: var(--tea-deep); color: #fff; }
 .nf-paradigm-title { font-size: 18px; font-weight: 700; color: var(--tea-deep); margin-bottom: 6px; }
 .nf-paradigm-subtitle { font-size: 12px; font-weight: 600; color: var(--copper); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
-.nf-paradigm-body { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.nf-paradigm-body { font-size: 13px; color: var(--muted-ink); line-height: 1.7; }
 
 @media (max-width: 768px) {
   .nf-signal-grid { grid-template-columns: 1fr; }
@@ -336,7 +339,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   color: var(--border); margin-bottom: 16px; line-height: 1;
 }
 .nf-pain-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-pain-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Value Props ═══ */
 .nf-value-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
@@ -352,7 +355,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: 20px; margin-bottom: 20px;
 }
 .nf-value-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-value-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-value-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ── Value Quantification (must come AFTER generic .nf-value-card to override) ── */
 .nf-value-quant .nf-value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
@@ -367,14 +370,14 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-value-quant .nf-value-card--efficiency .nf-value-title { color: var(--tea-deep); }
 .nf-value-quant .nf-value-subtitle { font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
 .nf-value-quant .nf-value-card--growth .nf-value-subtitle { color: var(--ink); }
-.nf-value-quant .nf-value-card--efficiency .nf-value-subtitle { color: var(--muted); }
+.nf-value-quant .nf-value-card--efficiency .nf-value-subtitle { color: var(--muted-ink); }
 .nf-value-quant .nf-value-stat { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .nf-value-quant .nf-value-stat-num { font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 4px; }
 .nf-value-quant .nf-value-card--growth .nf-value-stat-num { color: var(--ink); }
 .nf-value-quant .nf-value-card--efficiency .nf-value-stat-num { color: var(--copper); }
 .nf-value-quant .nf-value-stat-label { font-size: 12px; line-height: 1.4; }
 .nf-value-quant .nf-value-card--growth .nf-value-stat-label { color: var(--ink); }
-.nf-value-quant .nf-value-card--efficiency .nf-value-stat-label { color: var(--muted); }
+.nf-value-quant .nf-value-card--efficiency .nf-value-stat-label { color: var(--muted-ink); }
 
 @media (max-width: 768px) {
   .nf-value-quant .nf-value-grid { grid-template-columns: 1fr; }
@@ -394,10 +397,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-step-en {
   font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
-  color: var(--muted); margin-bottom: 8px; letter-spacing: -0.01em;
+  color: var(--muted-ink); margin-bottom: 8px; letter-spacing: -0.01em;
 }
 .nf-step-title { font-weight: 600; font-size: 19px; color: var(--tea-deep); margin-bottom: 14px; }
-.nf-step-body { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+.nf-step-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; margin-bottom: 20px; }
 .nf-step-outputs { display: flex; flex-wrap: wrap; gap: 6px; }
 .nf-step-output {
   font-size: 11px; font-weight: 500; color: var(--tea-deep);
@@ -435,9 +438,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   padding: 3px 10px; border-radius: 99px; margin-bottom: 16px;
 }
 .nf-pkg-title { font-weight: 600; font-size: 20px; color: var(--tea-deep); margin-bottom: 6px; }
-.nf-pkg-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.nf-pkg-sub { font-size: 13px; color: var(--muted-ink); margin-bottom: 20px; }
 .nf-pkg-items { border-top: 1px solid var(--border); padding-top: 18px; }
-.nf-pkg-item { font-size: 13px; color: var(--muted); margin-bottom: 8px; padding-left: 16px; position: relative; line-height: 1.6; }
+.nf-pkg-item { font-size: 13px; color: var(--muted-ink); margin-bottom: 8px; padding-left: 16px; position: relative; line-height: 1.6; }
 .nf-pkg-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
 
 /* ═══ Why NEXFDE ═══ */
@@ -454,7 +457,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   margin-bottom: 16px;
 }
 .nf-why-card-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 12px; }
-.nf-why-card-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-why-card-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Endorsement ═══ */
 .nf-endorse { background: var(--bg-alt); }
@@ -469,10 +472,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-endorse-brand.at { color: #1a2a3a; }
 .nf-endorse-brand.opc { color: var(--tea-deep); }
-.nf-endorse-body { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.nf-endorse-body { font-size: 14px; color: var(--muted-ink); line-height: 1.8; }
 .nf-endorse-footer {
   margin-top: 32px; text-align: center;
-  font-size: 13px; color: var(--muted); font-weight: 500;
+  font-size: 13px; color: var(--muted-ink); font-weight: 500;
 }
 .nf-endorse-footer strong { color: var(--tea-deep); }
 
@@ -488,7 +491,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-fit-card.fit h3 svg { stroke: var(--copper); }
 .nf-fit-card.not h3 svg { stroke: var(--muted); }
-.nf-fit-card li { font-size: 14px; color: var(--muted); margin-bottom: 10px; padding-left: 22px; position: relative; line-height: 1.6; }
+.nf-fit-card li { font-size: 14px; color: var(--muted-ink); margin-bottom: 10px; padding-left: 22px; position: relative; line-height: 1.6; }
 .nf-fit-card li::before { content: ''; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 50%; }
 .nf-fit-card.fit li::before { background: var(--copper); }
 .nf-fit-card.not li::before { background: var(--border); }
@@ -507,24 +510,24 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   text-transform: uppercase; margin-bottom: 12px;
 }
 .nf-roadmap-card.active .nf-roadmap-phase { color: var(--copper); }
-.nf-roadmap-card:not(.active) .nf-roadmap-phase { color: var(--muted); }
+.nf-roadmap-card:not(.active) .nf-roadmap-phase { color: var(--muted-ink); }
 .nf-roadmap-dot {
   display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px;
 }
 .nf-roadmap-card.active .nf-roadmap-dot { background: var(--copper); }
 .nf-roadmap-card:not(.active) .nf-roadmap-dot { background: var(--border); }
 .nf-roadmap-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 8px; }
-.nf-roadmap-body { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+.nf-roadmap-body { font-size: 13px; color: var(--muted-ink); line-height: 1.7; margin-bottom: 16px; }
 .nf-roadmap-status {
   font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .nf-roadmap-card.active .nf-roadmap-status { color: var(--copper); }
-.nf-roadmap-card:not(.active) .nf-roadmap-status { color: var(--muted); }
+.nf-roadmap-card:not(.active) .nf-roadmap-status { color: var(--muted-ink); }
 .nf-roadmap-footer {
   margin-top: 36px; text-align: center; padding: 24px;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
 }
-.nf-roadmap-footer p { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+.nf-roadmap-footer p { font-size: 14px; color: var(--muted-ink); margin-bottom: 12px; }
 .nf-roadmap-footer a { font-weight: 600; color: var(--copper); font-size: 14px; }
 .nf-roadmap-footer a:hover { text-decoration: underline; }
 
@@ -545,13 +548,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-faq-q:hover { color: var(--copper); }
 .nf-faq-icon {
-  font-size: 20px; font-weight: 300; color: var(--muted);
+  font-size: 20px; font-weight: 300; color: var(--muted-ink);
   transition: transform 0.25s; flex-shrink: 0; margin-left: 16px;
 }
 .nf-faq-item.open .nf-faq-icon { transform: rotate(45deg); }
 .nf-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
 .nf-faq-item.open .nf-faq-a { max-height: 400px; padding-bottom: 22px; }
-.nf-faq-a p { font-size: 15px; color: var(--muted); line-height: 1.8; }
+.nf-faq-a p { font-size: 15px; color: var(--muted-ink); line-height: 1.8; }
 
 /* ═══ Final CTA ═══ */
 .nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
@@ -597,6 +600,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   /* Delivery dual-track stack */
   [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
+/* ═══ 对比度合规补丁 v2.7.4（整改清单 v1.0.0 全量落地 · 2026-10-28） ═══ */
+.nf-section-label, .nf-nav-logo-sub, .nf-nav-drop-num, .nf-nav-drop-foot, .nf-hero-badge,
+.nf-hero-credit a, .nf-signal-src, .nf-paradigm-subtitle, .nf-step-tag, .nf-deliver-num,
+.nf-pkg-tag, .nf-why-card-icon, .nf-roadmap-card.active .nf-roadmap-phase,
+.nf-roadmap-card.active .nf-roadmap-status, .nf-roadmap-footer a, .nf-faq-q:hover,
+.nf-value-quant .nf-value-card--growth .nf-value-label,
+.nf-value-quant .nf-value-card--efficiency .nf-value-label { color: var(--copper-ink); }
+a.nf-btn-outline:hover { color: var(--copper-ink); }
+a.nf-btn-primary, .nf-nav-cta, .nf-final-cta .nf-btn-primary,
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper-ink); color: #fff; }
+a.nf-btn-primary:hover, .nf-final-cta .nf-btn-primary:hover { background: var(--copper-deep); }
+.nf-nav-cta:hover { background: var(--copper-deep) !important; }
 </style>
 
 <div class="nf-page">
@@ -627,7 +642,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div class="nf-container">
     <div class="nf-hero-grid">
       <div>
-        <div class="nf-hero-badge">Enterprise AI Deployment</div>
+        <div class="nf-hero-badge">FDE-style AI Deployment</div>
         <h1>把 AI 从判断<em>推进到</em>生产</h1>
         <p class="nf-hero-sub">
           NEX<strong style="color:var(--copper);">FDE</strong> 不是卖工具，也不是停在方案文档。我们帮助企业从场景判断、试点验证到真实流程上线，跑通第一条能持续运转的 AI 工作流。
@@ -798,7 +813,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         </div>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:24px;">数据基于 NEXFDE 服务企业客户的汇总。个体效果因行业与场景而异。</p>
+    <p style="font-size:12px;color:var(--muted-ink);text-align:center;margin-top:24px;">数据基于 NEXFDE 服务企业客户的汇总。个体效果因行业与场景而异。</p>
   </div>
 </section>
 
@@ -822,7 +837,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       </div>
       <!-- Question -->
       <div id="diag-question" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:16px;">
-        <div id="diag-qnum" style="font-size:12px;font-weight:600;color:var(--copper);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">问题 1/6</div>
+        <div id="diag-qnum" style="font-size:12px;font-weight:600;color:var(--copper-ink);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">问题 1/6</div>
         <div id="diag-qtext" style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:24px;line-height:1.5;">你的团队目前对 AI 的态度是？</div>
         <div id="diag-options" style="display:flex;flex-direction:column;gap:10px;">
           <button class="diag-opt" onclick="selectAnswer(0)" style="display:block;width:100%;text-align:left;padding:14px 18px;background:var(--warm-white);border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;color:var(--ink);cursor:pointer;transition:all 0.15s;">A. 还在观望，不确定能做什么</button>
@@ -837,12 +852,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <div style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:40px 32px;text-align:center;margin-bottom:24px;">
         <div id="diag-result-icon" style="font-size:40px;margin-bottom:16px;"></div>
         <div id="diag-result-title" style="font-size:22px;font-weight:700;color:var(--tea-deep);margin-bottom:10px;"></div>
-        <div id="diag-result-desc" style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:24px;max-width:540px;margin-left:auto;margin-right:auto;"></div>
-        <div id="diag-result-recommend" style="display:inline-block;background:var(--copper-pale);padding:10px 20px;border-radius:99px;font-size:14px;font-weight:600;color:var(--copper);margin-bottom:8px;"></div>
-        <div id="diag-result-wb" style="font-size:13px;color:var(--muted);margin-top:8px;"></div>
+        <div id="diag-result-desc" style="font-size:15px;color:var(--muted-ink);line-height:1.8;margin-bottom:24px;max-width:540px;margin-left:auto;margin-right:auto;"></div>
+        <div id="diag-result-recommend" style="display:inline-block;background:var(--copper-pale);padding:10px 20px;border-radius:99px;font-size:14px;font-weight:600;color:var(--copper-ink);margin-bottom:8px;"></div>
+        <div id="diag-result-wb" style="font-size:13px;color:var(--muted-ink);margin-top:8px;"></div>
       </div>
 
-      <div style="text-align:center;margin-bottom:20px;font-size:13px;color:var(--muted);">以上是你的诊断结果。想针对你的具体业务做深度解读？</div>
+      <div style="text-align:center;margin-bottom:20px;font-size:13px;color:var(--muted-ink);">以上是你的诊断结果。想针对你的具体业务做深度解读？</div>
 
       <!-- Lead Capture -->
       <div style="background:var(--tea-deep);border-radius:var(--radius-lg);padding:36px 32px;text-align:center;color:#fff;">
@@ -1017,19 +1032,19 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div class="nf-container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:12px;">标准化交付</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:12px;">标准化交付</div>
         <div style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:10px;">基于 WorkBuddy 智能体基座</div>
-        <div style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:14px;">利用 WorkBuddy 平台快速搭建智能体、配置业务流程、部署上线。适合流程标准化程度高的场景。</div>
-        <div style="display:flex;gap:16px;font-size:13px;color:var(--muted);">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.7;margin-bottom:14px;">利用 WorkBuddy 平台快速搭建智能体、配置业务流程、部署上线。适合流程标准化程度高的场景。</div>
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--muted-ink);">
           <span>周期: 2-4 周</span>
           <span>投入: 标准报价</span>
         </div>
       </div>
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">原生定制开发</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-ink);margin-bottom:12px;">原生定制开发</div>
         <div style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:10px;">独立技术栈，深度定制</div>
-        <div style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:14px;">不限平台，根据业务复杂度选择最合适的技术方案。适合复杂业务逻辑、特殊系统集成需求。</div>
-        <div style="display:flex;gap:16px;font-size:13px;color:var(--muted);">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.7;margin-bottom:14px;">不限平台，根据业务复杂度选择最合适的技术方案。适合复杂业务逻辑、特殊系统集成需求。</div>
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--muted-ink);">
           <span>周期: 4-12 周</span>
           <span>投入: 按需评估</span>
         </div>
@@ -1224,12 +1239,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div class="nf-roadmap-footer">
       <p style="font-weight:600;color:var(--tea-deep);margin-bottom:8px;">FDE 落地场景案例</p>
       <div style="display:flex;flex-direction:column;gap:6px;">
-        <a href="/cases/social-media-analytics/" style="color:var(--copper);text-decoration:none;">#1 双平台社媒数据洞察 <span style="color:#6B7A73;font-size:12px;">真实验证</span></a>
-        <a href="/cases/nexfde-site-build/" style="color:var(--copper);text-decoration:none;">#2 网站构建即案例 <span style="color:#6B7A73;font-size:12px;">持续迭代</span></a>
-        <a href="/cases/geo-lead-generation/" style="color:var(--copper);text-decoration:none;">#3 GEO 改造获客闭环 <span style="color:#6B7A73;font-size:12px;">生产运行</span></a>
-        <a href="/cases/ai-course-production-line/" style="color:var(--copper);text-decoration:none;">#4 课程生产链路 <span style="color:#6B7A73;font-size:12px;">生产运行</span></a>
-        <a href="/cases/customer-service-ai/" style="color:var(--copper);text-decoration:none;">#5 客服 AI 确定性架构 <span style="color:#6B7A73;font-size:12px;">真实验证</span></a>
-        <a href="/cases/" style="color:var(--copper);text-decoration:none;font-weight:600;" data-track="cta_cases_hub">查看全部案例 →</a>
+        <a href="/cases/social-media-analytics/" style="color:var(--copper-ink);text-decoration:none;">#1 双平台社媒数据洞察 <span style="color:#5C6B64;font-size:12px;">真实验证</span></a>
+        <a href="/cases/nexfde-site-build/" style="color:var(--copper-ink);text-decoration:none;">#2 网站构建即案例 <span style="color:#5C6B64;font-size:12px;">持续迭代</span></a>
+        <a href="/cases/geo-lead-generation/" style="color:var(--copper-ink);text-decoration:none;">#3 GEO 改造获客闭环 <span style="color:#5C6B64;font-size:12px;">生产运行</span></a>
+        <a href="/cases/ai-course-production-line/" style="color:var(--copper-ink);text-decoration:none;">#4 课程生产链路 <span style="color:#5C6B64;font-size:12px;">生产运行</span></a>
+        <a href="/cases/customer-service-ai/" style="color:var(--copper-ink);text-decoration:none;">#5 客服 AI 确定性架构 <span style="color:#5C6B64;font-size:12px;">真实验证</span></a>
+        <a href="/cases/" style="color:var(--copper-ink);text-decoration:none;font-weight:600;" data-track="cta_cases_hub">查看全部案例 →</a>
       </div>
       <p style="margin-top:16px;">你是有 AI 能力的行业专家？我们正在建立 FDE 交付网络。</p>
       <a href="/network/" data-track="cta_network">了解加入 NEXFDE 交付网络 →</a>
@@ -1307,7 +1322,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         </div>
         <div>
           <div style="font-weight:600;color:#ffffff;margin-bottom:10px;font-size:13px;letter-spacing:0.04em;">联系</div>
-          <a href="#" onclick="openWechat();return false;" style="display:block;color:var(--copper);text-decoration:none;margin-bottom:6px;font-weight:500;" data-track="diagnostic_booking">预约部署诊断 →</a>
+          <a href="#" onclick="openWechat();return false;" style="display:block;color:var(--copper-light);text-decoration:none;margin-bottom:6px;font-weight:500;" data-track="diagnostic_booking">预约部署诊断 →</a>
           <a href="/enterprise/" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;font-size:13px;" data-track="cta_enterprise">企业合作 →</a>
           <a href="/network/" style="display:block;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:6px;font-size:13px;" data-track="cta_network">加入交付网络 →</a>
         </div>

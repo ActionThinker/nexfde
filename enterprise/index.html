@@ -106,6 +106,8 @@
 </head>
 <body>
 
+<!-- NEXFDE Build: v2.7.4 | 2026-10-28 | VIS: 深茶绿+铜色 | AI-Native -->
+
 <div class="nf-page">
 
 <style>
@@ -123,6 +125,9 @@
   --border: #D4CFC6;
   --ink: #1A1A1A;
   --muted: #6B7A73;
+  --copper-ink: #9A6228;   /* 合规·小字强调 / 主按钮铜底（白字 5.06:1） */
+  --copper-deep: #8A5722;  /* 合规·主按钮悬停（白字 6.06:1） */
+  --muted-ink: #5C6B64;    /* 合规·次级正文（5.02:1） */
   --radius: 12px;
   --radius-lg: 16px;
   --green-bg: #E8F0EC;
@@ -148,7 +153,7 @@
 }
 .nf-section-title em { font-style: normal; color: var(--copper); }
 .nf-section-desc {
-  font-size: 17px; color: var(--muted);
+  font-size: 17px; color: var(--muted-ink);
   max-width: 620px; line-height: 1.8; margin-bottom: 52px;
 }
 
@@ -181,12 +186,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
 .nf-nav-back {
-  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  font-size: 13px; color: var(--muted-ink); padding: 6px 12px;
   border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
 }
 .nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
 .nf-nav-links { display: flex; align-items: center; gap: 24px; }
-.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted-ink); transition: color 0.15s; }
 .nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-links a.nf-nav-here { color: var(--tea-deep); font-weight: 600; }
 .nf-nav-cta {
@@ -219,9 +224,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
-.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 600px; line-height: 1.8; margin-bottom: 30px; }
+.nf-hero-sub { font-size: 17px; color: var(--muted-ink); max-width: 600px; line-height: 1.8; margin-bottom: 30px; }
 .nf-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-.nf-hero-note { font-size: 13px; color: var(--muted); margin-top: 18px; }
+.nf-hero-note { font-size: 13px; color: var(--muted-ink); margin-top: 18px; }
 
 /* ═══ Cooperation Modes ═══ */
 .nf-pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -240,10 +245,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   margin-bottom: 14px;
 }
 .nf-pkg-title { font-weight: 600; font-size: 20px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-pkg-desc { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; }
+.nf-pkg-desc { font-size: 14px; color: var(--muted-ink); line-height: 1.75; margin-bottom: 20px; }
 .nf-pkg-items { border-top: 1px solid var(--border); padding-top: 18px; margin-top: auto; }
 .nf-pkg-item {
-  font-size: 13px; color: var(--muted); margin-bottom: 8px;
+  font-size: 13px; color: var(--muted-ink); margin-bottom: 8px;
   padding-left: 16px; position: relative; line-height: 1.6;
 }
 .nf-pkg-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
@@ -264,7 +269,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-step-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 6px; }
 .nf-step-sub { font-size: 14px; font-weight: 600; color: var(--copper); margin-bottom: 14px; line-height: 1.6; }
-.nf-step-desc { font-size: 14px; color: var(--muted); line-height: 1.75; border-top: 1px solid var(--border); padding-top: 14px; }
+.nf-step-desc { font-size: 14px; color: var(--muted-ink); line-height: 1.75; border-top: 1px solid var(--border); padding-top: 14px; }
 
 /* ═══ Pricing / Decision Note ═══ */
 .nf-note-box {
@@ -275,7 +280,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: 17px; font-weight: 600; color: var(--tea-deep);
   line-height: 1.7; margin-bottom: 12px;
 }
-.nf-note-body { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.nf-note-body { font-size: 14px; color: var(--muted-ink); line-height: 1.8; }
 .nf-note-body strong { color: var(--tea-deep); }
 
 /* ═══ Related Cases ═══ */
@@ -287,7 +292,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-rel-item:hover { background: var(--copper-pale); }
 .nf-rel-title { display: block; font-size: 16px; font-weight: 600; color: var(--tea-deep); margin-bottom: 4px; }
-.nf-rel-desc { display: block; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.nf-rel-desc { display: block; font-size: 13px; color: var(--muted-ink); line-height: 1.6; }
 .nf-rel-arrow { flex-shrink: 0; font-size: 13px; font-weight: 600; color: var(--copper); white-space: nowrap; }
 .nf-rel-all {
   display: inline-block; margin-top: 24px;
@@ -304,7 +309,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   padding: 20px 4px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 16px; font-weight: 600; color: var(--tea-deep); text-align: left;
 }
-.nf-faq-a { display: none; padding: 0 4px 20px; font-size: 14px; color: var(--muted); line-height: 1.8; }
+.nf-faq-a { display: none; padding: 0 4px 20px; font-size: 14px; color: var(--muted-ink); line-height: 1.8; }
 .nf-faq-a p { margin: 0; }
 .nf-faq-a strong { color: var(--tea-deep); }
 
@@ -337,6 +342,25 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   .nf-footer-grid { grid-template-columns: 1fr 1fr; }
   .nf-final-cta { padding: 80px 0; }
 }
+
+/* ═══ 对比度合规补丁 v2.7.4（整改清单 v1.0.0 全量落地 · 2026-10-28） ═══ */
+.nf-section-label, .nf-nav-logo-sub, .nf-nav-drop-num, .nf-nav-drop-foot, .nf-hero-badge,
+.nf-hero-credit a, .nf-signal-src, .nf-paradigm-subtitle, .nf-step-tag, .nf-deliver-num,
+.nf-pkg-tag, .nf-why-card-icon, .nf-roadmap-card.active .nf-roadmap-phase,
+.nf-roadmap-card.active .nf-roadmap-status, .nf-roadmap-footer a, .nf-faq-q:hover,
+.nf-value-quant .nf-value-card--growth .nf-value-label,
+.nf-value-quant .nf-value-card--efficiency .nf-value-label,
+.nf-provide-tag, .nf-case-stage, .nf-step-sub, .nf-rel-arrow, .nf-rel-all,
+.nf-record-link, .nf-case-ctas a.nf-case-go, .nf-fit-table td a,
+.nf-tl-marker, .nf-tl-day, .nf-stat-num em { color: var(--copper-ink); }
+a.nf-btn-outline:hover { color: var(--copper-ink); }
+a.nf-btn-primary, .nf-nav-cta, .nf-final-cta .nf-btn-primary,
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper-ink); color: #fff; }
+a.nf-btn-primary:hover, .nf-final-cta .nf-btn-primary:hover { background: var(--copper-deep); }
+.nf-nav-cta:hover { background: var(--copper-deep) !important; }
+.nf-footer a:hover { color: var(--copper-light); }
+.nf-nav-back:hover { border-color: var(--copper-ink); color: var(--copper-ink); }
+.nf-verify-card h3 span { color: var(--copper-ink); }
 </style>
 
 <!-- ═══ Nav ═══ -->
@@ -555,9 +579,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
     <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「企业合作 + 你的行业」，我们聊聊你的场景</p>
+    <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;">发送「企业合作 + 你的行业」，我们聊聊你的场景</p>
     <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
-    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+    <p style="font-size:11px;color:var(--muted-ink);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
   </div>
 </div>
 
@@ -567,7 +591,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div class="nf-footer-grid">
       <div>
         <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
-        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">
+          FDE-style AI Deployment
+        </div>
+        <p style="font-size:13px;max-width:220px;">把 AI 从判断推进到生产。</p>
       </div>
       <div>
         <h5>服务</h5>

@@ -81,6 +81,8 @@
 </head>
 <body>
 
+<!-- NEXFDE Build: v2.7.4 | 2026-10-28 | VIS: 深茶绿+铜色 | AI-Native -->
+
 <div class="nf-page">
 
 <style>
@@ -98,6 +100,9 @@
   --border: #D4CFC6;
   --ink: #1A1A1A;
   --muted: #6B7A73;
+  --copper-ink: #9A6228;   /* 合规·小字强调 / 主按钮铜底（白字 5.06:1） */
+  --copper-deep: #8A5722;  /* 合规·主按钮悬停（白字 6.06:1） */
+  --muted-ink: #5C6B64;    /* 合规·次级正文（5.02:1） */
   --radius: 12px;
   --radius-lg: 16px;
   --green-bg: #E8F0EC;
@@ -123,7 +128,7 @@
 }
 .nf-section-title em { font-style: normal; color: var(--copper); }
 .nf-section-desc {
-  font-size: 17px; color: var(--muted);
+  font-size: 17px; color: var(--muted-ink);
   max-width: 620px; line-height: 1.8; margin-bottom: 52px;
 }
 
@@ -156,12 +161,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
 .nf-nav-back {
-  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  font-size: 13px; color: var(--muted-ink); padding: 6px 12px;
   border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
 }
 .nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
 .nf-nav-links { display: flex; align-items: center; gap: 24px; }
-.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted-ink); transition: color 0.15s; }
 .nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-cta {
   font-size: 13px; font-weight: 600; color: #fff !important;
@@ -201,7 +206,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-stage-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tea-mid); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
-.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
+.nf-hero-sub { font-size: 17px; color: var(--muted-ink); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
 .nf-hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .nf-hero-tag {
   font-size: 12px; font-weight: 500; color: var(--tea-mid);
@@ -216,13 +221,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-hero-stat-label {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+  text-transform: uppercase; color: var(--muted-ink); margin-bottom: 20px;
 }
 .nf-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .nf-stat-item { text-align: center; padding: 12px 8px; background: var(--copper-pale); border-radius: var(--radius); }
 .nf-stat-num { font-size: 24px; font-weight: 700; color: var(--tea-deep); line-height: 1.2; }
 .nf-stat-num em { font-style: normal; color: var(--copper); font-size: 14px; }
-.nf-stat-text { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+.nf-stat-text { font-size: 11px; color: var(--muted-ink); margin-top: 4px; line-height: 1.4; }
 
 /* ═══ Pain/Challenge Cards ═══ */
 .nf-pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; }
@@ -233,7 +238,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   color: var(--border); margin-bottom: 16px; line-height: 1;
 }
 .nf-pain-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-pain-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Solution Steps ═══ */
 .nf-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -249,10 +254,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   line-height: 1;
 }
 .nf-step-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 6px; }
-.nf-step-sub { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+.nf-step-sub { font-size: 14px; color: var(--muted-ink); margin-bottom: 14px; line-height: 1.6; }
 .nf-step-items { border-top: 1px solid var(--border); padding-top: 14px; }
 .nf-step-item {
-  font-size: 13px; color: var(--muted); margin-bottom: 6px;
+  font-size: 13px; color: var(--muted-ink); margin-bottom: 6px;
   padding-left: 14px; position: relative; line-height: 1.6;
 }
 .nf-step-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
@@ -270,7 +275,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: clamp(24px, 3.5vw, 34px); font-weight: 700;
   color: var(--tea-deep); line-height: 1.2; margin-bottom: 6px;
 }
-.nf-result-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.nf-result-label { font-size: 13px; color: var(--muted-ink); line-height: 1.5; }
 .nf-result-note { font-size: 11px; color: var(--border); margin-top: 4px; }
 
 /* ═══ Insight Cards ═══ */
@@ -287,7 +292,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: 20px; margin-bottom: 20px;
 }
 .nf-insight-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-insight-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-insight-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Timeline ═══ */
 .nf-timeline { max-width: 760px; margin: 20px auto 0; }
@@ -307,7 +312,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-tl-content { padding-top: 8px; }
 .nf-tl-day { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper); margin-bottom: 4px; }
 .nf-tl-title { font-weight: 600; font-size: 16px; color: var(--tea-deep); margin-bottom: 4px; }
-.nf-tl-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.nf-tl-desc { font-size: 13px; color: var(--muted-ink); line-height: 1.6; }
 
 /* ═══ Scenario Fit ═══ */
 .nf-fit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -319,7 +324,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-fit-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
 .nf-fit-icon { font-size: 28px; margin-bottom: 16px; }
 .nf-fit-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-fit-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-fit-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Final CTA ═══ */
 .nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
@@ -350,6 +355,25 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   .nf-footer-grid { grid-template-columns: 1fr 1fr; }
   .nf-final-cta { padding: 80px 0; }
 }
+
+/* ═══ 对比度合规补丁 v2.7.4（整改清单 v1.0.0 全量落地 · 2026-10-28） ═══ */
+.nf-section-label, .nf-nav-logo-sub, .nf-nav-drop-num, .nf-nav-drop-foot, .nf-hero-badge,
+.nf-hero-credit a, .nf-signal-src, .nf-paradigm-subtitle, .nf-step-tag, .nf-deliver-num,
+.nf-pkg-tag, .nf-why-card-icon, .nf-roadmap-card.active .nf-roadmap-phase,
+.nf-roadmap-card.active .nf-roadmap-status, .nf-roadmap-footer a, .nf-faq-q:hover,
+.nf-value-quant .nf-value-card--growth .nf-value-label,
+.nf-value-quant .nf-value-card--efficiency .nf-value-label,
+.nf-provide-tag, .nf-case-stage, .nf-step-sub, .nf-rel-arrow, .nf-rel-all,
+.nf-record-link, .nf-case-ctas a.nf-case-go, .nf-fit-table td a,
+.nf-tl-marker, .nf-tl-day, .nf-stat-num em { color: var(--copper-ink); }
+a.nf-btn-outline:hover { color: var(--copper-ink); }
+a.nf-btn-primary, .nf-nav-cta, .nf-final-cta .nf-btn-primary,
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper-ink); color: #fff; }
+a.nf-btn-primary:hover, .nf-final-cta .nf-btn-primary:hover { background: var(--copper-deep); }
+.nf-nav-cta:hover { background: var(--copper-deep) !important; }
+.nf-footer a:hover { color: var(--copper-light); }
+.nf-nav-back:hover { border-color: var(--copper-ink); color: var(--copper-ink); }
+.nf-verify-card h3 span { color: var(--copper-ink); }
 </style>
 
 <!-- ═══ Nav ═══ -->
@@ -431,19 +455,19 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">客户画像</h3>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">行业：</strong>零售 · 多品牌连锁（客户名称与品牌按约定不公开）</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">系统现状：</strong>一套客服系统服务多个品牌，客户咨询经端侧插件接收与回复，路由与话术规则散在端侧</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">合规诉求：</strong>售后、赔付等话术一个字都不能错，红线场景必须逐字稳定</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">目标：</strong>客服 AI 从「能用」到「敢用」——串台归零、合规零出错、运营改口径不再等发版</span>
         </div>
@@ -451,7 +475,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">第二阶段的问题，全在架构上</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">问题一：</strong>多品牌共用一套客服系统时，知识边界怎么隔离？</p>
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">问题二：</strong>运营改一句口径，为什么要把工程师和发版流程卷进来？</p>
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">问题三：</strong>售后赔付这类一个字都不能错的话术，凭什么交给概率？</p>
@@ -461,7 +485,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
-      <p style="font-size:15px;color:var(--muted);">核心判断：<strong style="color:var(--tea-deep);">「第二阶段的客服 AI，客户买的不再是『模型能力』，而是『确定性架构』——谁先把决策、执行、合规三件事在架构层分开，谁先把 AI 客服从 demo 做进生产。」</strong></p>
+      <p style="font-size:15px;color:var(--muted-ink);">核心判断：<strong style="color:var(--tea-deep);">「第二阶段的客服 AI，客户买的不再是『模型能力』，而是『确定性架构』——谁先把决策、执行、合规三件事在架构层分开，谁先把 AI 客服从 demo 做进生产。」</strong></p>
     </div>
   </div>
 </section>
@@ -532,11 +556,11 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 32px;">
-      <p style="font-size:14px;color:var(--muted);line-height:1.8;"><strong style="color:var(--tea-deep);">工程保障 · 双引擎一致性：</strong>大脑与端侧本地路由逐条对拍（134 条测试网），大脑故障秒级降级本地，服务不中断。确定性架构不能以牺牲可用性为代价——双引擎让「确定性」本身也有兜底。</p>
+      <p style="font-size:14px;color:var(--muted-ink);line-height:1.8;"><strong style="color:var(--tea-deep);">工程保障 · 双引擎一致性：</strong>大脑与端侧本地路由逐条对拍（134 条测试网），大脑故障秒级降级本地，服务不中断。确定性架构不能以牺牲可用性为代价——双引擎让「确定性」本身也有兜底。</p>
     </div>
 
     <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
-      <p style="font-size:15px;color:var(--muted);">核心洞察：<strong style="color:var(--tea-deep);">「AI 客服的可靠性不来自更强的模型，来自更清醒的分工——把『必须确定的』交给规则，把『可以泛化的』交给模型，把『两可的』交给人。」</strong></p>
+      <p style="font-size:15px;color:var(--muted-ink);">核心洞察：<strong style="color:var(--tea-deep);">「AI 客服的可靠性不来自更强的模型，来自更清醒的分工——把『必须确定的』交给规则，把『可以泛化的』交给模型，把『两可的』交给人。」</strong></p>
     </div>
   </div>
 </section>
@@ -553,9 +577,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 1 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">1</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">1</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 1</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 1</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">判断诊断阶段</div>
           </div>
         </div>
@@ -571,18 +595,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">三线架构盘点</td>
-                <td style="padding:14px 16px;color:var(--muted);">逐项审计决策层、执行层、合规层现状——决策在哪做、规则在哪管、话术谁在发</td>
-                <td style="padding:14px 16px;color:var(--muted);">看清系统的真实风险分布</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">逐项审计决策层、执行层、合规层现状——决策在哪做、规则在哪管、话术谁在发</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">看清系统的真实风险分布</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">红线场景清单</td>
-                <td style="padding:14px 16px;color:var(--muted);">圈定售后、赔付等逐字合规话术与跨品牌边界场景</td>
-                <td style="padding:14px 16px;color:var(--muted);">知道哪些话术必须走确定性通道</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">圈定售后、赔付等逐字合规话术与跨品牌边界场景</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">知道哪些话术必须走确定性通道</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">改造路径设计</td>
-                <td style="padding:14px 16px;color:var(--muted);">输出确定性架构改造方案与灰度切换计划</td>
-                <td style="padding:14px 16px;color:var(--muted);">拿到可执行的改造路线图</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">输出确定性架构改造方案与灰度切换计划</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">拿到可执行的改造路线图</td>
               </tr>
             </tbody>
           </table>
@@ -592,9 +616,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 2 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">2</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">2</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 2</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 2</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">试点冲刺阶段</div>
           </div>
         </div>
@@ -610,18 +634,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">客服大脑上线</td>
-                <td style="padding:14px 16px;color:var(--muted);">编排引擎 + 品牌路由 + 知识库分区 + 跨品牌守卫</td>
-                <td style="padding:14px 16px;color:var(--muted);">串台归零，决策收敛到服务端</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">编排引擎 + 品牌路由 + 知识库分区 + 跨品牌守卫</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">串台归零，决策收敛到服务端</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">确定性通道 + 安全管道</td>
-                <td style="padding:14px 16px;color:var(--muted);">合规话术原文直发、句级安全剥离、事实锚定</td>
-                <td style="padding:14px 16px;color:var(--muted);">红线话术逐字稳定，安全不误杀</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">合规话术原文直发、句级安全剥离、事实锚定</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">红线话术逐字稳定，安全不误杀</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">真机全链路验证</td>
-                <td style="padding:14px 16px;color:var(--muted);">真机用例 + 联动测试台（含极端场景重放）</td>
-                <td style="padding:14px 16px;color:var(--muted);">问题当日修复当日回归，验证全绿</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">真机用例 + 联动测试台（含极端场景重放）</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">问题当日修复当日回归，验证全绿</td>
               </tr>
             </tbody>
           </table>
@@ -631,9 +655,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 3 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">3</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">3</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 3</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 3</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">生产上线阶段</div>
           </div>
         </div>
@@ -649,18 +673,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">灰度部署</td>
-                <td style="padding:14px 16px;color:var(--muted);">服务端上线、端侧大版本发版、门店品牌映射预置</td>
-                <td style="padding:14px 16px;color:var(--muted);">灰度开关一键可切、秒级可回滚</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">服务端上线、端侧大版本发版、门店品牌映射预置</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">灰度开关一键可切、秒级可回滚</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">运营自助机制</td>
-                <td style="padding:14px 16px;color:var(--muted);">话术 / 规则 / 提示词全部收敛到大脑侧</td>
-                <td style="padding:14px 16px;color:var(--muted);">运营自助迭代，工程零介入</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">话术 / 规则 / 提示词全部收敛到大脑侧</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">运营自助迭代，工程零介入</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">持续验证</td>
-                <td style="padding:14px 16px;color:var(--muted);">测试网对拍 + 周期回归</td>
-                <td style="padding:14px 16px;color:var(--muted);">大脑故障秒级降级，服务不中断</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">测试网对拍 + 周期回归</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">大脑故障秒级降级，服务不中断</td>
               </tr>
             </tbody>
           </table>
@@ -746,7 +770,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div style="margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">架构成果</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 决策上收：业务规则全部收敛到服务端「客服大脑」</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 确定性通道：合规话术不过模型、不过检索，原文直发</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 安全管道：句级剥离 + 事实锚定 + 编造链接整条拦截</p>
@@ -756,7 +780,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       </div>
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">验证成果</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 标准验收 36/37、旅程套件 54/54、联动 66 轮——160+ 轮真机对话全绿</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 售后五类剧本 12 种问法 × 多轮重放 100% 逐字稳定</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 指代追问链（价格 → 保质期 → 口味 → 介绍）全程锁定同一产品，多轮后仍准确回忆语境</p>
@@ -767,7 +791,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
-      <p style="font-size:14px;color:var(--muted);">口径说明：数据来自项目测试档案（真机审计日志 + 自动化测试输出），可随档案核对。按脱敏与有限授权原则，客户名称与品牌不公开，行业、规模与交付数据保持真实。</p>
+      <p style="font-size:14px;color:var(--muted-ink);">口径说明：数据来自项目测试档案（真机审计日志 + 自动化测试输出），可随档案核对。按脱敏与有限授权原则，客户名称与品牌不公开，行业、规模与交付数据保持真实。</p>
     </div>
   </div>
 </section>
@@ -797,7 +821,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:32px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:28px 32px;text-align:center;">
-      <p style="font-size:15px;color:var(--muted);">核心洞察：<strong style="color:var(--tea-deep);">「把 AI 客服做进生产，靠的不是模型能力，是架构纪律——决策、执行、合规各归其位，确定性才会发生。」</strong></p>
+      <p style="font-size:15px;color:var(--muted-ink);">核心洞察：<strong style="color:var(--tea-deep);">「把 AI 客服做进生产，靠的不是模型能力，是架构纪律——决策、执行、合规各归其位，确定性才会发生。」</strong></p>
     </div>
   </div>
 </section>
@@ -836,45 +860,45 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <p class="nf-section-desc">三个服务包对应不同阶段的需求。诊断阶段可独立购买——先判断值不值得做，再决定要不要推进。</p>
     <div class="nf-pkg-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px;">
       <div class="nf-pkg-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">诊断</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper-ink);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">诊断</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">客服 AI 架构诊断</div>
-        <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥5,000 <span style="font-size:15px;font-weight:500;">起</span></div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">按品牌数量与系统复杂度评估</div>
+        <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥5,000 <span style="font-size:15px;font-weight:500;color:var(--copper-ink);">起</span></div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">按品牌数量与系统复杂度评估</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">决策 / 执行 / 合规三线盘点</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">红线场景与跨品牌边界清单</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">改造路径与灰度切换计划</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">输出：诊断报告 + 改造路线图</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">决策 / 执行 / 合规三线盘点</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">红线场景与跨品牌边界清单</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">改造路径与灰度切换计划</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">输出：诊断报告 + 改造路线图</div>
         </div>
       </div>
       <div class="nf-pkg-card" style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper);padding:4px 10px;border-radius:5px;margin-bottom:14px;">推荐</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper-ink);padding:4px 10px;border-radius:5px;margin-bottom:14px;">推荐</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">确定性架构改造</div>
-        <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥20,000 <span style="font-size:15px;font-weight:500;">起</span></div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">按品牌 × 坐席数动态定价 · 以采购规模为准</div>
+        <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥20,000 <span style="font-size:15px;font-weight:500;color:var(--copper-ink);">起</span></div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">按品牌 × 坐席数动态定价 · 以采购规模为准</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">诊断报告 + 客服大脑编排引擎</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">确定性话术通道 + 安全管道</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">品牌路由与知识库分区</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">真机全链路验证（含极端场景）</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">诊断报告 + 客服大脑编排引擎</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">确定性话术通道 + 安全管道</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">品牌路由与知识库分区</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">真机全链路验证（含极端场景）</div>
         </div>
       </div>
       <div class="nf-pkg-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">持续</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper-ink);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">持续</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">生产部署与持续运营</div>
         <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥29,999</div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥59,999</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">— ¥59,999</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">改造实施全部内容</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">灰度部署与门店品牌映射</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">运营自助迭代机制</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">周期回归与测试网对拍</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">改造实施全部内容</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">灰度部署与门店品牌映射</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">运营自助迭代机制</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">周期回归与测试网对拍</div>
         </div>
       </div>
     </div>
 
     <div style="margin-top:28px;background:var(--copper-pale);border-radius:var(--radius);padding:20px 24px;text-align:center;">
-      <p style="font-size:14px;color:var(--muted);">不确定哪个阶段适合你？<a href="#engage" style="color:var(--copper);font-weight:600;">联系我们</a>，聊聊你的客服系统现状和期望。架构改造按品牌数量 × 坐席规模动态评估，具体以采购规模为准；完整价目提交需求后提供。</p>
+      <p style="font-size:14px;color:var(--muted-ink);">不确定哪个阶段适合你？<a href="#engage" style="color:var(--copper-ink);font-weight:600;">联系我们</a>，聊聊你的客服系统现状和期望。架构改造按品牌数量 × 坐席规模动态评估，具体以采购规模为准；完整价目提交需求后提供。</p>
     </div>
   </div>
 </section>
@@ -897,9 +921,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
     <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「客服 AI 诊断 + 你的行业」，我们聊聊你的场景</p>
+    <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;">发送「客服 AI 诊断 + 你的行业」，我们聊聊你的场景</p>
     <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
-    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+    <p style="font-size:11px;color:var(--muted-ink);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
   </div>
 </div>
 
@@ -909,7 +933,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div class="nf-footer-grid">
       <div>
         <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
-        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">
+          FDE-style AI Deployment
+        </div>
+        <p style="font-size:13px;max-width:220px;">把 AI 从判断推进到生产。</p>
       </div>
       <div>
         <h5>服务</h5>

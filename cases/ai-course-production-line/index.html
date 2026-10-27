@@ -81,6 +81,8 @@
 </head>
 <body>
 
+<!-- NEXFDE Build: v2.7.4 | 2026-10-28 | VIS: 深茶绿+铜色 | AI-Native -->
+
 <div class="nf-page">
 
 <style>
@@ -98,6 +100,9 @@
   --border: #D4CFC6;
   --ink: #1A1A1A;
   --muted: #6B7A73;
+  --copper-ink: #9A6228;   /* 合规·小字强调 / 主按钮铜底（白字 5.06:1） */
+  --copper-deep: #8A5722;  /* 合规·主按钮悬停（白字 6.06:1） */
+  --muted-ink: #5C6B64;    /* 合规·次级正文（5.02:1） */
   --radius: 12px;
   --radius-lg: 16px;
   --green-bg: #E8F0EC;
@@ -123,7 +128,7 @@
 }
 .nf-section-title em { font-style: normal; color: var(--copper); }
 .nf-section-desc {
-  font-size: 17px; color: var(--muted);
+  font-size: 17px; color: var(--muted-ink);
   max-width: 620px; line-height: 1.8; margin-bottom: 52px;
 }
 
@@ -156,12 +161,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
 .nf-nav-back {
-  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  font-size: 13px; color: var(--muted-ink); padding: 6px 12px;
   border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
 }
 .nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
 .nf-nav-links { display: flex; align-items: center; gap: 24px; }
-.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted-ink); transition: color 0.15s; }
 .nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-cta {
   font-size: 13px; font-weight: 600; color: #fff !important;
@@ -201,7 +206,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-stage-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tea-mid); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
-.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
+.nf-hero-sub { font-size: 17px; color: var(--muted-ink); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
 .nf-hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .nf-hero-tag {
   font-size: 12px; font-weight: 500; color: var(--tea-mid);
@@ -216,13 +221,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-hero-stat-label {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+  text-transform: uppercase; color: var(--muted-ink); margin-bottom: 20px;
 }
 .nf-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .nf-stat-item { text-align: center; padding: 12px 8px; background: var(--copper-pale); border-radius: var(--radius); }
 .nf-stat-num { font-size: 24px; font-weight: 700; color: var(--tea-deep); line-height: 1.2; }
 .nf-stat-num em { font-style: normal; color: var(--copper); font-size: 14px; }
-.nf-stat-text { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+.nf-stat-text { font-size: 11px; color: var(--muted-ink); margin-top: 4px; line-height: 1.4; }
 
 /* ═══ Pain/Challenge Cards ═══ */
 .nf-pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; }
@@ -233,7 +238,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   color: var(--border); margin-bottom: 16px; line-height: 1;
 }
 .nf-pain-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-pain-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Solution Steps ═══ */
 .nf-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -249,10 +254,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   line-height: 1;
 }
 .nf-step-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 6px; }
-.nf-step-sub { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+.nf-step-sub { font-size: 14px; color: var(--muted-ink); margin-bottom: 14px; line-height: 1.6; }
 .nf-step-items { border-top: 1px solid var(--border); padding-top: 14px; }
 .nf-step-item {
-  font-size: 13px; color: var(--muted); margin-bottom: 6px;
+  font-size: 13px; color: var(--muted-ink); margin-bottom: 6px;
   padding-left: 14px; position: relative; line-height: 1.6;
 }
 .nf-step-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
@@ -270,7 +275,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: clamp(24px, 3.5vw, 34px); font-weight: 700;
   color: var(--tea-deep); line-height: 1.2; margin-bottom: 6px;
 }
-.nf-result-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.nf-result-label { font-size: 13px; color: var(--muted-ink); line-height: 1.5; }
 .nf-result-note { font-size: 11px; color: var(--border); margin-top: 4px; }
 
 /* ═══ Insight Cards ═══ */
@@ -287,7 +292,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: 20px; margin-bottom: 20px;
 }
 .nf-insight-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-insight-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-insight-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Timeline ═══ */
 .nf-timeline { max-width: 760px; margin: 20px auto 0; }
@@ -307,7 +312,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-tl-content { padding-top: 8px; }
 .nf-tl-day { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper); margin-bottom: 4px; }
 .nf-tl-title { font-weight: 600; font-size: 16px; color: var(--tea-deep); margin-bottom: 4px; }
-.nf-tl-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.nf-tl-desc { font-size: 13px; color: var(--muted-ink); line-height: 1.6; }
 
 /* ═══ Scenario Fit ═══ */
 .nf-fit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -319,7 +324,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-fit-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
 .nf-fit-icon { font-size: 28px; margin-bottom: 16px; }
 .nf-fit-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-fit-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-fit-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Final CTA ═══ */
 .nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
@@ -350,6 +355,25 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   .nf-footer-grid { grid-template-columns: 1fr 1fr; }
   .nf-final-cta { padding: 80px 0; }
 }
+
+/* ═══ 对比度合规补丁 v2.7.4（整改清单 v1.0.0 全量落地 · 2026-10-28） ═══ */
+.nf-section-label, .nf-nav-logo-sub, .nf-nav-drop-num, .nf-nav-drop-foot, .nf-hero-badge,
+.nf-hero-credit a, .nf-signal-src, .nf-paradigm-subtitle, .nf-step-tag, .nf-deliver-num,
+.nf-pkg-tag, .nf-why-card-icon, .nf-roadmap-card.active .nf-roadmap-phase,
+.nf-roadmap-card.active .nf-roadmap-status, .nf-roadmap-footer a, .nf-faq-q:hover,
+.nf-value-quant .nf-value-card--growth .nf-value-label,
+.nf-value-quant .nf-value-card--efficiency .nf-value-label,
+.nf-provide-tag, .nf-case-stage, .nf-step-sub, .nf-rel-arrow, .nf-rel-all,
+.nf-record-link, .nf-case-ctas a.nf-case-go, .nf-fit-table td a,
+.nf-tl-marker, .nf-tl-day, .nf-stat-num em { color: var(--copper-ink); }
+a.nf-btn-outline:hover { color: var(--copper-ink); }
+a.nf-btn-primary, .nf-nav-cta, .nf-final-cta .nf-btn-primary,
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper-ink); color: #fff; }
+a.nf-btn-primary:hover, .nf-final-cta .nf-btn-primary:hover { background: var(--copper-deep); }
+.nf-nav-cta:hover { background: var(--copper-deep) !important; }
+.nf-footer a:hover { color: var(--copper-light); }
+.nf-nav-back:hover { border-color: var(--copper-ink); color: var(--copper-ink); }
+.nf-verify-card h3 span { color: var(--copper-ink); }
 </style>
 
 <!-- ═══ Nav ═══ -->
@@ -431,7 +455,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">需求端的变化</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">变化一：</strong>定制化成为常态——不同行业、不同岗位的 AI 课程无法通用，每单都要重新开发。</p>
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">变化二：</strong>决策到交付的窗口在缩短——客户从「想培训」到「能上课」的耐心越来越短，慢就意味着丢单。</p>
           <p><strong style="color:var(--tea-deep);">变化三：</strong>客户要的不是课件，是效果——交付物从「讲一次」延伸到调研、练习、资产沉淀的完整闭环。</p>
@@ -440,7 +464,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">供给端的现状</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">现状一：</strong>课程开发高度依赖讲师个人经验——判断、素材、案例都在个人脑子里，没有工程化承载。</p>
           <p style="margin-bottom:12px;"><strong style="color:var(--tea-deep);">现状二：</strong>每次交付都是重新做——同一套流程反复从零开始，机构接单量被开发产能卡死。</p>
           <p><strong style="color:var(--tea-deep);">现状三：</strong>AI 正在改变培训本身——被培训的是 AI，做培训的也应该用 AI。同行还没把生成器用在课程开发上。</p>
@@ -449,7 +473,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
-      <p style="font-size:15px;color:var(--muted);">核心判断：<strong style="color:var(--tea-deep);">「课程交付的瓶颈从来不是『不会讲』，而是『每次重新做』。把开发过程流水线化，备课就从创作变成装配。」</strong></p>
+      <p style="font-size:15px;color:var(--muted-ink);">核心判断：<strong style="color:var(--tea-deep);">「课程交付的瓶颈从来不是『不会讲』，而是『每次重新做』。把开发过程流水线化，备课就从创作变成装配。」</strong></p>
     </div>
   </div>
 </section>
@@ -563,9 +587,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 1 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">1</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">1</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 1</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 1</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">判断诊断阶段</div>
           </div>
         </div>
@@ -581,18 +605,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">需求收集</td>
-                <td style="padding:14px 16px;color:var(--muted);">培训需求表单收集 + 需求库结构化落库，学员岗位、现状、目标逐项建档</td>
-                <td style="padding:14px 16px;color:var(--muted);">需求被完整记录，不是凭印象做课</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">培训需求表单收集 + 需求库结构化落库，学员岗位、现状、目标逐项建档</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">需求被完整记录，不是凭印象做课</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">建议书与方案书</td>
-                <td style="padding:14px 16px;color:var(--muted);">生成器输出合作方案：课程定位、内容框架、交付安排</td>
-                <td style="padding:14px 16px;color:var(--muted);">半天拿到可决策的方案，不用等一周</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">生成器输出合作方案：课程定位、内容框架、交付安排</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">半天拿到可决策的方案，不用等一周</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">调研问卷</td>
-                <td style="padding:14px 16px;color:var(--muted);">生成器输出调研问卷与调研计划，收集学员真实场景</td>
-                <td style="padding:14px 16px;color:var(--muted);">课程内容对准真实工作场景</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">生成器输出调研问卷与调研计划，收集学员真实场景</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">课程内容对准真实工作场景</td>
               </tr>
             </tbody>
           </table>
@@ -602,9 +626,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 2 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">2</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">2</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 2</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 2</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">试点冲刺阶段</div>
           </div>
         </div>
@@ -620,18 +644,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">课程大纲</td>
-                <td style="padding:14px 16px;color:var(--muted);">基于调研数据生成课程大纲：模块、目标、节奏、练习点</td>
-                <td style="padding:14px 16px;color:var(--muted);">课程结构有依据，不是拍脑袋排课</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">基于调研数据生成课程大纲：模块、目标、节奏、练习点</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">课程结构有依据，不是拍脑袋排课</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">课件包四件套</td>
-                <td style="padding:14px 16px;color:var(--muted);">课件、讲义、练习设计、场景任务卡成套输出，1 天完成</td>
-                <td style="padding:14px 16px;color:var(--muted);">拿到的是能直接上课的完整材料</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">课件、讲义、练习设计、场景任务卡成套输出，1 天完成</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">拿到的是能直接上课的完整材料</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">首次交付验证</td>
-                <td style="padding:14px 16px;color:var(--muted);">完整上课交付，收集学员与客户真实反馈</td>
-                <td style="padding:14px 16px;color:var(--muted);">闭环跑通，反馈进入下一轮迭代</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">完整上课交付，收集学员与客户真实反馈</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">闭环跑通，反馈进入下一轮迭代</td>
               </tr>
             </tbody>
           </table>
@@ -641,9 +665,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 3 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">3</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">3</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 3</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 3</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">生产上线阶段</div>
           </div>
         </div>
@@ -659,18 +683,18 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">案例资产包</td>
-                <td style="padding:14px 16px;color:var(--muted);">交付案例结构化沉淀：行业场景、方案、课件、反馈</td>
-                <td style="padding:14px 16px;color:var(--muted);">培训资产留在客户手里，可持续复用</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">交付案例结构化沉淀：行业场景、方案、课件、反馈</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">培训资产留在客户手里，可持续复用</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">流水线复用</td>
-                <td style="padding:14px 16px;color:var(--muted);">新客户沿同一链路生产：方案半天、问卷半天、课件 1 天</td>
-                <td style="padding:14px 16px;color:var(--muted);">复购与新单的备课周期持续压缩</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">新客户沿同一链路生产：方案半天、问卷半天、课件 1 天</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">复购与新单的备课周期持续压缩</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:500;color:var(--tea-deep);white-space:nowrap;">持续迭代机制</td>
-                <td style="padding:14px 16px;color:var(--muted);">每次交付复盘 → 生成器与资产库升级</td>
-                <td style="padding:14px 16px;color:var(--muted);">链路越用越快，交付越做越好</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">每次交付复盘 → 生成器与资产库升级</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">链路越用越快，交付越做越好</td>
               </tr>
             </tbody>
           </table>
@@ -772,7 +796,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div style="margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">生产链路成果</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 六步闭环全链路：需求收集 → 方案 → 调研 → 大纲 → 课件包 → 案例资产</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 五个生成器：建议书方案书 / 调研问卷 / 课程大纲 / 课件包四件套 / 案例资产包</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 需求库结构化落库，需求可追溯、可复用</p>
@@ -782,7 +806,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       </div>
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">交付成果</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 5 次企业内训真实交付：建筑工程央企 2 次 + 城市商业银行 3 次</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 多次政务系统培训，同一条流水线</p>
           <p style="margin-bottom:8px;"><strong style="color:var(--tea-deep);">&#10003;</strong> 复购验证：同一客户备课周期 2 周 → 1 周 → 3 天</p>
@@ -793,7 +817,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:24px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:24px 28px;text-align:center;">
-      <p style="font-size:14px;color:var(--muted);">口径说明：交付次数与周期数据来自实际项目排期与交付记录；时间线按交付次序排列，具体日期可随项目档案核对。</p>
+      <p style="font-size:14px;color:var(--muted-ink);">口径说明：交付次数与周期数据来自实际项目排期与交付记录；时间线按交付次序排列，具体日期可随项目档案核对。</p>
     </div>
   </div>
 </section>
@@ -823,7 +847,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     </div>
 
     <div style="margin-top:32px;background:var(--copper-pale);border-radius:var(--radius-lg);padding:28px 32px;text-align:center;">
-      <p style="font-size:15px;color:var(--muted);">核心洞察：<strong style="color:var(--tea-deep);">「培训交付的竞争力，不在会讲一门课，而在把每门课都做成资产、把每次交付都做成下一次的速度。」</strong></p>
+      <p style="font-size:15px;color:var(--muted-ink);">核心洞察：<strong style="color:var(--tea-deep);">「培训交付的竞争力，不在会讲一门课，而在把每门课都做成资产、把每次交付都做成下一次的速度。」</strong></p>
     </div>
   </div>
 </section>
@@ -862,35 +886,35 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <p class="nf-section-desc">两个服务包对应两种需求：直接要交付，或要把能力搬回去。价格区间为公开锚点，完整价目与定制细节提交信息后发送。</p>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:20px;max-width:860px;margin-left:auto;margin-right:auto;">
       <div class="nf-pkg-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">交付</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--copper-ink);background:var(--copper-pale);padding:4px 10px;border-radius:5px;margin-bottom:14px;">交付</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">企业内训交付</div>
         <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥2.5 万</div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥3 万 / 天</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">— ¥3 万 / 天</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">需求收集 + 方案与调研</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">课程大纲 + 课件包四件套</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">现场授课交付</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">案例资产包沉淀</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">多行业场景可选（制造 / 工程 / 金融 / 政务等）</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">需求收集 + 方案与调研</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">课程大纲 + 课件包四件套</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">现场授课交付</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">案例资产包沉淀</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">多行业场景可选（制造 / 工程 / 金融 / 政务等）</div>
         </div>
       </div>
       <div class="nf-pkg-card" style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:36px 28px;transition:border-color 0.2s, transform 0.15s;">
-        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper);padding:4px 10px;border-radius:5px;margin-bottom:14px;">推荐</div>
+        <div class="nf-pkg-tag" style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper-ink);padding:4px 10px;border-radius:5px;margin-bottom:14px;">推荐</div>
         <div class="nf-pkg-title" style="font-weight:600;font-size:20px;color:var(--tea-deep);margin-bottom:6px;">课程开发与交付解决方案输出</div>
         <div class="nf-pkg-price" style="font-size:28px;font-weight:700;color:var(--copper);margin-bottom:4px;">¥5 万</div>
-        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted);margin-bottom:20px;">— ¥6 万 / 天</div>
+        <div class="nf-pkg-range" style="font-size:13px;color:var(--muted-ink);margin-bottom:20px;">— ¥6 万 / 天</div>
         <div class="nf-pkg-items" style="border-top:1px solid var(--border);padding-top:18px;">
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">面向培训机构 / 企业人力资源部门</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">六步生产链路 + 生成器方案全套输出</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">需求库与资产库搭建方法</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">交付陪跑与复购提速验证</div>
-          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">把能力搬回你的团队，不依赖我们</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">面向培训机构 / 企业人力资源部门</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">六步生产链路 + 生成器方案全套输出</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">需求库与资产库搭建方法</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">交付陪跑与复购提速验证</div>
+          <div class="nf-pkg-item" style="font-size:13px;color:var(--muted-ink);margin-bottom:8px;padding-left:16px;position:relative;line-height:1.6;">把能力搬回你的团队，不依赖我们</div>
         </div>
       </div>
     </div>
 
     <div style="margin-top:28px;background:var(--copper-pale);border-radius:var(--radius);padding:20px 24px;text-align:center;">
-      <p style="font-size:14px;color:var(--muted);">课程开发与交付方案可按需组合：单次内训、系列课程、链路搭建与陪跑。<a href="#engage" style="color:var(--copper);font-weight:600;">提交信息</a>后，我们发送完整价目与案例细节。</p>
+      <p style="font-size:14px;color:var(--muted-ink);">课程开发与交付方案可按需组合：单次内训、系列课程、链路搭建与陪跑。<a href="#engage" style="color:var(--copper-ink);font-weight:600;">提交信息</a>后，我们发送完整价目与案例细节。</p>
     </div>
   </div>
 </section>
@@ -913,9 +937,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
     <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「AI 培训课程开发 + 你的行业」，我们聊聊你的场景</p>
+    <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;">发送「AI 培训课程开发 + 你的行业」，我们聊聊你的场景</p>
     <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
-    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+    <p style="font-size:11px;color:var(--muted-ink);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
   </div>
 </div>
 
@@ -925,7 +949,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div class="nf-footer-grid">
       <div>
         <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
-        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">
+          FDE-style AI Deployment
+        </div>
+        <p style="font-size:13px;max-width:220px;">把 AI 从判断推进到生产。</p>
       </div>
       <div>
         <h5>服务</h5>

@@ -101,6 +101,8 @@
 </head>
 <body>
 
+<!-- NEXFDE Build: v2.7.4 | 2026-10-28 | VIS: 深茶绿+铜色 | AI-Native -->
+
 <div class="nf-page">
 
 <style>
@@ -118,6 +120,9 @@
   --border: #D4CFC6;
   --ink: #1A1A1A;
   --muted: #6B7A73;
+  --copper-ink: #9A6228;   /* 合规·小字强调 / 主按钮铜底（白字 5.06:1） */
+  --copper-deep: #8A5722;  /* 合规·主按钮悬停（白字 6.06:1） */
+  --muted-ink: #5C6B64;    /* 合规·次级正文（5.02:1） */
   --radius: 12px;
   --radius-lg: 16px;
   --green-bg: #E8F0EC;
@@ -143,7 +148,7 @@
 }
 .nf-section-title em { font-style: normal; color: var(--copper); }
 .nf-section-desc {
-  font-size: 17px; color: var(--muted);
+  font-size: 17px; color: var(--muted-ink);
   max-width: 620px; line-height: 1.8; margin-bottom: 52px;
 }
 
@@ -176,12 +181,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
 .nf-nav-back {
-  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  font-size: 13px; color: var(--muted-ink); padding: 6px 12px;
   border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
 }
 .nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
 .nf-nav-links { display: flex; align-items: center; gap: 24px; }
-.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted-ink); transition: color 0.15s; }
 .nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-links a.nf-nav-here { color: var(--tea-deep); font-weight: 600; }
 .nf-nav-cta {
@@ -214,9 +219,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--copper); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
-.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 560px; line-height: 1.8; margin-bottom: 30px; }
+.nf-hero-sub { font-size: 17px; color: var(--muted-ink); max-width: 560px; line-height: 1.8; margin-bottom: 30px; }
 .nf-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-.nf-hero-note { font-size: 13px; color: var(--muted); margin-top: 18px; }
+.nf-hero-note { font-size: 13px; color: var(--muted-ink); margin-top: 18px; }
 
 /* ═══ Case Cards ═══ */
 .nf-case-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-top: 20px; }
@@ -230,20 +235,20 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-case-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .nf-case-no { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: var(--tea-mid); background: var(--green-bg); padding: 4px 10px; border-radius: 5px; }
 .nf-case-stage { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--copper); background: var(--copper-pale); padding: 4px 10px; border-radius: 5px; }
-.nf-case-industry { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 8px; }
+.nf-case-industry { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--muted-ink); margin-bottom: 8px; }
 .nf-case-title { font-size: 20px; font-weight: 700; color: var(--tea-deep); margin-bottom: 14px; }
 .nf-case-metric {
-  font-size: 14px; color: var(--muted); line-height: 1.6;
+  font-size: 14px; color: var(--muted-ink); line-height: 1.6;
   background: var(--copper-pale); border-radius: var(--radius);
   padding: 12px 16px; margin-bottom: 14px;
 }
 .nf-case-metric strong { color: var(--tea-deep); font-size: 16px; }
-.nf-case-client { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.nf-case-client { font-size: 13px; color: var(--muted-ink); margin-bottom: 20px; }
 .nf-case-ctas { margin-top: auto; display: flex; gap: 20px; align-items: center; border-top: 1px solid var(--border); padding-top: 18px; }
 .nf-case-ctas a { font-size: 14px; font-weight: 600; }
 .nf-case-ctas a.nf-case-go { color: var(--copper); }
 .nf-case-ctas a.nf-case-go:hover { color: var(--copper-light); }
-.nf-case-ctas a.nf-case-alt { color: var(--muted); }
+.nf-case-ctas a.nf-case-alt { color: var(--muted-ink); }
 .nf-case-ctas a.nf-case-alt:hover { color: var(--tea-deep); }
 
 /* ═══ Verifiable ═══ */
@@ -253,7 +258,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   border-radius: var(--radius-lg); padding: 36px 28px;
 }
 .nf-verify-card h3 { font-size: 18px; font-weight: 600; color: var(--tea-deep); margin-bottom: 18px; }
-.nf-verify-item { display: flex; gap: 14px; margin-bottom: 16px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+.nf-verify-item { display: flex; gap: 14px; margin-bottom: 16px; font-size: 14px; color: var(--muted-ink); line-height: 1.7; }
 .nf-verify-item:last-child { margin-bottom: 0; }
 .nf-verify-tag {
   flex-shrink: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
@@ -261,7 +266,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-verify-note {
   margin-top: 20px; background: var(--copper-pale); border-radius: var(--radius);
-  padding: 20px 24px; font-size: 14px; color: var(--muted); line-height: 1.7;
+  padding: 20px 24px; font-size: 14px; color: var(--muted-ink); line-height: 1.7;
 }
 
 /* ═══ Fit ═══ */
@@ -270,7 +275,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   text-align: left; padding: 14px 18px; font-size: 13px; font-weight: 600;
   color: var(--tea-deep); background: var(--bg-alt); white-space: nowrap;
 }
-.nf-fit-table td { padding: 14px 18px; color: var(--muted); border-top: 1px solid var(--border); line-height: 1.7; }
+.nf-fit-table td { padding: 14px 18px; color: var(--muted-ink); border-top: 1px solid var(--border); line-height: 1.7; }
 .nf-fit-table td a { color: var(--copper); font-weight: 600; }
 .nf-fit-table td a:hover { text-decoration: underline; }
 
@@ -283,7 +288,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   padding: 20px 4px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 16px; font-weight: 600; color: var(--tea-deep); text-align: left;
 }
-.nf-faq-a { display: none; padding: 0 4px 20px; font-size: 14px; color: var(--muted); line-height: 1.8; }
+.nf-faq-a { display: none; padding: 0 4px 20px; font-size: 14px; color: var(--muted-ink); line-height: 1.8; }
 .nf-faq-a p { margin: 0; }
 
 /* ═══ Final CTA ═══ */
@@ -314,6 +319,25 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   .nf-final-cta { padding: 80px 0; }
   .nf-fit-table { display: block; overflow-x: auto; }
 }
+
+/* ═══ 对比度合规补丁 v2.7.4（整改清单 v1.0.0 全量落地 · 2026-10-28） ═══ */
+.nf-section-label, .nf-nav-logo-sub, .nf-nav-drop-num, .nf-nav-drop-foot, .nf-hero-badge,
+.nf-hero-credit a, .nf-signal-src, .nf-paradigm-subtitle, .nf-step-tag, .nf-deliver-num,
+.nf-pkg-tag, .nf-why-card-icon, .nf-roadmap-card.active .nf-roadmap-phase,
+.nf-roadmap-card.active .nf-roadmap-status, .nf-roadmap-footer a, .nf-faq-q:hover,
+.nf-value-quant .nf-value-card--growth .nf-value-label,
+.nf-value-quant .nf-value-card--efficiency .nf-value-label,
+.nf-provide-tag, .nf-case-stage, .nf-step-sub, .nf-rel-arrow, .nf-rel-all,
+.nf-record-link, .nf-case-ctas a.nf-case-go, .nf-fit-table td a,
+.nf-tl-marker, .nf-tl-day, .nf-stat-num em { color: var(--copper-ink); }
+a.nf-btn-outline:hover { color: var(--copper-ink); }
+a.nf-btn-primary, .nf-nav-cta, .nf-final-cta .nf-btn-primary,
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper-ink); color: #fff; }
+a.nf-btn-primary:hover, .nf-final-cta .nf-btn-primary:hover { background: var(--copper-deep); }
+.nf-nav-cta:hover { background: var(--copper-deep) !important; }
+.nf-footer a:hover { color: var(--copper-light); }
+.nf-nav-back:hover { border-color: var(--copper-ink); color: var(--copper-ink); }
+.nf-verify-card h3 span { color: var(--copper-ink); }
 </style>
 
 <!-- ═══ Nav ═══ -->
@@ -374,7 +398,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <div class="nf-case-top"><span class="nf-case-no">Case 002</span><span class="nf-case-stage">持续迭代</span></div>
         <div class="nf-case-industry">切入行业：自营 · 品牌站</div>
         <div class="nf-case-title">网站构建即案例</div>
-        <div class="nf-case-metric"><strong>v1.0 → v2.7.3</strong> · 持续迭代</div>
+        <div class="nf-case-metric"><strong>v1.0 → v2.7.4</strong> · 持续迭代</div>
         <div class="nf-case-client">NEXFDE 自身（元案例）</div>
         <div class="nf-case-ctas">
           <a href="/cases/nexfde-site-build/" class="nf-case-go" data-track="case_view_site">查看案例详情 &rarr;</a>
@@ -446,7 +470,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       </div>
       <div class="nf-verify-card">
         <h3>脱敏与有限授权</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:12px;">客户名称与品牌一律不公开，行业、规模与交付数据保持真实——你可以相信数据，但不用知道是谁。</p>
           <p style="margin-bottom:12px;">指标口径在案例页内注明，可逐条核对。</p>
           <p>案例内容受保护：转载、抓取或用于模型训练，须获得 NEXFDE 书面授权。</p>
@@ -524,7 +548,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       </div>
       <div class="nf-faq-item">
         <button class="nf-faq-q" onclick="toggleFaq(this)">如何发起类似的项目合作？<span>+</span></button>
-        <div class="nf-faq-a"><p>在<a href="/enterprise/" style="color:var(--copper);font-weight:600;">企业合作页</a>提交你的业务问题，48 小时内回复——包括「这件事现在不值得做」的判断。也可以先预约一次部署诊断，用 1 周锁定最值得跑通的场景。</p></div>
+        <div class="nf-faq-a"><p>在<a href="/enterprise/" style="color:var(--copper-ink);font-weight:600;">企业合作页</a>提交你的业务问题，48 小时内回复——包括「这件事现在不值得做」的判断。也可以先预约一次部署诊断，用 1 周锁定最值得跑通的场景。</p></div>
       </div>
     </div>
   </div>
@@ -548,9 +572,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
     <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「部署诊断 + 你的行业」，我们聊聊你的场景</p>
+    <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;">发送「部署诊断 + 你的行业」，我们聊聊你的场景</p>
     <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
-    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+    <p style="font-size:11px;color:var(--muted-ink);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
   </div>
 </div>
 
@@ -560,7 +584,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div class="nf-footer-grid">
       <div>
         <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
-        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">
+          FDE-style AI Deployment
+        </div>
+        <p style="font-size:13px;max-width:220px;">把 AI 从判断推进到生产。</p>
       </div>
       <div>
         <h5>服务</h5>

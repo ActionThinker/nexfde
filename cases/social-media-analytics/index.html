@@ -81,6 +81,8 @@
 </head>
 <body>
 
+<!-- NEXFDE Build: v2.7.4 | 2026-10-28 | VIS: 深茶绿+铜色 | AI-Native -->
+
 <div class="nf-page">
 
 <style>
@@ -98,6 +100,9 @@
   --border: #D4CFC6;
   --ink: #1A1A1A;
   --muted: #6B7A73;
+  --copper-ink: #9A6228;   /* 合规·小字强调 / 主按钮铜底（白字 5.06:1） */
+  --copper-deep: #8A5722;  /* 合规·主按钮悬停（白字 6.06:1） */
+  --muted-ink: #5C6B64;    /* 合规·次级正文（5.02:1） */
   --radius: 12px;
   --radius-lg: 16px;
   --green-bg: #E8F0EC;
@@ -123,7 +128,7 @@
 }
 .nf-section-title em { font-style: normal; color: var(--copper); }
 .nf-section-desc {
-  font-size: 17px; color: var(--muted);
+  font-size: 17px; color: var(--muted-ink);
   max-width: 620px; line-height: 1.8; margin-bottom: 52px;
 }
 
@@ -156,12 +161,12 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-nav-logo .fde { font-weight: 700; color: var(--copper); }
 .nf-nav-back {
-  font-size: 13px; color: var(--muted); padding: 6px 12px;
+  font-size: 13px; color: var(--muted-ink); padding: 6px 12px;
   border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
 }
 .nf-nav-back:hover { border-color: var(--copper); color: var(--copper); }
 .nf-nav-links { display: flex; align-items: center; gap: 24px; }
-.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; }
+.nf-nav-links a { font-size: 14px; font-weight: 500; color: var(--muted-ink); transition: color 0.15s; }
 .nf-nav-links a:hover { color: var(--tea-deep); }
 .nf-nav-cta {
   font-size: 13px; font-weight: 600; color: #fff !important;
@@ -201,7 +206,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-stage-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tea-mid); display: block; }
 .nf-hero h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; color: var(--tea-deep); margin-bottom: 20px; letter-spacing: -0.03em; }
 .nf-hero h1 em { font-style: normal; color: var(--copper); }
-.nf-hero-sub { font-size: 17px; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
+.nf-hero-sub { font-size: 17px; color: var(--muted-ink); max-width: 500px; line-height: 1.8; margin-bottom: 24px; }
 .nf-hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .nf-hero-tag {
   font-size: 12px; font-weight: 500; color: var(--tea-mid);
@@ -216,13 +221,13 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-hero-stat-label {
   font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+  text-transform: uppercase; color: var(--muted-ink); margin-bottom: 20px;
 }
 .nf-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .nf-stat-item { text-align: center; padding: 12px 8px; background: var(--copper-pale); border-radius: var(--radius); }
 .nf-stat-num { font-size: 24px; font-weight: 700; color: var(--tea-deep); line-height: 1.2; }
 .nf-stat-num em { font-style: normal; color: var(--copper); font-size: 14px; }
-.nf-stat-text { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+.nf-stat-text { font-size: 11px; color: var(--muted-ink); margin-top: 4px; line-height: 1.4; }
 
 /* ═══ Pain/Challenge Cards ═══ */
 .nf-pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 20px; }
@@ -233,7 +238,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   color: var(--border); margin-bottom: 16px; line-height: 1;
 }
 .nf-pain-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-pain-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-pain-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Solution Steps ═══ */
 .nf-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -249,10 +254,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   line-height: 1;
 }
 .nf-step-title { font-weight: 600; font-size: 18px; color: var(--tea-deep); margin-bottom: 6px; }
-.nf-step-sub { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+.nf-step-sub { font-size: 14px; color: var(--muted-ink); margin-bottom: 14px; line-height: 1.6; }
 .nf-step-items { border-top: 1px solid var(--border); padding-top: 14px; }
 .nf-step-item {
-  font-size: 13px; color: var(--muted); margin-bottom: 6px;
+  font-size: 13px; color: var(--muted-ink); margin-bottom: 6px;
   padding-left: 14px; position: relative; line-height: 1.6;
 }
 .nf-step-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
@@ -270,7 +275,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: clamp(24px, 3.5vw, 34px); font-weight: 700;
   color: var(--tea-deep); line-height: 1.2; margin-bottom: 6px;
 }
-.nf-result-label { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.nf-result-label { font-size: 13px; color: var(--muted-ink); line-height: 1.5; }
 .nf-result-note { font-size: 11px; color: var(--border); margin-top: 4px; }
 
 /* ═══ Insight Cards ═══ */
@@ -287,7 +292,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   font-size: 20px; margin-bottom: 20px;
 }
 .nf-insight-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-insight-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-insight-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Pricing ═══ */
 .nf-pkg-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -306,9 +311,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 }
 .nf-pkg-title { font-weight: 600; font-size: 20px; color: var(--tea-deep); margin-bottom: 6px; }
 .nf-pkg-price { font-size: 28px; font-weight: 700; color: var(--copper); margin-bottom: 4px; }
-.nf-pkg-range { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.nf-pkg-range { font-size: 13px; color: var(--muted-ink); margin-bottom: 20px; }
 .nf-pkg-items { border-top: 1px solid var(--border); padding-top: 18px; }
-.nf-pkg-item { font-size: 13px; color: var(--muted); margin-bottom: 8px; padding-left: 16px; position: relative; line-height: 1.6; }
+.nf-pkg-item { font-size: 13px; color: var(--muted-ink); margin-bottom: 8px; padding-left: 16px; position: relative; line-height: 1.6; }
 .nf-pkg-item::before { content: '—'; position: absolute; left: 0; color: var(--border); }
 
 /* ═══ Timeline ═══ */
@@ -329,7 +334,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-tl-content { padding-top: 8px; }
 .nf-tl-day { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--copper); margin-bottom: 4px; }
 .nf-tl-title { font-weight: 600; font-size: 16px; color: var(--tea-deep); margin-bottom: 4px; }
-.nf-tl-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.nf-tl-desc { font-size: 13px; color: var(--muted-ink); line-height: 1.6; }
 
 /* ═══ Scenario Fit ═══ */
 .nf-fit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 20px; }
@@ -341,7 +346,7 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 .nf-fit-card:hover { border-color: rgba(200,133,62,0.3); transform: translateY(-2px); }
 .nf-fit-icon { font-size: 28px; margin-bottom: 16px; }
 .nf-fit-title { font-weight: 600; font-size: 17px; color: var(--tea-deep); margin-bottom: 10px; }
-.nf-fit-body { font-size: 14px; color: var(--muted); line-height: 1.75; }
+.nf-fit-body { font-size: 14px; color: var(--muted-ink); line-height: 1.75; }
 
 /* ═══ Final CTA ═══ */
 .nf-final-cta { text-align: center; padding: 120px 0; background: var(--tea-deep); }
@@ -372,6 +377,25 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   .nf-footer-grid { grid-template-columns: 1fr 1fr; }
   .nf-final-cta { padding: 80px 0; }
 }
+
+/* ═══ 对比度合规补丁 v2.7.4（整改清单 v1.0.0 全量落地 · 2026-10-28） ═══ */
+.nf-section-label, .nf-nav-logo-sub, .nf-nav-drop-num, .nf-nav-drop-foot, .nf-hero-badge,
+.nf-hero-credit a, .nf-signal-src, .nf-paradigm-subtitle, .nf-step-tag, .nf-deliver-num,
+.nf-pkg-tag, .nf-why-card-icon, .nf-roadmap-card.active .nf-roadmap-phase,
+.nf-roadmap-card.active .nf-roadmap-status, .nf-roadmap-footer a, .nf-faq-q:hover,
+.nf-value-quant .nf-value-card--growth .nf-value-label,
+.nf-value-quant .nf-value-card--efficiency .nf-value-label,
+.nf-provide-tag, .nf-case-stage, .nf-step-sub, .nf-rel-arrow, .nf-rel-all,
+.nf-record-link, .nf-case-ctas a.nf-case-go, .nf-fit-table td a,
+.nf-tl-marker, .nf-tl-day, .nf-stat-num em { color: var(--copper-ink); }
+a.nf-btn-outline:hover { color: var(--copper-ink); }
+a.nf-btn-primary, .nf-nav-cta, .nf-final-cta .nf-btn-primary,
+.nf-pkg-card.featured .nf-pkg-tag { background: var(--copper-ink); color: #fff; }
+a.nf-btn-primary:hover, .nf-final-cta .nf-btn-primary:hover { background: var(--copper-deep); }
+.nf-nav-cta:hover { background: var(--copper-deep) !important; }
+.nf-footer a:hover { color: var(--copper-light); }
+.nf-nav-back:hover { border-color: var(--copper-ink); color: var(--copper-ink); }
+.nf-verify-card h3 span { color: var(--copper-ink); }
 </style>
 
 <!-- ═══ Nav ═══ -->
@@ -453,23 +477,23 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">客户画像</h3>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">行业：</strong>传统专业服务型企业（如营建/设计/咨询等）</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">身份：</strong>创始人IP，深耕行业多年，有专业壁垒但缺数据意识</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">规模：</strong>年营收千万级，团队两位数，服务过上百家客户</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">社媒现状：</strong>运营多个平台账号矩阵，粉丝总量数万级</span>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted);line-height:1.6;">
+        <div style="display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted-ink);line-height:1.6;">
           <span style="flex-shrink:0;">&#9679;</span>
           <span><strong style="color:var(--tea-deep);">核心诉求：</strong>通过短视频内容获客，将线上流量转化为线下签约，但完全不知道哪条内容有效、哪条白做</span>
         </div>
@@ -477,9 +501,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
         <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:20px;">典型场景</h3>
-        <div style="font-size:14px;color:var(--muted);line-height:1.8;">
+        <div style="font-size:14px;color:var(--muted-ink);line-height:1.8;">
           <p style="margin-bottom:12px;">企业创始人或市场团队同时在抖音、小红书等多个平台运营内容账号，每周产出<strong style="color:var(--tea-deep);">两位数级别</strong>的短视频或图文内容。</p>
-          <p style="margin-bottom:12px;">团队知道"内容就是流量"，但面临一个核心困境：<strong style="color:var(--copper);">做了一两年、发了几百条，从来没有系统性地看过数据</strong>——不知道哪条爆了、为什么爆、下次怎么复制。</p>
+          <p style="margin-bottom:12px;">团队知道"内容就是流量"，但面临一个核心困境：<strong style="color:var(--copper-ink);">做了一两年、发了几百条，从来没有系统性地看过数据</strong>——不知道哪条爆了、为什么爆、下次怎么复制。</p>
           <p>平台后台只给几个孤立的数字（播放量、点赞数），但没有跨平台对比、没有时间趋势、没有内容效率分析——<strong style="color:var(--tea-deep);">数据有，但不可用</strong>。</p>
         </div>
       </div>
@@ -596,9 +620,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 1 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">1</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">1</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 1</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 1</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">POC 验证与基础设施搭建</div>
           </div>
         </div>
@@ -614,23 +638,23 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">数据抓取管线</td>
-                <td style="padding:14px 16px;color:var(--muted);">搭建抖音+小红书全量作品采集管线，突破平台原生后台的数据限制。含ASR语音转文字，单次可采集数百条历史作品的结构化数据。</td>
-                <td style="padding:14px 16px;color:var(--muted);">打破平台后台的数据限制，把「拍过的视频」变成「可计算的数据资产」。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">搭建抖音+小红书全量作品采集管线，突破平台原生后台的数据限制。含ASR语音转文字，单次可采集数百条历史作品的结构化数据。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">打破平台后台的数据限制，把「拍过的视频」变成「可计算的数据资产」。</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">API 接口验证</td>
-                <td style="padding:14px 16px;color:var(--muted);">逐端点测试平台API的可用性、字段返回率、限制条件。梳理哪些字段可以直接拿、哪些需要补数、哪些不可得。</td>
-                <td style="padding:14px 16px;color:var(--muted);">客户不会收到一堆报错——所有「拿不到的数据」我们已经在前面踩过坑，交付的是干净的数据集。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">逐端点测试平台API的可用性、字段返回率、限制条件。梳理哪些字段可以直接拿、哪些需要补数、哪些不可得。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">客户不会收到一堆报错——所有「拿不到的数据」我们已经在前面踩过坑，交付的是干净的数据集。</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">补数端点发现</td>
-                <td style="padding:14px 16px;color:var(--muted);">在API Catalog中定位隐藏的补数端点（如播放量批量查询、评论数端点），验证调用链路和数据可靠性。</td>
-                <td style="padding:14px 16px;color:var(--muted);">平台不直接给的指标（播放量/评论数/下载量），通过补数端点或后台数据合并方案拿回来，填补数据缺口。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">在API Catalog中定位隐藏的补数端点（如播放量批量查询、评论数端点），验证调用链路和数据可靠性。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">平台不直接给的指标（播放量/评论数/下载量），通过补数端点或后台数据合并方案拿回来，填补数据缺口。</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">成本核算</td>
-                <td style="padding:14px 16px;color:var(--muted);">计算全流程API调用成本、补数消耗、ASR消耗。建立单客户/单次服务的成本基线。</td>
-                <td style="padding:14px 16px;color:var(--muted);">客户看到的价格是经过真实成本核算的——不是拍脑袋定价，也不是亏本接单。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">计算全流程API调用成本、补数消耗、ASR消耗。建立单客户/单次服务的成本基线。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">客户看到的价格是经过真实成本核算的——不是拍脑袋定价，也不是亏本接单。</td>
               </tr>
             </tbody>
           </table>
@@ -640,9 +664,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 2 -->
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:24px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper);flex-shrink:0;">2</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-pale);border:2px solid var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--copper-ink);flex-shrink:0;">2</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 2</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 2</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">自动化流程与智能体构建</div>
           </div>
         </div>
@@ -658,23 +682,23 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">社媒分析专家智能体</td>
-                <td style="padding:14px 16px;color:var(--muted);">创建专用AI Agent，内置社媒数据分析的完整方法论：统计脚本模板、报告结构规范、双平台差异规则、数据质量校验逻辑。</td>
-                <td style="padding:14px 16px;color:var(--muted);">不是每次都要从零开始写分析。专家智能体封装了已验证的方法论，确保不同客户拿到同等质量的交付。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">创建专用AI Agent，内置社媒数据分析的完整方法论：统计脚本模板、报告结构规范、双平台差异规则、数据质量校验逻辑。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">不是每次都要从零开始写分析。专家智能体封装了已验证的方法论，确保不同客户拿到同等质量的交付。</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">管线 Skill 设计与调试</td>
-                <td style="padding:14px 16px;color:var(--muted);">把固化管线（采集/补数/统计/报告）封装为可复用的Skill模块。调试环境变量超限、编码兼容、API Key加载等坑。</td>
-                <td style="padding:14px 16px;color:var(--muted);">工具链可复用：下个月客户自己就能跑。Skill已固化在工作环境中，换一个新账号只需改一个ID参数。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">把固化管线（采集/补数/统计/报告）封装为可复用的Skill模块。调试环境变量超限、编码兼容、API Key加载等坑。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">工具链可复用：下个月客户自己就能跑。Skill已固化在工作环境中，换一个新账号只需改一个ID参数。</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">数据报告模版设计</td>
-                <td style="padding:14px 16px;color:var(--muted);">设计报告章节结构（诊断→洞察→策略→路线图）、数据可视化模版、双平台对比框架。通过多轮审计验证数据一致性。</td>
-                <td style="padding:14px 16px;color:var(--muted);">报告质量可预期：每次交付的结构、深度、质量标准一致。不是靠个人发挥——是系统化输出。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">设计报告章节结构（诊断→洞察→策略→路线图）、数据可视化模版、双平台对比框架。通过多轮审计验证数据一致性。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">报告质量可预期：每次交付的结构、深度、质量标准一致。不是靠个人发挥——是系统化输出。</td>
               </tr>
               <tr>
                 <td style="padding:14px 16px;font-weight:600;color:var(--tea-deep);white-space:nowrap;">自动化全流程联调</td>
-                <td style="padding:14px 16px;color:var(--muted);">打通采集→补数→统计→诊断→报告的全链路自动化。处理中断恢复、批量调度、API超时重试等工程问题。</td>
-                <td style="padding:14px 16px;color:var(--muted);">客户无需任何技术操作。发送链接后，全流程自动运转到最终报告输出。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">打通采集→补数→统计→诊断→报告的全链路自动化。处理中断恢复、批量调度、API超时重试等工程问题。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">客户无需任何技术操作。发送链接后，全流程自动运转到最终报告输出。</td>
               </tr>
             </tbody>
           </table>
@@ -684,9 +708,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
       <!-- Phase 3 -->
       <div style="background:var(--surface);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:36px 32px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">3</div>
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--copper-ink);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">3</div>
           <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:2px;">Phase 3</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:2px;">Phase 3</div>
             <div style="font-size:20px;font-weight:700;color:var(--tea-deep);">交付与能力移交</div>
           </div>
         </div>
@@ -701,24 +725,24 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
             </thead>
             <tbody>
               <tr style="border-bottom:1px solid var(--border);">
-                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">增长诊断报告</td>
-                <td style="padding:14px 16px;color:var(--muted);">互动漏斗、时间效率、内容矩阵、问题诊断——基于全量数据而非抽样。</td>
-                <td style="padding:14px 16px;color:var(--muted);">知道哪条内容有效、为什么有效、下次怎么复制。</td>
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper-ink);white-space:nowrap;">增长诊断报告</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">互动漏斗、时间效率、内容矩阵、问题诊断——基于全量数据而非抽样。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">知道哪条内容有效、为什么有效、下次怎么复制。</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
-                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">深度分析报告</td>
-                <td style="padding:14px 16px;color:var(--muted);">跨平台对比、趋势检测、高价值内容特征提取、商业转化机会识别。</td>
-                <td style="padding:14px 16px;color:var(--muted);">知道每个平台的不同价值定位、资源应该怎么分配。</td>
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper-ink);white-space:nowrap;">深度分析报告</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">跨平台对比、趋势检测、高价值内容特征提取、商业转化机会识别。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">知道每个平台的不同价值定位、资源应该怎么分配。</td>
               </tr>
               <tr style="border-bottom:1px solid var(--border);">
-                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">增长策略与行动建议</td>
-                <td style="padding:14px 16px;color:var(--muted);">具体到每周做什么、先做什么、预期效果。含内容矩阵重构、发布策略优化、商业转化漏斗设计。</td>
-                <td style="padding:14px 16px;color:var(--muted);">团队可以直接照着路线图执行，不需要再花时间「消化理解」。</td>
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper-ink);white-space:nowrap;">增长策略与行动建议</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">具体到每周做什么、先做什么、预期效果。含内容矩阵重构、发布策略优化、商业转化漏斗设计。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">团队可以直接照着路线图执行，不需要再花时间「消化理解」。</td>
               </tr>
               <tr>
-                <td style="padding:14px 16px;font-weight:600;color:var(--copper);white-space:nowrap;">工具链与能力移交</td>
-                <td style="padding:14px 16px;color:var(--muted);">固化管线脚本 + AI Agent + Skill模块 + 能力清单文档。客户或第三方可自行复跑、迭代。</td>
-                <td style="padding:14px 16px;color:var(--muted);">不是持续依赖我们的服务——客户获得了自己跑下去的能力。</td>
+                <td style="padding:14px 16px;font-weight:600;color:var(--copper-ink);white-space:nowrap;">工具链与能力移交</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">固化管线脚本 + AI Agent + Skill模块 + 能力清单文档。客户或第三方可自行复跑、迭代。</td>
+                <td style="padding:14px 16px;color:var(--muted-ink);">不是持续依赖我们的服务——客户获得了自己跑下去的能力。</td>
               </tr>
             </tbody>
           </table>
@@ -727,10 +751,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
         <div style="margin-top:28px;background:var(--copper-pale);border-radius:var(--radius);padding:24px 28px;text-align:center;">
           <p style="font-size:16px;font-weight:600;color:var(--tea-deep);margin-bottom:6px;">
             最终效果：客户发送抖音、小红书主页链接 →
-            <span style="color:var(--copper);">自动化完成全流程</span> →
+            <span style="color:var(--copper-ink);">自动化完成全流程</span> →
             获得增长诊断报告、深度分析报告、增长策略与行动建议
           </p>
-          <p style="font-size:13px;color:var(--muted);">从链接到完整交付物，两周闭环。客户零技术操作。</p>
+          <p style="font-size:13px;color:var(--muted-ink);">从链接到完整交付物，两周闭环。客户零技术操作。</p>
         </div>
       </div>
 
@@ -952,34 +976,34 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
       <div style="background:var(--warm-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;">
-        <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:14px;">模式 A — 结果付费</div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:14px;">模式 A — 结果付费</div>
         <h3 style="font-size:22px;font-weight:700;color:var(--tea-deep);margin-bottom:8px;">采购以结果交付的报告</h3>
-        <p style="font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7;">你把平台主页链接给我们，我们交付完整的分析报告。按上述三档定价付费，一次交付、一次结算。</p>
+        <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;line-height:1.7;">你把平台主页链接给我们，我们交付完整的分析报告。按上述三档定价付费，一次交付、一次结算。</p>
         <div style="border-top:1px solid var(--border);padding-top:18px;">
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">增长诊断报告（数据全景+问题定位）</div>
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">深度分析报告（跨平台对比+核心洞察）</div>
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">增长策略与行动建议（路线图+具体动作）</div>
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">全量结构化数据卡片（可导入BI工具）</div>
-          <div style="font-size:13px;color:var(--muted);padding-left:16px;position:relative;line-height:1.6;">适合：想快速拿到结论、暂时不需要自己跑流程的团队</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">增长诊断报告（数据全景+问题定位）</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">深度分析报告（跨平台对比+核心洞察）</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">增长策略与行动建议（路线图+具体动作）</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">全量结构化数据卡片（可导入BI工具）</div>
+          <div style="font-size:13px;color:var(--muted-ink);padding-left:16px;position:relative;line-height:1.6;">适合：想快速拿到结论、暂时不需要自己跑流程的团队</div>
         </div>
       </div>
 
       <div style="background:var(--warm-white);border:2px solid var(--copper);border-radius:var(--radius-lg);padding:36px 28px;">
-        <div style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper);padding:4px 10px;border-radius:5px;margin-bottom:14px;">模式 B — 解决方案交付</div>
+        <div style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--copper-ink);padding:4px 10px;border-radius:5px;margin-bottom:14px;">模式 B — 解决方案交付</div>
         <h3 style="font-size:22px;font-weight:700;color:var(--tea-deep);margin-bottom:8px;">采购 FDE 服务交付一套可内部部署的系统</h3>
-        <p style="font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7;">我们交付一套完整的软件+培训包，你可以在内部独立运行、持续迭代。项目制报价，按交付范围评估。</p>
+        <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;line-height:1.7;">我们交付一套完整的软件+培训包，你可以在内部独立运行、持续迭代。项目制报价，按交付范围评估。</p>
         <div style="border-top:1px solid var(--border);padding-top:18px;">
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">社媒分析专家智能体（AI Agent，已封装方法论）</div>
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">固化管线 Skill 模块（采集/补数/统计/报告）</div>
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">MCP / API 调试完整的可运行环境</div>
-          <div style="font-size:13px;color:var(--muted);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">部署文档 + 操作培训 + 首次运行陪跑</div>
-          <div style="font-size:13px;color:var(--muted);padding-left:16px;position:relative;line-height:1.6;">适合：想长期自主运营、希望把能力沉淀在内部的团队</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">社媒分析专家智能体（AI Agent，已封装方法论）</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">固化管线 Skill 模块（采集/补数/统计/报告）</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">MCP / API 调试完整的可运行环境</div>
+          <div style="font-size:13px;color:var(--muted-ink);margin-bottom:10px;padding-left:16px;position:relative;line-height:1.6;">部署文档 + 操作培训 + 首次运行陪跑</div>
+          <div style="font-size:13px;color:var(--muted-ink);padding-left:16px;position:relative;line-height:1.6;">适合：想长期自主运营、希望把能力沉淀在内部的团队</div>
         </div>
       </div>
     </div>
 
     <div style="margin-top:28px;background:var(--copper-pale);border-radius:var(--radius);padding:20px 24px;text-align:center;">
-      <p style="font-size:14px;color:var(--muted);">不确定哪个模式适合你？<a href="#engage" style="color:var(--copper);font-weight:600;">联系我们</a>，聊聊你的团队现状和期望。</p>
+      <p style="font-size:14px;color:var(--muted-ink);">不确定哪个模式适合你？<a href="#engage" style="color:var(--copper-ink);font-weight:600;">联系我们</a>，聊聊你的团队现状和期望。</p>
     </div>
   </div>
 </section>
@@ -1002,9 +1026,9 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:40px 32px;max-width:380px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1">&times;</button>
     <h3 style="font-size:18px;font-weight:600;color:var(--tea-deep);margin-bottom:8px;">扫码添加微信</h3>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">发送「社媒诊断 + 你的行业」，我们聊聊你的场景</p>
+    <p style="font-size:14px;color:var(--muted-ink);margin-bottom:20px;">发送「社媒诊断 + 你的行业」，我们聊聊你的场景</p>
     <img src="/assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:8px;border:1px solid var(--border);" loading="lazy">
-    <p style="font-size:11px;color:var(--muted);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
+    <p style="font-size:11px;color:var(--muted-ink);margin-top:14px;">微信: ActionThinker &nbsp;|&nbsp; 邮箱: lu@NexFDE.com</p>
   </div>
 </div>
 
@@ -1014,7 +1038,10 @@ a.nf-btn-outline:hover { border-color: var(--copper); color: var(--copper); tran
     <div class="nf-footer-grid">
       <div>
         <div class="nf-footer-brand">NEX<span class="fde">FDE</span></div>
-        <p style="font-size:13px;max-width:220px;">FDE-style AI Deployment Practice — 把 AI 从判断推进到生产。</p>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--copper);text-transform:uppercase;margin-bottom:6px;">
+          FDE-style AI Deployment
+        </div>
+        <p style="font-size:13px;max-width:220px;">把 AI 从判断推进到生产。</p>
       </div>
       <div>
         <h5>服务</h5>
