@@ -6,7 +6,7 @@
 
 ## 项目信息
 
-- **站点**: nexfde.com v2.7.2
+- **站点**: nexfde.com v2.7.3
 - **类型**: 多页静态站点（首页 + 案例库 + 交付网络 + 企业合作 + 场景案例页），纯静态 HTML + CSS + JS
 - **部署**: GitHub Pages（`ActionThinker/nexfde`），无构建步骤
 - **设计系统**: Deep Tea Green (#1E3D32) + Copper (#C8853E)，Inter 字体，暖白背景 (#F5F2ED)
