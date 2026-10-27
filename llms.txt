@@ -7,11 +7,12 @@
 - [Method](https://nexfde.com/#method): FDE 三步方法论 — AI Deployment Diagnostic → Pilot Sprint → Production Rollout
 - [Services](https://nexfde.com/#services): 三个服务产品包 — Diagnostic / Pilot Sprint / Production Rollout
 - [FAQ](https://nexfde.com/#faq): 5 个常见问题 — 咨询差异、咨询vs实施、不确定场景、适用规模、工具推荐
-- [案例库](https://nexfde.com/cases/): FDE 落地案例库 — 4 个真实案例卡片矩阵、行业适配、案例授权说明，案例导入获客入口
+- [案例库](https://nexfde.com/cases/): FDE 落地案例库 — 5 个真实案例卡片矩阵、行业适配、案例授权说明，案例导入获客入口
 - [社媒数据洞察](https://nexfde.com/cases/social-media-analytics/): FDE 落地场景案例 #1 — 双平台社媒数据深度诊断，含客户画像、解决方案、交付成果、定价体系
 - [网站构建即案例](https://nexfde.com/cases/nexfde-site-build/): FDE 落地场景案例 #2 — 元案例，NEXFDE 站点本身的 FDE 方法论实践全过程
 - [GEO 改造获客闭环](https://nexfde.com/cases/geo-lead-generation/): FDE 落地场景案例 #3 — 新域名 GEO 改造，3 周 16 条渠道伙伴线索，零投放纯自然流量
 - [课程生产链路](https://nexfde.com/cases/ai-course-production-line/): FDE 落地场景案例 #4 — 六步闭环生产链路，备课周期从 2 周压缩到 3 天，5 次+ 企业内训交付验证
+- [客服 AI 确定性架构](https://nexfde.com/cases/customer-service-ai/): FDE 落地场景案例 #5 — 多品牌连锁客服 AI 确定性架构：决策上收、执行下沉、合规话术走确定性通道，160+ 轮真机验证全绿
 - [交付网络](https://nexfde.com/network/): FDE 协同交付网络 — 专家/伙伴侧入口，四越飞轮、双线人才生产线、项目合作记录、专家申请表单
 - [企业合作](https://nexfde.com/enterprise/): 企业合作入口 — 三种合作方式、合作流程与定价口径、客户需求提交表单
 
