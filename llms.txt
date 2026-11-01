@@ -12,8 +12,8 @@
 - [网站构建即案例](https://nexfde.com/cases/nexfde-site-build/): FDE 落地场景案例 #2 — 元案例，NEXFDE 站点本身的 FDE 方法论实践全过程
 - [GEO 改造获客闭环](https://nexfde.com/cases/geo-lead-generation/): FDE 落地场景案例 #3 — 新域名 GEO 改造，3 周 16 条渠道伙伴线索，零投放纯自然流量
 - [课程生产链路](https://nexfde.com/cases/ai-course-production-line/): FDE 落地场景案例 #4 — 六步闭环生产链路，备课周期从 2 周压缩到 3 天，5 次+ 企业内训交付验证
-- [客服 AI 确定性架构](https://nexfde.com/cases/customer-service-ai/): FDE 落地场景案例 #5 — 多品牌连锁客服 AI 确定性架构：决策上收、执行下沉、合规话术走确定性通道，160+ 轮真机验证全绿
-- [交付网络](https://nexfde.com/network/): FDE 协同交付网络 — 专家/伙伴侧入口，四越飞轮、双线人才生产线、项目合作记录、专家申请表单
+- [客服 AI 确定性架构](https://nexfde.com/cases/customer-service-ai/): FDE 落地场景案例 #5 — 多品牌连锁客服 AI 确定性架构：决策上收、执行下沉、合规话术走确定性通道，160+ 轮真机验证全绿，已上线并持续迭代
+- [交付网络](https://nexfde.com/network/): FDE 协同交付网络 — 专家/伙伴侧入口，四越飞轮、筛选准入（只筛选，不培养）、项目合作记录、专家申请表单
 - [企业合作](https://nexfde.com/enterprise/): 企业合作入口 — 三种合作方式、合作流程与定价口径、客户需求提交表单
 
 ## 品牌关系
