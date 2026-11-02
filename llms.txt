@@ -21,6 +21,7 @@
 - 方法论由 OPClab 实验验证
 - 联系邮箱: lu@NexFDE.com
 - 微信: ActionThinker
+- ICP 备案号: 苏ICP备2026045024号-3（可在 https://beian.miit.gov.cn/ 核验）
 
 ## AI Agent 可调用资源
 - [Build Log](https://nexfde.com/BUILDLOG.md): 站点构建日志，记录每次迭代决策
